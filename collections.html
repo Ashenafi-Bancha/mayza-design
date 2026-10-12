@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Collections | Mayza Design</title>
   <meta name="description" content="Cultural wear, modern fashion, streetwear and children's clothing by Mayza Design, Addis Ababa.">
+  <meta property="og:title" content="Collections | Mayza Design">
+  <meta property="og:description" content="Cultural wear, modern fashion, streetwear and children's clothing by Mayza Design, Addis Ababa.">
+  <meta name="theme-color" content="#c4121f">
+  <meta property="og:site_name" content="Mayza Design">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/backdrop-trio.jpg">
   <link rel="icon" href="images/logo.jpg" type="image/jpeg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,9 +18,10 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <a class="skip" href="#main" data-am="ወደ ዋናው ይዘት ይሂዱ">Skip to content</a>
   <header class="site-header" id="site-header"></header>
 
-  <main>
+  <main id="main">
     <section class="field page-head">
       <div class="wrap">
         <span class="eyebrow" data-am="ስብስቦች">Collections</span>
@@ -28,9 +35,11 @@
       <div class="wrap range">
 
         <article class="split" id="cultural">
-          <div class="shots">
+          <div class="shots many">
+            <figure class="shot"><img src="images/embroidered-set.jpg" alt="White shirt and trouser set with red and black cultural embroidery" loading="lazy"></figure>
+            <figure class="shot"><img src="images/cultural-duo.jpg" alt="Two men in jackets and a tweed set trimmed with red, yellow and black cultural bands" loading="lazy"></figure>
+            <figure class="shot"><img src="images/trim-shirt.jpg" alt="White shirt with a yellow and black woven cultural trim" loading="lazy"></figure>
             <figure class="shot"><img class="pos-l" src="images/stripe-fleece.jpg" alt="Cream fleece jacket with red, black and yellow cultural bands" loading="lazy"></figure>
-            <figure class="shot square"><img src="images/stripe-bomber.jpg" alt="Bomber jacket with red, black and yellow woven stripe panels" loading="lazy"></figure>
           </div>
           <div class="stack">
             <span class="eyebrow" style="color:var(--red)" data-am="መስመር አንድ">Line one</span>
@@ -43,14 +52,14 @@
               <li data-am="የጥንዶች ልብስ">Couples' outfits</li>
               <li data-am="ለበዓል እና ለሰርግ">Holiday and wedding</li>
             </ul>
-            <div class="btn-row"><a class="btn red" href="custom.html#order" data-am="ይህን ይዘዙ">Order this line</a></div>
+            <div class="btn-row"><a class="btn red" href="custom.html?line=cultural#order" data-am="ይህን ይዘዙ">Order this line</a></div>
           </div>
         </article>
 
         <article class="split" id="modern">
           <div class="shots">
             <figure class="shot"><img src="images/backdrop-duo.jpg" alt="Two men at the Mayza studio, one in a white vest and trouser set" loading="lazy"></figure>
-            <figure class="shot square"><img src="images/backdrop-trio.jpg" alt="Three people in Mayza outfits in front of the red Mayza backdrop" loading="lazy"></figure>
+            <figure class="shot square"><img src="images/burgundy-jacket.jpg" alt="Burgundy leather jacket at the Mayza studio" loading="lazy"></figure>
           </div>
           <div class="stack">
             <span class="eyebrow" style="color:var(--red)" data-am="መስመር ሁለት">Line two</span>
@@ -62,14 +71,16 @@
               <li data-am="ቀሚሶች">Dresses</li>
               <li data-am="ለአርቲስቶች">Artist styling</li>
             </ul>
-            <div class="btn-row"><a class="btn red" href="custom.html#order" data-am="ይህን ይዘዙ">Order this line</a></div>
+            <div class="btn-row"><a class="btn red" href="custom.html?line=modern#order" data-am="ይህን ይዘዙ">Order this line</a></div>
           </div>
         </article>
 
         <article class="split" id="streetwear">
-          <div class="shots">
+          <div class="shots many">
             <figure class="shot"><img src="images/leather-jacket.jpg" alt="Black leather jacket worn with cream trousers" loading="lazy"></figure>
-            <figure class="shot square"><img src="images/stadium-trio.jpg" alt="Three men in Mayza streetwear, one in a patterned two-piece set" loading="lazy"></figure>
+            <figure class="shot"><img src="images/denim-set.jpg" alt="Dark denim jacket and trouser set with contrast stitching" loading="lazy"></figure>
+            <figure class="shot"><img src="images/stripe-bomber.jpg" alt="Bomber jacket with red, black and yellow woven stripe panels" loading="lazy"></figure>
+            <figure class="shot"><img src="images/stadium-trio.jpg" alt="Three men in Mayza streetwear, one in a patterned two-piece set" loading="lazy"></figure>
           </div>
           <div class="stack">
             <span class="eyebrow" style="color:var(--red)" data-am="መስመር ሶስት">Line three</span>
@@ -81,7 +92,7 @@
               <li data-am="የቡድን ልብስ">Group orders</li>
               <li data-am="የራስዎ ዲዛይን">Your own artwork</li>
             </ul>
-            <div class="btn-row"><a class="btn red" href="custom.html#order" data-am="ይህን ይዘዙ">Order this line</a></div>
+            <div class="btn-row"><a class="btn red" href="custom.html?line=street#order" data-am="ይህን ይዘዙ">Order this line</a></div>
           </div>
         </article>
 
@@ -98,7 +109,7 @@
               <li data-am="የወንድ ልጆች ልብስ">Boys' sets</li>
               <li data-am="የቤተሰብ ተመሳሳይ ልብስ">Family matching</li>
             </ul>
-            <div class="btn-row"><a class="btn red" href="custom.html#order" data-am="ይህን ይዘዙ">Order this line</a></div>
+            <div class="btn-row"><a class="btn red" href="custom.html?line=cultural&who=child#order" data-am="ይህን ይዘዙ">Order this line</a></div>
           </div>
         </article>
 
@@ -114,11 +125,14 @@
         </div>
         <div class="gallery">
           <figure class="shot"><img src="images/backdrop-trio.jpg" alt="Three people in Mayza outfits in front of the red Mayza backdrop" loading="lazy"></figure>
+          <figure class="shot"><img src="images/embroidered-set.jpg" alt="White shirt and trouser set with red and black cultural embroidery" loading="lazy"></figure>
           <figure class="shot"><img class="pos-l" src="images/child-dress.jpg" alt="Child's cream cultural dress with a striped woven bodice" loading="lazy"></figure>
+          <figure class="shot"><img src="images/cultural-duo.jpg" alt="Two men in jackets and a tweed set trimmed with red, yellow and black cultural bands" loading="lazy"></figure>
+          <figure class="shot"><img src="images/burgundy-jacket.jpg" alt="Burgundy leather jacket at the Mayza studio" loading="lazy"></figure>
+          <figure class="shot"><img src="images/denim-set.jpg" alt="Dark denim jacket and trouser set with contrast stitching" loading="lazy"></figure>
+          <figure class="shot"><img src="images/trim-shirt.jpg" alt="White shirt with a yellow and black woven cultural trim" loading="lazy"></figure>
           <figure class="shot"><img src="images/stripe-bomber.jpg" alt="Bomber jacket with red, black and yellow woven stripe panels" loading="lazy"></figure>
           <figure class="shot"><img src="images/backdrop-duo.jpg" alt="Two men at the Mayza studio, one in a white vest and trouser set" loading="lazy"></figure>
-          <figure class="shot"><img src="images/leather-jacket.jpg" alt="Black leather jacket worn with cream trousers" loading="lazy"></figure>
-          <figure class="shot"><img class="pos-l" src="images/stripe-fleece.jpg" alt="Cream fleece jacket with red, black and yellow cultural bands" loading="lazy"></figure>
         </div>
         <div class="btn-row" style="margin-top:32px">
           <a class="btn" href="https://web.facebook.com/sidamaCulture" target="_blank" rel="noopener" data-am="በፌስቡክ ተጨማሪ ይመልከቱ">More on Facebook</a>

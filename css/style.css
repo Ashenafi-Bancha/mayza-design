@@ -595,3 +595,142 @@ form.sheet {
 .site-footer .social svg { width: 34px; height: 34px; flex: none; transition: transform 0.25s ease; }
 .site-footer .social a:hover { text-decoration: none; }
 .site-footer .social a:hover svg { transform: translateY(-3px) scale(1.08); }
+
+/* ================= Finishing layer ================= */
+
+.skip {
+  position: absolute;
+  left: 16px;
+  top: -60px;
+  z-index: 40;
+  background: var(--ink);
+  color: var(--cloth);
+  padding: 10px 16px;
+  border-radius: 0 0 8px 8px;
+  text-decoration: none;
+}
+.skip:focus { top: 0; }
+
+/* quick links: phones only, straight after the hero */
+.quick { display: none; }
+@media (max-width: 700px) {
+  .quick {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 18px var(--gutter) 6px;
+    background: var(--cloth);
+  }
+  .quick a {
+    display: grid;
+    justify-items: center;
+    gap: 8px;
+    padding: 14px 6px 12px;
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    text-decoration: none;
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-align: center;
+    box-shadow: 0 10px 20px -16px rgba(23, 17, 15, 0.5);
+    min-width: 0;
+  }
+  .quick a:active { transform: scale(0.97); }
+  .quick .ico {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--ico, var(--red));
+    color: var(--white);
+  }
+  .quick svg { width: 21px; height: 21px; }
+}
+
+/* running line of what the studio makes */
+.marquee { overflow: hidden; border-block: 1px solid var(--line); background: var(--cloth); padding-block: 22px; }
+.marquee-track { display: flex; align-items: center; gap: 36px; width: max-content; }
+.marquee span {
+  font-family: var(--display);
+  font-size: clamp(1.8rem, 5vw, 3.4rem);
+  line-height: 1.3;
+  white-space: nowrap;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--ink);
+}
+.marquee span:nth-of-type(3n + 1) { color: var(--red); -webkit-text-stroke: 0; }
+.marquee i { width: 14px; height: 14px; background: var(--gold); transform: rotate(45deg); flex: none; }
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes slide { to { transform: translateX(-50%); } }
+  .marquee-track { animation: slide 38s linear infinite; }
+}
+
+/* phone action bar replaces the single floating button */
+.action-bar { display: none; }
+@media (max-width: 700px) {
+  .action-bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.2fr;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 30;
+    background: var(--ink);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    box-shadow: 0 -10px 30px -12px rgba(0, 0, 0, 0.5);
+  }
+  .action-bar a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 15px 6px;
+    color: var(--cloth);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  .action-bar a + a { border-left: 1px solid rgba(251, 247, 241, 0.16); }
+  .action-bar a:last-child { background: var(--red); color: var(--white); border-left: 0; }
+  .action-bar svg { width: 18px; height: 18px; }
+  body { padding-bottom: calc(54px + env(safe-area-inset-bottom, 0px)); }
+}
+
+/* photo viewer */
+.zoomable { cursor: zoom-in; }
+dialog.viewer {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  max-width: min(92vw, 900px);
+  max-height: 92vh;
+  overflow: visible;
+}
+dialog.viewer::backdrop { background: rgba(23, 17, 15, 0.9); }
+dialog.viewer img { max-width: 100%; max-height: 86vh; margin-inline: auto; border-radius: 6px; }
+dialog.viewer button {
+  position: absolute;
+  top: -18px;
+  right: -6px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 0;
+  background: var(--white);
+  color: var(--ink);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes pop { from { opacity: 0; transform: scale(0.94); } to { opacity: 1; transform: none; } }
+  dialog.viewer[open] img { animation: pop 0.35s cubic-bezier(0.2, 0.7, 0.2, 1); }
+}
+
+/* collection lines with four photos */
+.shots.many { grid-template-columns: 1fr 1fr; align-items: stretch; }
+.shots.many .shot:nth-child(even) { translate: 0 22px; }
+.shots.many { padding-bottom: 22px; }
+.lookbook-stage { --panel: clamp(150px, 20vw, 250px); }

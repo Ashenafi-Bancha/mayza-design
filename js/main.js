@@ -20,6 +20,16 @@ const ICONS = {
   instagram: `<svg viewBox="0 0 24 24" aria-hidden="true"><defs><radialGradient id="ig" cx="30%" cy="107%" r="150%"><stop offset="0" stop-color="#fdf497"/><stop offset=".05" stop-color="#fdf497"/><stop offset=".45" stop-color="#fd5949"/><stop offset=".6" stop-color="#d6249f"/><stop offset=".9" stop-color="#285AEB"/></radialGradient></defs><rect width="24" height="24" rx="6" fill="url(#ig)"/><rect x="5.5" y="5.5" width="13" height="13" rx="3.8" fill="none" stroke="#fff" stroke-width="1.7"/><circle cx="12" cy="12" r="3.1" fill="none" stroke="#fff" stroke-width="1.7"/><circle cx="15.7" cy="8.3" r="1" fill="#fff"/></svg>`,
 };
 
+const line = (d) => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${d}</svg>`;
+const LINE = {
+  phone: line('<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>'),
+  chat: line('<path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>'),
+  send: line('<path d="M22 2 11 13"/><path d="m22 2-7 20-4-9-9-4 20-7z"/>'),
+  grid: line('<rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/>'),
+  edit: line('<path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>'),
+  pin: line('<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>'),
+};
+
 const PAGES = [
   ["index.html", "Home", "መነሻ"],
   ["collections.html", "Collections", "ስብስቦች"],
@@ -74,7 +84,24 @@ function renderChrome() {
       </div>
       <div class="legal">© ${new Date().getFullYear()} Mayza Design</div>
     </div>
-    <a class="btn red quick-call" href="tel:+${MAYZA.phoneIntl}" data-am="ይደውሉ">Call to order</a>`;
+    <nav class="action-bar" aria-label="Order">
+      <a href="tel:+${MAYZA.phoneIntl}">${LINE.phone}<span data-am="ይደውሉ">Call</span></a>
+      <a href="${MAYZA.whatsapp}" target="_blank" rel="noopener">${LINE.chat}<span>WhatsApp</span></a>
+      <a href="custom.html#order">${LINE.edit}<span data-am="ይዘዙ">Order</span></a>
+    </nav>`;
+
+  const quick = document.getElementById("quick");
+  if (quick) {
+    const q = (href, ico, color, en, am, ext) =>
+      `<a href="${href}"${ext ? ' target="_blank" rel="noopener"' : ""}><span class="ico" style="--ico:${color}">${ico}</span><span data-am="${am}">${en}</span></a>`;
+    quick.innerHTML =
+      q(`tel:+${MAYZA.phoneIntl}`, LINE.phone, "var(--red)", "Call", "ይደውሉ") +
+      q(MAYZA.whatsapp, LINE.chat, "#25D366", "WhatsApp", "ዋትስአፕ", true) +
+      q(MAYZA.telegram, LINE.send, "#229ED9", "Telegram", "ቴሌግራም", true) +
+      q("collections.html", LINE.grid, "var(--ink)", "Collections", "ስብስቦች") +
+      q("custom.html#order", LINE.edit, "var(--ink)", "Order sheet", "የትዕዛዝ ቅጽ") +
+      q("contact.html", LINE.pin, "var(--ink)", "Location", "አድራሻ");
+  }
 
   const btn = document.getElementById("menu-btn");
   const nav = document.getElementById("nav");
@@ -153,6 +180,14 @@ function initOrderForm() {
     }
   };
 
+  // "Order this line" links arrive as custom.html?line=cultural&who=child
+  const asked = new URLSearchParams(location.search);
+  ["garment:line", "who:who"].forEach((pair) => {
+    const [field, key] = pair.split(":");
+    const v = asked.get(key);
+    if (v && [...form.elements[field].options].some((o) => o.value === v)) form.elements[field].value = v;
+  });
+
   form.addEventListener("input", () => { status.textContent = ""; compose(); });
   form.addEventListener("submit", (e) => e.preventDefault());
   document.addEventListener("langchange", compose);
@@ -170,7 +205,27 @@ function initOrderForm() {
   compose();
 }
 
+function initViewer() {
+  const shots = document.querySelectorAll(".gallery img, .shots img");
+  if (!shots.length || !window.HTMLDialogElement) return;
+  const dlg = document.createElement("dialog");
+  dlg.className = "viewer";
+  dlg.innerHTML = `<button type="button" aria-label="Close">✕</button><img alt="">`;
+  document.body.appendChild(dlg);
+  const big = dlg.querySelector("img");
+  dlg.addEventListener("click", (e) => { if (e.target !== big) dlg.close(); });
+  shots.forEach((img) => {
+    img.classList.add("zoomable");
+    img.addEventListener("click", () => {
+      big.src = img.currentSrc || img.src;
+      big.alt = img.alt;
+      dlg.showModal();
+    });
+  });
+}
+
 renderChrome();
+initViewer();
 document.querySelectorAll(".lang button").forEach((b) =>
   b.addEventListener("click", () => setLang(b.dataset.lang))
 );

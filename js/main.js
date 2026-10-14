@@ -47,7 +47,7 @@ function renderChrome() {
 
   document.getElementById("site-header").innerHTML = `
     <div class="wrap">
-      <a class="brand" href="index.html" aria-label="Mayza Design">${EMBLEM}<span>Mayza</span></a>
+      <a class="brand" href="index.html" aria-label="Mayza Design">${EMBLEM}<span>Mayza Design</span></a>
       <nav class="nav" id="nav" aria-label="Main">
         ${links}
         <a class="btn red" href="custom.html#order" data-am="አሁን ይዘዙ">Order now</a>

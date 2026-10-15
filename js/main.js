@@ -63,7 +63,7 @@ function renderChrome() {
     <div class="band"></div>
     <div class="wrap">
       <div>
-        <a class="brand" href="index.html">${EMBLEM}<span>Mayza</span></a>
+        <a class="brand" href="index.html">${EMBLEM}<span>Mayza Design</span></a>
         <p data-am="ባህላዊ እና ዘመናዊ አልባሳት ዲዛይን፤ አዲስ አበባ፣ ኢትዮጵያ።">Cultural and modern clothing design, made in Addis Ababa, Ethiopia.</p>
       </div>
       <div>

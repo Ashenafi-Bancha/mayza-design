@@ -69,7 +69,7 @@ function renderChrome() {
       <div>
         <h3 data-am="ይጎብኙን">Visit</h3>
         <ul>
-          <li data-am="ሰሚት ፍየል ቤት ትንሽ ገባ ብሎ">Summit Fiyel Bet, just off the main road</li>
+          <li data-am="${MAYZA.address_am || "ሰሚት ፍየል ቤት ትንሽ ገባ ብሎ"}">${MAYZA.address_en || "Summit Fiyel Bet, just off the main road"}</li>
           <li data-am="አዲስ አበባ፣ ኢትዮጵያ">Addis Ababa, Ethiopia</li>
           <li><a href="tel:+${MAYZA.phoneIntl}">${MAYZA.phone}</a></li>
         </ul>
@@ -141,8 +141,8 @@ function initOrderForm() {
   };
 
   const L = {
-    en: { hi: "Hello Mayza Design, I would like to place a custom order.", name: "Name", phone: "Phone", garment: "Garment", who: "For", date: "Needed by", size: "Measurements (cm)", chest: "chest", waist: "waist", hip: "hip", height: "height", notes: "Details", copied: "Message copied.", copyFail: "Select the message above and copy it.", need: "Please add your name and phone number first.", tg: "Message copied. Paste it into the Telegram chat." },
-    am: { hi: "ሰላም ማይዛ ዲዛይን፣ ልዩ ትዕዛዝ ማዘዝ እፈልጋለሁ።", name: "ስም", phone: "ስልክ", garment: "የልብስ ዓይነት", who: "ለማን", date: "የሚፈለግበት ቀን", size: "ልኬት (ሴ.ሜ)", chest: "ደረት", waist: "ወገብ", hip: "ዳሌ", height: "ቁመት", notes: "ዝርዝር", copied: "መልዕክቱ ተቀድቷል።", copyFail: "ከላይ ያለውን መልዕክት መርጠው ይቅዱ።", need: "እባክዎ መጀመሪያ ስምዎን እና ስልክዎን ያስገቡ።", tg: "መልዕክቱ ተቀድቷል። በቴሌግራም ውይይቱ ላይ ይለጥፉት።" },
+    en: { hi: "Hello Mayza Design, I would like to place a custom order.", piece: "Piece", name: "Name", phone: "Phone", garment: "Garment", who: "For", date: "Needed by", size: "Measurements (cm)", chest: "chest", waist: "waist", hip: "hip", height: "height", notes: "Details", copied: "Message copied.", copyFail: "Select the message above and copy it.", need: "Please add your name and phone number first.", tg: "Message copied. Paste it into the Telegram chat." },
+    am: { hi: "ሰላም ማይዛ ዲዛይን፣ ልዩ ትዕዛዝ ማዘዝ እፈልጋለሁ።", piece: "ልብስ", name: "ስም", phone: "ስልክ", garment: "የልብስ ዓይነት", who: "ለማን", date: "የሚፈለግበት ቀን", size: "ልኬት (ሴ.ሜ)", chest: "ደረት", waist: "ወገብ", hip: "ዳሌ", height: "ቁመት", notes: "ዝርዝር", copied: "መልዕክቱ ተቀድቷል።", copyFail: "ከላይ ያለውን መልዕክት መርጠው ይቅዱ።", need: "እባክዎ መጀመሪያ ስምዎን እና ስልክዎን ያስገቡ።", tg: "መልዕክቱ ተቀድቷል። በቴሌግራም ውይይቱ ላይ ይለጥፉት።" },
   };
   const t = () => L[document.documentElement.lang] || L.en;
 
@@ -152,7 +152,9 @@ function initOrderForm() {
       .filter((k) => val(k))
       .map((k) => `${s[k]} ${val(k)}`)
       .join(", ");
+    const piece = window.MAYZA_PIECE && (document.documentElement.lang === "am" && window.MAYZA_PIECE.am ? window.MAYZA_PIECE.am : window.MAYZA_PIECE.en);
     const lines = [
+      piece && `${s.piece}: ${piece}`,
       val("name") && `${s.name}: ${val("name")}`,
       val("phone") && `${s.phone}: ${val("phone")}`,
       picked("garment") && `${s.garment}: ${picked("garment")}`,
@@ -189,6 +191,7 @@ function initOrderForm() {
   });
 
   form.addEventListener("input", () => { status.textContent = ""; compose(); });
+  document.addEventListener("piecechange", compose);
   form.addEventListener("submit", (e) => e.preventDefault());
   document.addEventListener("langchange", compose);
 
@@ -206,29 +209,40 @@ function initOrderForm() {
 }
 
 function initViewer() {
-  const shots = document.querySelectorAll(".gallery img, .shots img");
-  if (!shots.length || !window.HTMLDialogElement) return;
+  if (!window.HTMLDialogElement) return;
   const dlg = document.createElement("dialog");
   dlg.className = "viewer";
   dlg.innerHTML = `<button type="button" aria-label="Close">✕</button><img alt="">`;
   document.body.appendChild(dlg);
   const big = dlg.querySelector("img");
   dlg.addEventListener("click", (e) => { if (e.target !== big) dlg.close(); });
-  shots.forEach((img) => {
-    img.classList.add("zoomable");
-    img.addEventListener("click", () => {
-      big.src = img.currentSrc || img.src;
-      big.alt = img.alt;
-      dlg.showModal();
-    });
+  const SEL = ".gallery img, .shots img, .pieces .piece-photo img";
+  document.querySelectorAll(SEL).forEach((img) => img.classList.add("zoomable"));
+  document.addEventListener("click", (e) => {
+    const img = e.target.closest(SEL);
+    if (!img) return;
+    big.src = img.currentSrc || img.src;
+    big.alt = img.alt;
+    dlg.showModal();
   });
+}
+
+function bindLang() {
+  document.querySelectorAll(".lang button").forEach((b) =>
+    b.addEventListener("click", () => setLang(b.dataset.lang))
+  );
+}
+
+// site.js calls this after the owner's settings arrive
+function refreshChrome() {
+  renderChrome();
+  bindLang();
+  setLang(document.documentElement.lang || "en");
 }
 
 renderChrome();
 initViewer();
-document.querySelectorAll(".lang button").forEach((b) =>
-  b.addEventListener("click", () => setLang(b.dataset.lang))
-);
+bindLang();
 initOrderForm();
 let saved = "en";
 try { saved = localStorage.getItem("mayza-lang") || "en"; } catch (e) {}

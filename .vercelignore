@@ -1,0 +1,7 @@
+scripts/
+dev-server.js
+video/
+.env
+.env.*
+!.env.example
+images/mayza-design.png

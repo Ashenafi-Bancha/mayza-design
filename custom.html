@@ -63,11 +63,13 @@
         <div class="section-head">
           <span class="eyebrow" data-am="የትዕዛዝ ቅጽ">Order sheet</span>
           <h2 data-am="ትዕዛዝዎን ያዘጋጁ">Prepare your order</h2>
-          <p class="lede" data-am="ቅጹን ሲሞሉ መልዕክቱ በቀኝ በኩል ይዘጋጃል። ከዚያ በዋትስአፕ ወይም በቴሌግራም ይላኩልን።">As you fill this in, your message is written on the right. Then send it to us on WhatsApp or Telegram.</p>
+          <p class="lede" data-am="ቅጹን ሲሞሉ መልዕክትዎ በራሱ ይዘጋጃል። ከዚያ በዋትስአፕ ወይም በቴሌግራም ይላኩልን።">As you fill this in, your message is written for you. Then send it to us on WhatsApp or Telegram.</p>
         </div>
 
         <div class="order">
           <form class="sheet" id="order-form" novalidate>
+            <div class="field-row full picked" id="picked-piece" hidden></div>
+            <input class="trap" type="text" name="company" id="company" tabindex="-1" autocomplete="off" aria-hidden="true">
             <div class="field-row">
               <label for="name" data-am="ሙሉ ስም">Full name</label>
               <input id="name" name="name" autocomplete="name" required>
@@ -121,6 +123,7 @@
           <aside class="preview" aria-label="Your order message">
             <h3 data-am="የእርስዎ መልዕክት">Your message</h3>
             <pre id="order-message"></pre>
+            <button class="btn red" type="button" id="send-mayza" hidden data-am="ትዕዛዙን ወደ ማይዛ ላክ">Send order to Mayza</button>
             <button class="btn red" type="button" id="send-whatsapp" data-am="በዋትስአፕ ይላኩ">Send on WhatsApp</button>
             <button class="btn" type="button" id="send-telegram" data-am="በቴሌግራም ይላኩ">Send on Telegram</button>
             <button class="btn ghost" type="button" id="copy-message" data-am="መልዕክቱን ይቅዱ">Copy message</button>
@@ -133,7 +136,10 @@
   </main>
 
   <footer class="site-footer" id="site-footer"></footer>
+  <script src="js/config.js"></script>
+  <script src="js/store.js"></script>
   <script src="js/main.js"></script>
   <script src="js/motion.js"></script>
+  <script src="js/site.js"></script>
 </body>
 </html>

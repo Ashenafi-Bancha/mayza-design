@@ -1,2 +1,5 @@
 .claude/
 images/mayza-design.png
+video/
+node_modules/
+.env

@@ -117,24 +117,21 @@
       </div>
     </section>
 
-    <section class="section tint">
+    <section class="section tint" id="pieces">
       <div class="wrap">
         <div class="section-head">
-          <span class="eyebrow" data-am="ማዕከለ ስዕላት">Gallery</span>
-          <h2 data-am="የቅርብ ጊዜ ስራዎች">Recent work</h2>
-          <p class="lede" data-am="አዳዲስ ስራዎችን በየቀኑ በፌስቡክ እና በቲክቶክ እናጋራለን።">New pieces go up on Facebook and TikTok most days.</p>
+          <span class="eyebrow" data-am="ምርቶቻችን">The pieces</span>
+          <h2 data-am="ይምረጡ፣ በልክዎ እንሰፋዋለን">Pick a piece, we make it in your size</h2>
+          <p class="lede" data-am="የወደዱትን ልብስ ይምረጡ፤ ቀለሙንና ልኬቱን በትዕዛዝ ቅጹ ላይ እናስተካክላለን።">Choose a piece you like. We adjust the colour and fit on the order sheet.</p>
         </div>
-        <div class="gallery">
-          <figure class="shot"><img src="images/cultural-trio.jpg" alt="Three men in Mayza jacket and trouser sets with red, yellow and black cultural woven panels" loading="lazy"></figure>
-          <figure class="shot"><img src="images/backdrop-trio.jpg" alt="Three people in Mayza outfits in front of the red Mayza backdrop" loading="lazy"></figure>
-          <figure class="shot"><img src="images/embroidered-set.jpg" alt="White shirt and trouser set with red and black cultural embroidery" loading="lazy"></figure>
-          <figure class="shot"><img class="pos-l" src="images/child-dress.jpg" alt="Child's cream cultural dress with a striped woven bodice" loading="lazy"></figure>
-          <figure class="shot"><img src="images/cultural-duo.jpg" alt="Two men in jackets and a tweed set trimmed with red, yellow and black cultural bands" loading="lazy"></figure>
-          <figure class="shot"><img src="images/burgundy-jacket.jpg" alt="Burgundy leather jacket at the Mayza studio" loading="lazy"></figure>
-          <figure class="shot"><img src="images/denim-set.jpg" alt="Dark denim jacket and trouser set with contrast stitching" loading="lazy"></figure>
-          <figure class="shot"><img src="images/trim-shirt.jpg" alt="White shirt with a yellow and black woven cultural trim" loading="lazy"></figure>
-          <figure class="shot"><img src="images/stripe-bomber.jpg" alt="Bomber jacket with red, black and yellow woven stripe panels" loading="lazy"></figure>
+        <div class="filters" id="piece-filters" role="group" aria-label="Filter by collection">
+          <button type="button" class="filter" data-line="all" aria-pressed="true" data-am="ሁሉም">All</button>
+          <button type="button" class="filter" data-line="cultural" aria-pressed="false" data-am="ባህላዊ">Cultural</button>
+          <button type="button" class="filter" data-line="modern" aria-pressed="false" data-am="ዘመናዊ">Modern</button>
+          <button type="button" class="filter" data-line="streetwear" aria-pressed="false" data-am="ስትሪትዌር">Streetwear</button>
+          <button type="button" class="filter" data-line="children" aria-pressed="false" data-am="ልጆች">Children</button>
         </div>
+        <div class="pieces" id="pieces-grid" aria-live="polite"></div>
         <div class="btn-row" style="margin-top:32px">
           <a class="btn" href="https://web.facebook.com/sidamaCulture" target="_blank" rel="noopener" data-am="በፌስቡክ ተጨማሪ ይመልከቱ">More on Facebook</a>
           <a class="btn ghost" href="https://www.tiktok.com/@mayza_design" target="_blank" rel="noopener" data-am="በቲክቶክ ይመልከቱ">Watch on TikTok</a>
@@ -144,7 +141,10 @@
   </main>
 
   <footer class="site-footer" id="site-footer"></footer>
+  <script src="js/config.js"></script>
+  <script src="js/store.js"></script>
   <script src="js/main.js"></script>
   <script src="js/motion.js"></script>
+  <script src="js/site.js"></script>
 </body>
 </html>

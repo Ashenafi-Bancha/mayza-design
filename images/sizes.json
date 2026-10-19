@@ -1,0 +1,58 @@
+{
+ "backdrop-duo": {
+  "width": 1536,
+  "height": 2048
+ },
+ "backdrop-trio": {
+  "width": 1536,
+  "height": 2048
+ },
+ "burgundy-jacket": {
+  "width": 360,
+  "height": 640
+ },
+ "child-dress": {
+  "width": 1122,
+  "height": 1402
+ },
+ "cultural-duo": {
+  "width": 480,
+  "height": 640
+ },
+ "cultural-trio": {
+  "width": 1086,
+  "height": 1448
+ },
+ "denim-set": {
+  "width": 480,
+  "height": 640
+ },
+ "embroidered-set": {
+  "width": 360,
+  "height": 640
+ },
+ "flag": {
+  "width": 1536,
+  "height": 1024
+ },
+ "leather-jacket": {
+  "width": 1536,
+  "height": 2048
+ },
+ "stadium-trio": {
+  "width": 1080,
+  "height": 1164
+ },
+ "stripe-bomber": {
+  "width": 1013,
+  "height": 1350
+ },
+ "stripe-fleece": {
+  "width": 1023,
+  "height": 1537
+ },
+ "trim-shirt": {
+  "width": 360,
+  "height": 640
+ }
+}

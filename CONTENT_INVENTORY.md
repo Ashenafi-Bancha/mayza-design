@@ -502,3 +502,51 @@ These parts come from the admin at runtime and must keep working after the redes
 - Every element marked `data-cms` / `data-cms-img` can be overridden in Admin > Website.
 - The order sheet: chosen piece, "Send order to Mayza", WhatsApp, Telegram and copy buttons, and the live message preview.
 - English / Amharic switch on every page.
+
+## Verification after the premium redesign
+
+Checked with `python scripts/content-inventory.py --verify` on the `premium-redesign` branch.
+
+| Area | Facts in the original | Present after the redesign |
+|---|---|---|
+| about · am | 25 | 25 |
+| about · image | 1 | 1 |
+| about · link | 2 | 2 |
+| about · meta | 4 | 4 |
+| about · text | 28 | 28 |
+| about · title | 1 | 1 |
+| catalogue · collection | 4 | 4 |
+| catalogue · product | 12 | 12 |
+| catalogue · setting | 16 | 16 |
+| collections · am | 43 | 43 |
+| collections · image | 11 | 11 |
+| collections · link | 6 | 6 |
+| collections · meta | 4 | 4 |
+| collections · text | 43 | 43 |
+| collections · title | 1 | 1 |
+| contact · am | 17 | 17 |
+| contact · image | 1 | 1 |
+| contact · link | 9 | 9 |
+| contact · meta | 4 | 4 |
+| contact · text | 23 | 23 |
+| contact · title | 1 | 1 |
+| custom · am | 42 | 42 |
+| custom · field | 6 | 6 |
+| custom · link | 1 | 1 |
+| custom · meta | 4 | 4 |
+| custom · text | 44 | 44 |
+| custom · title | 1 | 1 |
+| index · am | 34 | 34 |
+| index · image | 10 | 10 |
+| index · link | 8 | 8 |
+| index · meta | 4 | 4 |
+| index · text | 38 | 38 |
+| index · title | 1 | 1 |
+| shared · link | 5 | 5 |
+| shared · nav | 5 | 5 |
+| shared · phone | 3 | 3 |
+| shared · quick | 6 | 6 |
+| shared · text | 7 | 7 |
+| **Total** | **475** | **475** |
+
+Result: 475 of 475 original content facts are present (100%).

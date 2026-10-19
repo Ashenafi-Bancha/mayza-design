@@ -115,6 +115,12 @@
       if (img.dataset.cmsSrc === undefined) img.dataset.cmsSrc = img.getAttribute("src");
       const c = (map || {})[img.dataset.cmsImg] || {};
       const next = c.img ? S.resolveImage(c.img) : img.dataset.cmsSrc;
+      const pictureEl = img.closest("picture");
+      if (pictureEl) {
+        // the AVIF/WebP versions belong to the original photo only
+        if (!img._sources) img._sources = [...pictureEl.querySelectorAll("source")];
+        img._sources.forEach((src) => (c.img ? src.remove() : !src.isConnected && pictureEl.insertBefore(src, img)));
+      }
       if (img.getAttribute("src") !== next) img.setAttribute("src", next);
     });
     relang();
@@ -126,42 +132,74 @@
 
   // ---------- collections managed in Admin > Collections ----------
   const LEFT = /child-dress|stripe-fleece/; // photos framed from the left
-  const pic = (url, cls, alt) => `<figure class="${cls}"><img${LEFT.test(url) ? ' class="pos-l zoomable"' : ' class="zoomable"'} src="${esc(S.resolveImage(url))}" alt="${esc(alt)}" loading="lazy"></figure>`;
+  // Built-in photos come with AVIF and WebP versions (see scripts/optimize-images.js);
+  // photos uploaded in the admin are served as they are.
+  function picture(url, alt, sizes, imgClass = "") {
+    const cls = [imgClass, LEFT.test(url || "") ? "pos-l" : ""].filter(Boolean).join(" ");
+    const img = `<img${cls ? ` class="${cls}"` : ""} src="${esc(S.resolveImage(url))}" alt="${esc(alt)}" loading="lazy" decoding="async">`;
+    const m = /^images\/([\w-]+)\.jpg$/.exec(url || "");
+    if (!m) return img;
+    const set = (ext) => `images/${m[1]}-480.${ext} 480w, images/${m[1]}-800.${ext} 800w, images/${m[1]}.${ext} 1600w`;
+    return `<picture><source type="image/avif" srcset="${set("avif")}" sizes="${sizes}"><source type="image/webp" srcset="${set("webp")}" sizes="${sizes}">${img}</picture>`;
+  }
+  const pic = (url, cls, alt, sizes = "(max-width: 860px) 100vw, 40vw") =>
+    `<figure class="${cls}" data-wipe data-parallax data-cursor="view">${picture(url, alt, sizes)}</figure>`;
+
+  // Replace only the blocks whose words or photos changed, so a page whose content
+  // matches the built-in markup is left alone (no flicker, no replayed animation).
+  const fingerprint = (el) => [...el.querySelectorAll("h2, h3, p, li, .eyebrow, img, a")]
+    .map((x) => (x.tagName === "IMG" ? x.getAttribute("src") : x.tagName === "A" ? x.getAttribute("href") : (x.dataset.en !== undefined ? x.dataset.en : x.innerHTML) + "§" + (x.dataset.am || "")))
+    .join("|");
+  function patch(container, html) {
+    const tpl = document.createElement("template");
+    tpl.innerHTML = html.trim();
+    const next = [...tpl.content.children];
+    const now = [...container.children];
+    if (next.length !== now.length) { container.replaceChildren(...next); return true; }
+    let changed = false;
+    next.forEach((el, i) => { if (fingerprint(el) !== fingerprint(now[i])) { now[i].replaceWith(el); changed = true; } });
+    return changed;
+  }
   const splitTags = (v) => String(v || "").split(",").map((x) => x.trim()).filter(Boolean);
   const collectionsReady = S.listCollections().catch(() => []);
 
   function renderCollections(cols, products) {
     const range = document.getElementById("collection-range");
     if (range && cols.length) {
-      range.innerHTML = cols.map((c) => {
+      const changed = patch(range, cols.map((c) => {
         const urls = [...new Set([c.image_url, ...products.filter((p) => p.line === c.slug).map((p) => p.image_url)].filter(Boolean))];
         const four = urls.length >= 4;
         const shots = four
-          ? `<div class="shots many">${urls.slice(0, 4).map((u) => pic(u, "shot", c.name_en)).join("")}</div>`
-          : `<div class="shots">${urls.slice(0, 2).map((u, i) => pic(u, i ? "shot square" : "shot", c.name_en)).join("")}</div>`;
+          ? `<div class="shots many">${urls.slice(0, 4).map((u) => pic(u, "frame", c.name_en)).join("")}</div>`
+          : `<div class="shots">${urls.slice(0, 2).map((u) => pic(u, "frame", c.name_en)).join("")}</div>`;
         const te = splitTags(c.tags_en), ta = splitTags(c.tags_am);
         return `<article class="split" id="${esc(c.slug)}">
           ${urls.length ? shots : ""}
-          <div class="stack">
-            ${c.tagline_en ? `<span class="eyebrow" style="color:var(--red)" data-am="${esc(c.tagline_am || c.tagline_en)}">${esc(c.tagline_en)}</span>` : ""}
-            <h2 data-am="${esc(c.name_am || c.name_en)}">${esc(c.name_en)}</h2>
+          <div class="stack" data-reveal>
+            ${c.tagline_en ? `<span class="eyebrow" data-am="${esc(c.tagline_am || c.tagline_en)}">${esc(c.tagline_en)}</span>` : ""}
+            <h2 data-split data-am="${esc(c.name_am || c.name_en)}">${esc(c.name_en)}</h2>
             ${c.description_en ? `<p class="lede" data-am="${esc(c.description_am || c.description_en)}">${esc(c.description_en)}</p>` : ""}
             ${te.length ? `<ul class="tags">${te.map((tag, i) => `<li data-am="${esc(ta[i] || tag)}">${esc(tag)}</li>`).join("")}</ul>` : ""}
-            <div class="btn-row"><a class="btn red" href="custom.html?line=${encodeURIComponent(c.slug)}#order" data-am="ይህን ይዘዙ">Order this line</a></div>
+            <div class="btn-row"><a class="btn red magnetic" href="custom.html?line=${encodeURIComponent(c.slug)}#order" data-am="ይህን ይዘዙ">Order this line</a></div>
           </div>
         </article>`;
-      }).join("");
-      if (location.hash) { const target = document.getElementById(location.hash.slice(1)); if (target) target.scrollIntoView(); }
+      }).join(""));
+      if (changed && location.hash) { const target = document.getElementById(location.hash.slice(1)); if (target) target.scrollIntoView(); }
     }
     const tiles = document.getElementById("home-tiles");
     const home = cols.filter((c) => c.on_home).slice(0, 3);
     if (tiles && home.length) {
-      tiles.innerHTML = home.map((c) => `<a class="tile" href="collections.html#${encodeURIComponent(c.slug)}">
-          ${c.image_url ? pic(c.image_url, "shot", c.name_en).replace(' class="zoomable"', "").replace(" zoomable", "") : ""}
-          <h3 data-am="${esc(c.name_am || c.name_en)}">${esc(c.name_en)}</h3>
-          <p data-am="${esc(c.summary_am || c.description_am || c.summary_en || c.description_en || "")}">${esc(c.summary_en || c.description_en || "")}</p>
-          <span class="more" data-am="ይመልከቱ →">View →</span>
-        </a>`).join("");
+      patch(tiles, home.map((c) => {
+        const second = (products.find((p) => p.line === c.slug && p.image_url && p.image_url !== c.image_url) || {}).image_url;
+        return `<a class="tile" href="collections.html#${encodeURIComponent(c.slug)}" data-cursor="view">
+          ${c.image_url ? `<figure class="frame" data-wipe data-parallax>${picture(c.image_url, c.name_en, "(max-width: 860px) 100vw, 40vw")}${second ? `<span class="alt-img" aria-hidden="true">${picture(second, "", "(max-width: 860px) 100vw, 40vw")}</span>` : ""}</figure>` : ""}
+          <div class="tile-meta">
+            <h3 data-am="${esc(c.name_am || c.name_en)}">${esc(c.name_en)}</h3>
+            <span class="more" data-am="ይመልከቱ →">View →</span>
+            <p data-am="${esc(c.summary_am || c.description_am || c.summary_en || c.description_en || "")}">${esc(c.summary_en || c.description_en || "")}</p>
+          </div>
+        </a>`;
+      }).join(""));
     }
     relang();
   }
@@ -185,7 +223,7 @@
       const [pe, pa] = price(p);
       const [le, la] = names[p.line] || ["", ""];
       return `<article class="piece-card" data-line="${esc(p.line)}">
-        <figure class="piece-photo"><img src="${esc(S.resolveImage(p.image_url))}" alt="${esc(p.name_en)}" loading="lazy" class="zoomable${LEFT.test(p.image_url || "") ? " pos-l" : ""}"></figure>
+        <figure class="piece-photo">${picture(p.image_url, p.name_en, "(max-width: 520px) 50vw, (max-width: 1100px) 33vw, 25vw", "zoomable")}</figure>
         <div class="piece-meta">
           ${p.featured ? `<span class="piece-badge" data-am="ተመራጭ">Featured</span>` : ""}
           ${le ? `<p class="piece-line" data-am="${esc(la)}">${esc(le)}</p>` : ""}
@@ -193,7 +231,7 @@
           ${p.description_en || p.description_am ? `<p class="piece-desc" data-am="${esc(p.description_am || p.description_en)}">${esc(p.description_en || p.description_am)}</p>` : ""}
           <div class="piece-foot">
             <span class="piece-price" data-am="${esc(pa)}">${esc(pe)}</span>
-            <a class="btn red small" href="custom.html?product=${encodeURIComponent(p.id)}#order" data-am="ይዘዙ">Order this</a>
+            <a class="btn red small magnetic" href="custom.html?product=${encodeURIComponent(p.id)}#order" data-am="ይዘዙ">Order this</a>
           </div>
         </div>
       </article>`;

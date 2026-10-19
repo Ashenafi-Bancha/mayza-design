@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Custom orders | Mayza Design</title>
   <meta name="description" content="Order made-to-measure cultural and modern clothing from Mayza Design. Fill in the order sheet and send it by WhatsApp or Telegram, or call 0912070949.">
   <meta property="og:title" content="Custom orders | Mayza Design">
@@ -11,33 +11,108 @@
   <meta property="og:site_name" content="Mayza Design">
   <meta property="og:type" content="website">
   <meta property="og:image" content="images/backdrop-trio.jpg">
-  <link rel="icon" href="images/logo.jpg" type="image/jpeg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500;6..96,600&family=Figtree:wght@400;500;600&family=Noto+Sans+Ethiopic:wght@400;600&family=Noto+Serif+Ethiopic:wght@500;600&display=swap">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="am_ET">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Custom orders | Mayza Design">
+  <meta name="twitter:description" content="Order made-to-measure cultural and modern clothing from Mayza Design. Fill in the order sheet and send it by WhatsApp or Telegram, or call 0912070949.">
+  <meta name="twitter:image" content="images/backdrop-trio.jpg">
+  <link rel="icon" href="images/logo-160.png" type="image/png">
+  <link rel="apple-touch-icon" href="images/logo-160.png">
+  <link rel="preload" href="fonts/bodoni-moda-normal-500-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/manrope-normal-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <style>/* self-hosted fonts, see css/fonts.css */ @font-face { font-family: 'Bodoni Moda'; font-style: italic; font-weight: 500; font-display: swap; src: url(../fonts/bodoni-moda-italic-500-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face { font-family: 'Bodoni Moda'; font-style: italic; font-weight: 500; font-display: swap; src: url(../fonts/bodoni-moda-italic-500-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face { font-family: 'Bodoni Moda'; font-style: normal; font-weight: 500; font-display: swap; src: url(../fonts/bodoni-moda-normal-500-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face { font-family: 'Bodoni Moda'; font-style: normal; font-weight: 500; font-display: swap; src: url(../fonts/bodoni-moda-normal-500-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face { font-family: 'Manrope'; font-style: normal; font-weight: 400; font-display: swap; src: url(../fonts/manrope-normal-400-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face { font-family: 'Manrope'; font-style: normal; font-weight: 400; font-display: swap; src: url(../fonts/manrope-normal-400-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face { font-family: 'Manrope'; font-style: normal; font-weight: 500; font-display: swap; src: url(../fonts/manrope-normal-400-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face { font-family: 'Manrope'; font-style: normal; font-weight: 500; font-display: swap; src: url(../fonts/manrope-normal-400-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face { font-family: 'Manrope'; font-style: normal; font-weight: 600; font-display: swap; src: url(../fonts/manrope-normal-400-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face { font-family: 'Manrope'; font-style: normal; font-weight: 600; font-display: swap; src: url(../fonts/manrope-normal-400-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face { font-family: 'Manrope'; font-style: normal; font-weight: 700; font-display: swap; src: url(../fonts/manrope-normal-400-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face { font-family: 'Manrope'; font-style: normal; font-weight: 700; font-display: swap; src: url(../fonts/manrope-normal-400-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face { font-family: 'Noto Sans Ethiopic'; font-style: normal; font-weight: 400; font-stretch: 100%; font-display: swap; src: url(../fonts/noto-sans-ethiopic-normal-400-ethiopic.woff2) format('woff2'); unicode-range: U+030E, U+1200-1399, U+2D80-2DDE, U+AB01-AB2E, U+1E7E0-1E7E6, U+1E7E8-1E7EB, U+1E7ED-1E7EE, U+1E7F0-1E7FE;
+}
+
+@font-face { font-family: 'Noto Sans Ethiopic'; font-style: normal; font-weight: 600; font-stretch: 100%; font-display: swap; src: url(../fonts/noto-sans-ethiopic-normal-400-ethiopic.woff2) format('woff2'); unicode-range: U+030E, U+1200-1399, U+2D80-2DDE, U+AB01-AB2E, U+1E7E0-1E7E6, U+1E7E8-1E7EB, U+1E7ED-1E7EE, U+1E7F0-1E7FE;
+}
+
+@font-face { font-family: 'Noto Serif Ethiopic'; font-style: normal; font-weight: 500; font-stretch: 100%; font-display: swap; src: url(../fonts/noto-serif-ethiopic-normal-500-ethiopic.woff2) format('woff2'); unicode-range: U+030E, U+1200-1399, U+2D80-2DDE, U+AB01-AB2E, U+1E7E0-1E7E6, U+1E7E8-1E7EB, U+1E7ED-1E7EE, U+1E7F0-1E7FE;
+}
+
+@font-face { font-family: 'Noto Serif Ethiopic'; font-style: normal; font-weight: 600; font-stretch: 100%; font-display: swap; src: url(../fonts/noto-serif-ethiopic-normal-500-ethiopic.woff2) format('woff2'); unicode-range: U+030E, U+1200-1399, U+2D80-2DDE, U+AB01-AB2E, U+1E7E0-1E7E6, U+1E7E8-1E7EB, U+1E7ED-1E7EE, U+1E7F0-1E7FE;
+}</style>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="preload" as="image" type="image/avif" imagesrcset="images/embroidered-set-480.avif 360w" imagesizes="100vw" fetchpriority="high">
+  <script>
+    // Decide before first paint: preloader once per visit, motion only when the visitor allows it.
+    (function () {
+      var d = document.documentElement, calm = matchMedia("(prefers-reduced-motion: reduce)").matches, seen = false;
+      try { seen = sessionStorage.getItem("mz-seen") === "1"; if (!calm && sessionStorage.getItem("mz-curtain") === "1") d.classList.add("curtain-in"); } catch (e) {}
+      var small = matchMedia("(max-width: 860px)").matches, save = navigator.connection && navigator.connection.saveData;
+      if (seen || calm || small || save) d.classList.add("no-pre");
+      if (!calm) { d.classList.add("fx"); window.__fxFailsafe = setTimeout(function () { d.classList.remove("fx", "curtain-in"); d.classList.add("pre-done"); }, 4000); }
+    })();
+  </script>
 </head>
 <body>
   <a class="skip" href="#main" data-am="ወደ ዋናው ይዘት ይሂዱ">Skip to content</a>
+  <div class="pre" aria-hidden="true">
+    <div class="pre-inner">
+      <img class="pre-logo" src="images/logo-160.webp" alt="" width="74" height="74">
+      <div class="pre-word"><span>Mayza</span><span> </span><span>Design</span></div>
+      <div class="pre-band"></div>
+    </div>
+  </div>
+  <div class="curtain" aria-hidden="true"><i></i><i></i></div>
+  <div class="cursor" aria-hidden="true"><div class="cursor-ring"><span>View</span></div><div class="cursor-dot"></div></div>
   <header class="site-header" id="site-header"></header>
 
   <main id="main">
-    <section class="field page-head">
+    <section class="page-head" data-head>
+      <div class="page-head-media" aria-hidden="true"><figure class="frame" data-parallax><picture><source type="image/avif" srcset="images/embroidered-set-480.avif 360w" sizes="100vw"><source type="image/webp" srcset="images/embroidered-set-480.webp 360w" sizes="100vw"><img src="images/embroidered-set.jpg" alt="" width="360" height="640" fetchpriority="high" decoding="async"></picture></figure></div>
       <div class="wrap">
-        <span class="eyebrow" data-cms="custom.head.eyebrow" data-cms-label="Small line" data-cms-label-am="አጭር መስመር" data-am="ልዩ ትዕዛዝ">Custom orders</span>
-        <h1 data-cms="custom.head.title" data-cms-label="Headline" data-cms-label-am="ዋና ርዕስ" data-am="ለእርስዎ ብቻ የተሰፋ።">Made for you, and only you.</h1>
-        <p data-cms="custom.head.text" data-cms-label="Paragraph" data-cms-label-am="አንቀጽ" data-am="ዲዛይኑን ከእርስዎ ጋር እንወስናለን፣ በልክዎ እንሰፋለን።">We settle the design with you, then cut and sew it to your measurements.</p>
+        <span class="eyebrow" data-reveal data-cms="custom.head.eyebrow" data-cms-label="Small line" data-cms-label-am="አጭር መስመር" data-am="ልዩ ትዕዛዝ">Custom orders</span>
+        <h1 data-split data-cms="custom.head.title" data-cms-label="Headline" data-cms-label-am="ዋና ርዕስ" data-am="ለእርስዎ ብቻ የተሰፋ።">Made for you, and only you.</h1>
+        <p data-reveal data-cms="custom.head.text" data-cms-label="Paragraph" data-cms-label-am="አንቀጽ" data-am="ዲዛይኑን ከእርስዎ ጋር እንወስናለን፣ በልክዎ እንሰፋለን።">We settle the design with you, then cut and sew it to your measurements.</p>
       </div>
     </section>
     <div class="band"></div>
 
-    <section class="section">
-      <div class="wrap">
-        <div class="section-head">
-          <span class="eyebrow" data-cms="custom.steps.eyebrow" data-cms-label="Small line" data-cms-label-am="አጭር መስመር" data-am="አሰራሩ">How it works</span>
-          <h2 data-cms="custom.steps.title" data-cms-label="Heading" data-cms-label-am="ርዕስ" data-am="ከሃሳብ እስከ ልብስ">From idea to finished garment</h2>
-        </div>
-        <ol class="steps">
+    <section class="section steps-section">
+      <div class="steps-pin" id="steps-pin">
+        <div class="wrap">
+          <div class="section-head">
+            <span class="eyebrow" data-reveal data-cms="custom.steps.eyebrow" data-cms-label="Small line" data-cms-label-am="አጭር መስመር" data-am="አሰራሩ">How it works</span>
+            <h2 data-split data-cms="custom.steps.title" data-cms-label="Heading" data-cms-label-am="ርዕስ" data-am="ከሃሳብ እስከ ልብስ">From idea to finished garment</h2>
+          </div>
+          <ol class="steps-track" data-reveal>
           <li>
             <h3 data-cms="custom.steps.s1_title" data-cms-label="Step 1 title" data-cms-label-am="ደረጃ 1 ርዕስ" data-am="ሃሳብዎን ያጋሩ">Share your idea</h3>
             <p data-cms="custom.steps.s1_text" data-cms-label="Step 1 text" data-cms-label-am="ደረጃ 1 ጽሑፍ" data-am="የሚፈልጉትን ዓይነት፣ ዝግጅቱን እና ካለዎት ፎቶ ይላኩልን።">Send us the style you want, the occasion, and a reference photo if you have one.</p>
@@ -54,16 +129,17 @@
             <h3 data-cms="custom.steps.s4_title" data-cms-label="Step 4 title" data-cms-label-am="ደረጃ 4 ርዕስ" data-am="ስፌት እና ርክክብ">Sewing and pickup</h3>
             <p data-cms="custom.steps.s4_text" data-cms-label="Step 4 text" data-cms-label-am="ደረጃ 4 ጽሑፍ" data-am="ልብሱ ሲጠናቀቅ እንደውልልዎታለን፤ ሞክረው ይረከባሉ።">We call you when it is ready. Try it on and take it home.</p>
           </li>
-        </ol>
+          </ol>
+        </div>
       </div>
     </section>
 
-    <section class="section tint" id="order">
+    <section class="section is-tint" id="order">
       <div class="wrap">
         <div class="section-head">
-          <span class="eyebrow" data-cms="custom.form.eyebrow" data-cms-label="Small line" data-cms-label-am="አጭር መስመር" data-am="የትዕዛዝ ቅጽ">Order sheet</span>
-          <h2 data-cms="custom.form.title" data-cms-label="Heading" data-cms-label-am="ርዕስ" data-am="ትዕዛዝዎን ያዘጋጁ">Prepare your order</h2>
-          <p class="lede" data-am="ቅጹን ሲሞሉ መልዕክትዎ በራሱ ይዘጋጃል። ከዚያ በዋትስአፕ ወይም በቴሌግራም ይላኩልን።">As you fill this in, your message is written for you. Then send it to us on WhatsApp or Telegram.</p>
+          <span class="eyebrow" data-reveal data-cms="custom.form.eyebrow" data-cms-label="Small line" data-cms-label-am="አጭር መስመር" data-am="የትዕዛዝ ቅጽ">Order sheet</span>
+          <h2 data-split data-cms="custom.form.title" data-cms-label="Heading" data-cms-label-am="ርዕስ" data-am="ትዕዛዝዎን ያዘጋጁ">Prepare your order</h2>
+          <p class="lede" data-reveal data-am="ቅጹን ሲሞሉ መልዕክትዎ በራሱ ይዘጋጃል። ከዚያ በዋትስአፕ ወይም በቴሌግራም ይላኩልን።">As you fill this in, your message is written for you. Then send it to us on WhatsApp or Telegram.</p>
         </div>
 
         <div class="order">
@@ -123,7 +199,7 @@
           <aside class="preview" aria-label="Your order message">
             <h3 data-am="የእርስዎ መልዕክት">Your message</h3>
             <pre id="order-message"></pre>
-            <button class="btn red" type="button" id="send-mayza" hidden data-am="ትዕዛዙን ወደ ማይዛ ላክ">Send order to Mayza</button>
+            <button class="btn red magnetic" type="button" id="send-mayza" hidden data-am="ትዕዛዙን ወደ ማይዛ ላክ">Send order to Mayza</button>
             <button class="btn red" type="button" id="send-whatsapp" data-am="በዋትስአፕ ይላኩ">Send on WhatsApp</button>
             <button class="btn" type="button" id="send-telegram" data-am="በቴሌግራም ይላኩ">Send on Telegram</button>
             <button class="btn ghost" type="button" id="copy-message" data-am="መልዕክቱን ይቅዱ">Copy message</button>
@@ -136,10 +212,23 @@
   </main>
 
   <footer class="site-footer" id="site-footer"></footer>
-  <script src="js/config.js"></script>
-  <script src="js/store.js"></script>
-  <script src="js/main.js"></script>
-  <script src="js/motion.js"></script>
-  <script src="js/site.js"></script>
+  <script src="js/config.js" defer></script>
+  <script src="js/store.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/site.js" defer></script>
+  <script>
+    // Motion libraries load once the page has fully loaded, so they never hold up the first view.
+    // They download in parallel and run in order (async = false).
+    (function () {
+      function load() {
+        ["js/vendor/gsap.min.js", "js/vendor/ScrollTrigger.min.js", "js/vendor/SplitText.min.js", "js/vendor/lenis.min.js", "js/experience.js"].forEach(function (src) {
+          var s = document.createElement("script"); s.src = src; s.async = false; document.body.appendChild(s);
+        });
+      }
+      // wait for the first idle moment after load, so the first view has fully painted
+      function idle() { (window.requestIdleCallback || function (f) { setTimeout(f, 300); })(load, { timeout: 500 }); }
+      if (document.readyState === "complete") idle(); else addEventListener("load", idle);
+    })();
+  </script>
 </body>
 </html>

@@ -12,7 +12,7 @@ site.disable("x-powered-by");
 site.use(app);
 
 // Only the website's own folders and pages are served, never the server code or .env.
-["css", "js", "images", "admin"].forEach((dir) => site.use(`/${dir}`, express.static(path.join(root, dir), { dotfiles: "deny" })));
+["css", "js", "images", "fonts", "admin"].forEach((dir) => site.use(`/${dir}`, express.static(path.join(root, dir), { dotfiles: "deny" })));
 site.get(["/", "/:page.html"], (req, res, next) => {
   const file = path.join(root, `${req.params.page || "index"}.html`);
   if (path.dirname(file) !== root || !fs.existsSync(file)) return next();

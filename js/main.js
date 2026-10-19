@@ -10,7 +10,7 @@ const MAYZA = {
   instagram: "https://www.instagram.com/mayza__design",
 };
 
-const EMBLEM = `<img src="images/logo.jpg" alt="" width="38" height="38">`;
+const EMBLEM = `<img src="images/logo-160.webp" alt="" width="38" height="38">`;
 
 // Social marks in each platform's own colours.
 const TIKTOK_NOTE = "M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z";
@@ -40,28 +40,49 @@ const PAGES = [
 
 function renderChrome() {
   const here = location.pathname.split("/").pop() || "index.html";
-  const links = PAGES.map(
-    ([href, en, am]) =>
-      `<a href="${href}"${href === here ? ' aria-current="page"' : ""} data-am="${am}">${en}</a>`
-  ).join("");
+  const current = (href) => (href === here ? ' aria-current="page"' : "");
+  const links = PAGES.map(([href, en, am]) => `<a class="u-link" href="${href}"${current(href)} data-am="${am}">${en}</a>`).join("");
+  const menuLinks = PAGES.map(([href, en, am], i) => `<li><a href="${href}"${current(href)} style="--i:${i}" data-am="${am}">${en}</a></li>`).join("");
+  const socials = `<a href="${MAYZA.facebook}" target="_blank" rel="noopener" aria-label="Facebook">${ICONS.facebook}</a>
+        <a href="${MAYZA.tiktok}" target="_blank" rel="noopener" aria-label="TikTok">${ICONS.tiktok}</a>
+        <a href="${MAYZA.instagram}" target="_blank" rel="noopener" aria-label="Instagram">${ICONS.instagram}</a>`;
 
   document.getElementById("site-header").innerHTML = `
     <div class="wrap">
       <a class="brand" href="index.html" aria-label="Mayza Design">${EMBLEM}<span>Mayza Design</span></a>
-      <nav class="nav" id="nav" aria-label="Main">
+      <nav class="nav" aria-label="Main">
         ${links}
-        <a class="btn red" href="custom.html#order" data-am="አሁን ይዘዙ">Order now</a>
+        <a class="btn red magnetic" href="custom.html#order" data-am="አሁን ይዘዙ">Order now</a>
       </nav>
       <div class="lang" role="group" aria-label="Language">
-        <button type="button" data-lang="en">EN</button>
-        <button type="button" data-lang="am">አማ</button>
+        <button type="button" data-lang="en"><span>EN</span></button>
+        <button type="button" data-lang="am"><span>አማ</span></button>
       </div>
-      <button class="menu-btn" type="button" id="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="nav">☰</button>
+      <button class="menu-btn" type="button" id="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="menu"><span data-am="ምናሌ">Menu</span><i></i></button>
+    </div>`;
+
+  // fullscreen menu overlay, built once and kept outside the header
+  let menu = document.getElementById("menu");
+  if (!menu) {
+    menu = document.createElement("div");
+    menu.id = "menu";
+    menu.className = "menu";
+    menu.setAttribute("role", "dialog");
+    menu.setAttribute("aria-modal", "true");
+    menu.setAttribute("aria-label", "Menu");
+    document.getElementById("site-header").after(menu);
+  }
+  menu.innerHTML = `
+    <nav aria-label="Menu"><ul class="menu-links">${menuLinks}</ul></nav>
+    <div class="menu-foot">
+      <div><a class="u-link" href="tel:+${MAYZA.phoneIntl}">${MAYZA.phone}</a><br><span data-am="${MAYZA.address_am || "ሰሚት ፍየል ቤት ትንሽ ገባ ብሎ"}">${MAYZA.address_en || "Summit Fiyel Bet, just off the main road"}</span></div>
+      <div class="social-row">${socials}</div>
     </div>`;
 
   document.getElementById("site-footer").innerHTML = `
     <div class="band"></div>
-    <div class="wrap">
+    <a class="foot-word" href="index.html" aria-label="Mayza Design">Mayza <em>Design</em></a>
+    <div class="wrap foot-grid">
       <div>
         <a class="brand" href="index.html">${EMBLEM}<span>Mayza Design</span></a>
         <p data-am="ባህላዊ እና ዘመናዊ አልባሳት ዲዛይን፤ አዲስ አበባ፣ ኢትዮጵያ።">Cultural and modern clothing design, made in Addis Ababa, Ethiopia.</p>
@@ -71,7 +92,7 @@ function renderChrome() {
         <ul>
           <li data-am="${MAYZA.address_am || "ሰሚት ፍየል ቤት ትንሽ ገባ ብሎ"}">${MAYZA.address_en || "Summit Fiyel Bet, just off the main road"}</li>
           <li data-am="አዲስ አበባ፣ ኢትዮጵያ">Addis Ababa, Ethiopia</li>
-          <li><a href="tel:+${MAYZA.phoneIntl}">${MAYZA.phone}</a></li>
+          <li><a class="u-link" href="tel:+${MAYZA.phoneIntl}">${MAYZA.phone}</a></li>
         </ul>
       </div>
       <div>
@@ -82,7 +103,7 @@ function renderChrome() {
           <li><a href="${MAYZA.instagram}" target="_blank" rel="noopener">${ICONS.instagram}<span>Instagram</span></a></li>
         </ul>
       </div>
-      <div class="legal">© ${new Date().getFullYear()} Mayza Design</div>
+      <div class="legal"><span>© ${new Date().getFullYear()} Mayza Design</span></div>
     </div>
     <nav class="action-bar" aria-label="Order">
       <a href="tel:+${MAYZA.phoneIntl}">${LINE.phone}<span data-am="ይደውሉ">Call</span></a>
@@ -95,7 +116,7 @@ function renderChrome() {
     const q = (href, ico, color, en, am, ext) =>
       `<a href="${href}"${ext ? ' target="_blank" rel="noopener"' : ""}><span class="ico" style="--ico:${color}">${ico}</span><span data-am="${am}">${en}</span></a>`;
     quick.innerHTML =
-      q(`tel:+${MAYZA.phoneIntl}`, LINE.phone, "var(--red)", "Call", "ይደውሉ") +
+      q(`tel:+${MAYZA.phoneIntl}`, LINE.phone, "var(--garnet)", "Call", "ይደውሉ") +
       q(MAYZA.whatsapp, LINE.chat, "#25D366", "WhatsApp", "ዋትስአፕ", true) +
       q(MAYZA.telegram, LINE.send, "#229ED9", "Telegram", "ቴሌግራም", true) +
       q("collections.html", LINE.grid, "var(--ink)", "Collections", "ስብስቦች") +
@@ -103,13 +124,22 @@ function renderChrome() {
       q("contact.html", LINE.pin, "var(--ink)", "Location", "አድራሻ");
   }
 
-  const btn = document.getElementById("menu-btn");
-  const nav = document.getElementById("nav");
-  btn.addEventListener("click", () => {
-    const open = nav.classList.toggle("open");
-    btn.setAttribute("aria-expanded", open);
-  });
+  document.getElementById("menu-btn").addEventListener("click", () => toggleMenu());
 }
+
+// Opens or closes the fullscreen menu; Escape closes it and focus returns to the button.
+function toggleMenu(force) {
+  const open = force !== undefined ? force : !document.documentElement.classList.contains("menu-open");
+  const btn = document.getElementById("menu-btn");
+  document.documentElement.classList.toggle("menu-open", open);
+  btn.setAttribute("aria-expanded", open);
+  document.dispatchEvent(new CustomEvent("menuchange", { detail: { open } }));
+  if (open) setTimeout(() => { const first = document.querySelector(".menu-links a"); if (first) first.focus({ preventScroll: true }); }, 350);
+  else btn.focus({ preventScroll: true });
+}
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && document.documentElement.classList.contains("menu-open")) toggleMenu(false);
+});
 
 // Each translatable element holds English in the markup and Amharic in data-am.
 function setLang(lang) {

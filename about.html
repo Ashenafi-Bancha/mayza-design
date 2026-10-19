@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>About | Mayza Design</title>
   <meta name="description" content="Mayza Design is an Ethiopian fashion and art design brand in Addis Ababa, blending cultural dress with modern fashion.">
   <meta property="og:title" content="About | Mayza Design">
@@ -11,46 +11,120 @@
   <meta property="og:site_name" content="Mayza Design">
   <meta property="og:type" content="website">
   <meta property="og:image" content="images/backdrop-trio.jpg">
-  <link rel="icon" href="images/logo.jpg" type="image/jpeg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500;6..96,600&family=Figtree:wght@400;500;600&family=Noto+Sans+Ethiopic:wght@400;600&family=Noto+Serif+Ethiopic:wght@500;600&display=swap">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="am_ET">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="About | Mayza Design">
+  <meta name="twitter:description" content="Mayza Design is an Ethiopian fashion and art design brand in Addis Ababa, blending cultural dress with modern fashion.">
+  <meta name="twitter:image" content="images/backdrop-trio.jpg">
+  <link rel="icon" href="images/logo-160.png" type="image/png">
+  <link rel="apple-touch-icon" href="images/logo-160.png">
+  <link rel="preload" href="fonts/bodoni-moda-normal-500-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/manrope-normal-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <style>/* self-hosted fonts, see css/fonts.css */ @font-face { font-family: 'Bodoni Moda'; font-style: italic; font-weight: 500; font-display: swap; src: url(../fonts/bodoni-moda-italic-500-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face { font-family: 'Bodoni Moda'; font-style: italic; font-weight: 500; font-display: swap; src: url(../fonts/bodoni-moda-italic-500-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face { font-family: 'Bodoni Moda'; font-style: normal; font-weight: 500; font-display: swap; src: url(../fonts/bodoni-moda-normal-500-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face { font-family: 'Bodoni Moda'; font-style: normal; font-weight: 500; font-display: swap; src: url(../fonts/bodoni-moda-normal-500-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face { font-family: 'Manrope'; font-style: normal; font-weight: 400; font-display: swap; src: url(../fonts/manrope-normal-400-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face { font-family: 'Manrope'; font-style: normal; font-weight: 400; font-display: swap; src: url(../fonts/manrope-normal-400-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face { font-family: 'Manrope'; font-style: normal; font-weight: 500; font-display: swap; src: url(../fonts/manrope-normal-400-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face { font-family: 'Manrope'; font-style: normal; font-weight: 500; font-display: swap; src: url(../fonts/manrope-normal-400-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face { font-family: 'Manrope'; font-style: normal; font-weight: 600; font-display: swap; src: url(../fonts/manrope-normal-400-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face { font-family: 'Manrope'; font-style: normal; font-weight: 600; font-display: swap; src: url(../fonts/manrope-normal-400-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face { font-family: 'Manrope'; font-style: normal; font-weight: 700; font-display: swap; src: url(../fonts/manrope-normal-400-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face { font-family: 'Manrope'; font-style: normal; font-weight: 700; font-display: swap; src: url(../fonts/manrope-normal-400-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face { font-family: 'Noto Sans Ethiopic'; font-style: normal; font-weight: 400; font-stretch: 100%; font-display: swap; src: url(../fonts/noto-sans-ethiopic-normal-400-ethiopic.woff2) format('woff2'); unicode-range: U+030E, U+1200-1399, U+2D80-2DDE, U+AB01-AB2E, U+1E7E0-1E7E6, U+1E7E8-1E7EB, U+1E7ED-1E7EE, U+1E7F0-1E7FE;
+}
+
+@font-face { font-family: 'Noto Sans Ethiopic'; font-style: normal; font-weight: 600; font-stretch: 100%; font-display: swap; src: url(../fonts/noto-sans-ethiopic-normal-400-ethiopic.woff2) format('woff2'); unicode-range: U+030E, U+1200-1399, U+2D80-2DDE, U+AB01-AB2E, U+1E7E0-1E7E6, U+1E7E8-1E7EB, U+1E7ED-1E7EE, U+1E7F0-1E7FE;
+}
+
+@font-face { font-family: 'Noto Serif Ethiopic'; font-style: normal; font-weight: 500; font-stretch: 100%; font-display: swap; src: url(../fonts/noto-serif-ethiopic-normal-500-ethiopic.woff2) format('woff2'); unicode-range: U+030E, U+1200-1399, U+2D80-2DDE, U+AB01-AB2E, U+1E7E0-1E7E6, U+1E7E8-1E7EB, U+1E7ED-1E7EE, U+1E7F0-1E7FE;
+}
+
+@font-face { font-family: 'Noto Serif Ethiopic'; font-style: normal; font-weight: 600; font-stretch: 100%; font-display: swap; src: url(../fonts/noto-serif-ethiopic-normal-500-ethiopic.woff2) format('woff2'); unicode-range: U+030E, U+1200-1399, U+2D80-2DDE, U+AB01-AB2E, U+1E7E0-1E7E6, U+1E7E8-1E7EB, U+1E7ED-1E7EE, U+1E7F0-1E7FE;
+}</style>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="preload" as="image" type="image/avif" imagesrcset="images/backdrop-trio-480.avif 480w, images/backdrop-trio-800.avif 800w, images/backdrop-trio.avif 1536w" imagesizes="100vw" fetchpriority="high">
+  <script>
+    // Decide before first paint: preloader once per visit, motion only when the visitor allows it.
+    (function () {
+      var d = document.documentElement, calm = matchMedia("(prefers-reduced-motion: reduce)").matches, seen = false;
+      try { seen = sessionStorage.getItem("mz-seen") === "1"; if (!calm && sessionStorage.getItem("mz-curtain") === "1") d.classList.add("curtain-in"); } catch (e) {}
+      var small = matchMedia("(max-width: 860px)").matches, save = navigator.connection && navigator.connection.saveData;
+      if (seen || calm || small || save) d.classList.add("no-pre");
+      if (!calm) { d.classList.add("fx"); window.__fxFailsafe = setTimeout(function () { d.classList.remove("fx", "curtain-in"); d.classList.add("pre-done"); }, 4000); }
+    })();
+  </script>
 </head>
 <body>
   <a class="skip" href="#main" data-am="ወደ ዋናው ይዘት ይሂዱ">Skip to content</a>
+  <div class="pre" aria-hidden="true">
+    <div class="pre-inner">
+      <img class="pre-logo" src="images/logo-160.webp" alt="" width="74" height="74">
+      <div class="pre-word"><span>Mayza</span><span> </span><span>Design</span></div>
+      <div class="pre-band"></div>
+    </div>
+  </div>
+  <div class="curtain" aria-hidden="true"><i></i><i></i></div>
+  <div class="cursor" aria-hidden="true"><div class="cursor-ring"><span>View</span></div><div class="cursor-dot"></div></div>
   <header class="site-header" id="site-header"></header>
 
   <main id="main">
-    <section class="field page-head">
+    <section class="page-head" data-head>
+      <div class="page-head-media" aria-hidden="true"><figure class="frame" data-parallax><picture><source type="image/avif" srcset="images/backdrop-trio-480.avif 480w, images/backdrop-trio-800.avif 800w, images/backdrop-trio.avif 1536w" sizes="100vw"><source type="image/webp" srcset="images/backdrop-trio-480.webp 480w, images/backdrop-trio-800.webp 800w, images/backdrop-trio.webp 1536w" sizes="100vw"><img src="images/backdrop-trio.jpg" alt="" width="1536" height="2048" fetchpriority="high" decoding="async"></picture></figure></div>
       <div class="wrap">
-        <span class="eyebrow" data-cms="about.head.eyebrow" data-cms-label="Small line" data-cms-label-am="አጭር መስመር" data-am="ስለ እኛ">About</span>
-        <h1 data-cms="about.head.title" data-cms-label="Headline" data-cms-label-am="ዋና ርዕስ" data-am="ባህላዊ፣ ዘመናዊ፣ ውበት።">Cultural. Modern. Beautiful.</h1>
-        <p data-cms="about.head.text" data-cms-label="Paragraph" data-cms-label-am="አንቀጽ" data-am="ማይዛ ዲዛይን በአዲስ አበባ የሚገኝ የፋሽን እና የጥበብ ዲዛይን ብራንድ ነው።">Mayza Design is a fashion and art design brand based in Addis Ababa.</p>
+        <span class="eyebrow" data-reveal data-cms="about.head.eyebrow" data-cms-label="Small line" data-cms-label-am="አጭር መስመር" data-am="ስለ እኛ">About</span>
+        <h1 data-split data-cms="about.head.title" data-cms-label="Headline" data-cms-label-am="ዋና ርዕስ" data-am="ባህላዊ፣ ዘመናዊ፣ ውበት።">Cultural. Modern. Beautiful.</h1>
+        <p data-reveal data-cms="about.head.text" data-cms-label="Paragraph" data-cms-label-am="አንቀጽ" data-am="ማይዛ ዲዛይን በአዲስ አበባ የሚገኝ የፋሽን እና የጥበብ ዲዛይን ብራንድ ነው።">Mayza Design is a fashion and art design brand based in Addis Ababa.</p>
       </div>
     </section>
     <div class="band"></div>
 
     <section class="section">
-      <div class="wrap split">
+      <div class="wrap split story">
         <div class="stack">
-          <span class="eyebrow" style="color:var(--red)" data-cms="about.story.eyebrow" data-cms-label="Small line" data-cms-label-am="አጭር መስመር" data-am="ታሪካችን">Our story</span>
-          <h2 data-cms="about.story.title" data-cms-label="Heading" data-cms-label-am="ርዕስ" data-am="ከባህል የተነሳ፣ ለዛሬ የተሰራ">Rooted in culture, made for now</h2>
-          <p data-cms="about.story.p1" data-cms-label="First paragraph" data-cms-label-am="የመጀመሪያ አንቀጽ" data-am="ስራችን የሚነሳው ከኢትዮጵያ ባህላዊ አልባሳት ነው፤ በተለይም የሲዳማ ባህል ልብስ ከሚታወቅባቸው ቀይ፣ ጥቁር እና ቢጫ ጥለቶች።">Our work starts from Ethiopian cultural dress, and especially from the red, black and yellow woven bands that Sidama clothing is known for.</p>
-          <p data-cms="about.story.p2" data-cms-label="Second paragraph" data-cms-label-am="ሁለተኛ አንቀጽ" data-am="እነዚህን ቀለሞችና ጥለቶች ዛሬ ሰዎች በሚለብሱት መንገድ እንሰራቸዋለን፤ ለሰርግ ቀሚስ፣ ለመድረክ ልብስ፣ ለልጆች ቀሚስ ወይም ለዕለት ቲሸርት።">We carry those colours and patterns into the way people dress today: a wedding dress, a stage outfit, a child's dress or an everyday tee.</p>
-          <p data-cms="about.story.p3" data-cms-label="Third paragraph" data-cms-label-am="ሶስተኛ አንቀጽ" data-am="እያንዳንዱ ልብስ በትዕዛዝ እና በልክ ይሰፋል። የትም የማያገኙትን ዲዛይንም ሆነ ማቴሪያል ለማቅረብ እንጥራለን።">Each piece is cut and sewn to order. We aim to offer designs and materials you will not find anywhere else.</p>
+          <span class="eyebrow" data-reveal data-cms="about.story.eyebrow" data-cms-label="Small line" data-cms-label-am="አጭር መስመር" data-am="ታሪካችን">Our story</span>
+          <h2 data-split data-cms="about.story.title" data-cms-label="Heading" data-cms-label-am="ርዕስ" data-am="ከባህል የተነሳ፣ ለዛሬ የተሰራ">Rooted in culture, made for now</h2>
+          <p data-reveal data-cms="about.story.p1" data-cms-label="First paragraph" data-cms-label-am="የመጀመሪያ አንቀጽ" data-am="ስራችን የሚነሳው ከኢትዮጵያ ባህላዊ አልባሳት ነው፤ በተለይም የሲዳማ ባህል ልብስ ከሚታወቅባቸው ቀይ፣ ጥቁር እና ቢጫ ጥለቶች።">Our work starts from Ethiopian cultural dress, and especially from the red, black and yellow woven bands that Sidama clothing is known for.</p>
+          <p data-reveal data-cms="about.story.p2" data-cms-label="Second paragraph" data-cms-label-am="ሁለተኛ አንቀጽ" data-am="እነዚህን ቀለሞችና ጥለቶች ዛሬ ሰዎች በሚለብሱት መንገድ እንሰራቸዋለን፤ ለሰርግ ቀሚስ፣ ለመድረክ ልብስ፣ ለልጆች ቀሚስ ወይም ለዕለት ቲሸርት።">We carry those colours and patterns into the way people dress today: a wedding dress, a stage outfit, a child's dress or an everyday tee.</p>
+          <p data-reveal data-cms="about.story.p3" data-cms-label="Third paragraph" data-cms-label-am="ሶስተኛ አንቀጽ" data-am="እያንዳንዱ ልብስ በትዕዛዝ እና በልክ ይሰፋል። የትም የማያገኙትን ዲዛይንም ሆነ ማቴሪያል ለማቅረብ እንጥራለን።">Each piece is cut and sewn to order. We aim to offer designs and materials you will not find anywhere else.</p>
         </div>
-        <figure class="shot"><img data-cms-img="about.story.image" data-cms-label="Photo" data-cms-label-am="ፎቶ" src="images/backdrop-duo.jpg" alt="Two men at the Mayza studio, one in a white vest and trouser set" loading="lazy"></figure>
+        <figure class="frame" data-wipe data-parallax><picture><source type="image/avif" srcset="images/backdrop-duo-480.avif 480w, images/backdrop-duo-800.avif 800w, images/backdrop-duo.avif 1536w" sizes="(max-width: 860px) 100vw, 40vw"><source type="image/webp" srcset="images/backdrop-duo-480.webp 480w, images/backdrop-duo-800.webp 800w, images/backdrop-duo.webp 1536w" sizes="(max-width: 860px) 100vw, 40vw"><img data-cms-img="about.story.image" data-cms-label="Photo" data-cms-label-am="ፎቶ" src="images/backdrop-duo.jpg" alt="Two men at the Mayza studio, one in a white vest and trouser set" width="1536" height="2048" loading="lazy" decoding="async"></picture></figure>
       </div>
     </section>
 
-    <section class="section tint">
+    <section class="section is-tint cv">
       <div class="wrap">
         <div class="section-head">
-          <span class="eyebrow" data-cms="about.values.eyebrow" data-cms-label="Small line" data-cms-label-am="አጭር መስመር" data-am="የምንቆምለት">What we stand for</span>
-          <h2 data-cms="about.values.title" data-cms-label="Heading" data-cms-label-am="ርዕስ" data-am="ሶስት ቃል ኪዳኖች">Three promises</h2>
+          <span class="eyebrow" data-reveal data-cms="about.values.eyebrow" data-cms-label="Small line" data-cms-label-am="አጭር መስመር" data-am="የምንቆምለት">What we stand for</span>
+          <h2 data-split data-cms="about.values.title" data-cms-label="Heading" data-cms-label-am="ርዕስ" data-am="ሶስት ቃል ኪዳኖች">Three promises</h2>
         </div>
-        <div class="tiles">
+        <div class="promises" data-reveal>
           <div class="stack">
             <h3 data-cms="about.values.v1_title" data-cms-label="Promise 1 title" data-cms-label-am="ቃል 1 ርዕስ" data-am="ባህልን ማክበር">Respect for the culture</h3>
             <p data-cms="about.values.v1_text" data-cms-label="Promise 1 text" data-cms-label-am="ቃል 1 ጽሑፍ" data-am="ጥለቶቹና ቀለሞቹ ትርጉም አላቸው። በጥንቃቄ እና በትክክል እንጠቀማቸዋለን።">The patterns and colours carry meaning. We use them with care and get them right.</p>
@@ -67,13 +141,13 @@
       </div>
     </section>
 
-    <section class="section dark">
+    <section class="section is-dark cv">
       <div class="wrap">
         <div class="section-head">
-          <span class="eyebrow" data-am="ማህበረሰባችን">Our community</span>
-          <h2 data-cms="about.community.title" data-cms-label="Heading" data-cms-label-am="ርዕስ" data-am="አብረውን ያሉ">The people with us</h2>
+          <span class="eyebrow" data-reveal data-am="ማህበረሰባችን">Our community</span>
+          <h2 data-split data-cms="about.community.title" data-cms-label="Heading" data-cms-label-am="ርዕስ" data-am="አብረውን ያሉ">The people with us</h2>
         </div>
-        <div class="figures">
+        <div class="figures" data-reveal>
           <div><strong data-stat="facebook">82K</strong><span data-am="የፌስቡክ ተከታዮች">followers on Facebook</span></div>
           <div><strong data-stat="tiktok">27.2K</strong><span data-am="የቲክቶክ ተከታዮች">followers on TikTok</span></div>
           <div><strong data-stat="likes">248.3K</strong><span data-am="የቲክቶክ መውደዶች">likes on TikTok</span></div>
@@ -82,22 +156,35 @@
     </section>
 
     <div class="band"></div>
-    <section class="field cta">
+    <section class="cta is-garnet cv">
       <div class="wrap">
-        <h2 data-cms="about.cta.title" data-cms-label="Heading" data-cms-label-am="ርዕስ" data-am="ቀጣዩ ልብስዎን አብረን እንስራ።">Let us make your next outfit together.</h2>
-        <div class="btn-row">
-          <a class="btn light" href="custom.html#order" data-am="ልዩ ትዕዛዝ ይጀምሩ">Start a custom order</a>
-          <a class="btn ghost-light" href="contact.html" data-am="ያግኙን">Get in touch</a>
+        <h2 data-split data-cms="about.cta.title" data-cms-label="Heading" data-cms-label-am="ርዕስ" data-am="ቀጣዩ ልብስዎን አብረን እንስራ።">Let us make your next outfit together.</h2>
+        <div class="btn-row" data-reveal>
+          <a class="btn light magnetic" href="custom.html#order" data-am="ልዩ ትዕዛዝ ይጀምሩ">Start a custom order</a>
+          <a class="btn ghost-light magnetic" href="contact.html" data-am="ያግኙን">Get in touch</a>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer" id="site-footer"></footer>
-  <script src="js/config.js"></script>
-  <script src="js/store.js"></script>
-  <script src="js/main.js"></script>
-  <script src="js/motion.js"></script>
-  <script src="js/site.js"></script>
+  <script src="js/config.js" defer></script>
+  <script src="js/store.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/site.js" defer></script>
+  <script>
+    // Motion libraries load once the page has fully loaded, so they never hold up the first view.
+    // They download in parallel and run in order (async = false).
+    (function () {
+      function load() {
+        ["js/vendor/gsap.min.js", "js/vendor/ScrollTrigger.min.js", "js/vendor/SplitText.min.js", "js/vendor/lenis.min.js", "js/experience.js"].forEach(function (src) {
+          var s = document.createElement("script"); s.src = src; s.async = false; document.body.appendChild(s);
+        });
+      }
+      // wait for the first idle moment after load, so the first view has fully painted
+      function idle() { (window.requestIdleCallback || function (f) { setTimeout(f, 300); })(load, { timeout: 500 }); }
+      if (document.readyState === "complete") idle(); else addEventListener("load", idle);
+    })();
+  </script>
 </body>
 </html>

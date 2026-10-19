@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Collections | Mayza Design</title>
   <meta name="description" content="Cultural wear, modern fashion, streetwear and children's clothing by Mayza Design, Addis Ababa.">
   <meta property="og:title" content="Collections | Mayza Design">
@@ -11,22 +11,96 @@
   <meta property="og:site_name" content="Mayza Design">
   <meta property="og:type" content="website">
   <meta property="og:image" content="images/backdrop-trio.jpg">
-  <link rel="icon" href="images/logo.jpg" type="image/jpeg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500;6..96,600&family=Figtree:wght@400;500;600&family=Noto+Sans+Ethiopic:wght@400;600&family=Noto+Serif+Ethiopic:wght@500;600&display=swap">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="am_ET">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Collections | Mayza Design">
+  <meta name="twitter:description" content="Cultural wear, modern fashion, streetwear and children's clothing by Mayza Design, Addis Ababa.">
+  <meta name="twitter:image" content="images/backdrop-trio.jpg">
+  <link rel="icon" href="images/logo-160.png" type="image/png">
+  <link rel="apple-touch-icon" href="images/logo-160.png">
+  <link rel="preload" href="fonts/bodoni-moda-normal-500-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/manrope-normal-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <style>/* self-hosted fonts, see css/fonts.css */ @font-face { font-family: 'Bodoni Moda'; font-style: italic; font-weight: 500; font-display: swap; src: url(../fonts/bodoni-moda-italic-500-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face { font-family: 'Bodoni Moda'; font-style: italic; font-weight: 500; font-display: swap; src: url(../fonts/bodoni-moda-italic-500-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face { font-family: 'Bodoni Moda'; font-style: normal; font-weight: 500; font-display: swap; src: url(../fonts/bodoni-moda-normal-500-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face { font-family: 'Bodoni Moda'; font-style: normal; font-weight: 500; font-display: swap; src: url(../fonts/bodoni-moda-normal-500-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face { font-family: 'Manrope'; font-style: normal; font-weight: 400; font-display: swap; src: url(../fonts/manrope-normal-400-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face { font-family: 'Manrope'; font-style: normal; font-weight: 400; font-display: swap; src: url(../fonts/manrope-normal-400-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face { font-family: 'Manrope'; font-style: normal; font-weight: 500; font-display: swap; src: url(../fonts/manrope-normal-400-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face { font-family: 'Manrope'; font-style: normal; font-weight: 500; font-display: swap; src: url(../fonts/manrope-normal-400-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face { font-family: 'Manrope'; font-style: normal; font-weight: 600; font-display: swap; src: url(../fonts/manrope-normal-400-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face { font-family: 'Manrope'; font-style: normal; font-weight: 600; font-display: swap; src: url(../fonts/manrope-normal-400-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face { font-family: 'Manrope'; font-style: normal; font-weight: 700; font-display: swap; src: url(../fonts/manrope-normal-400-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face { font-family: 'Manrope'; font-style: normal; font-weight: 700; font-display: swap; src: url(../fonts/manrope-normal-400-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face { font-family: 'Noto Sans Ethiopic'; font-style: normal; font-weight: 400; font-stretch: 100%; font-display: swap; src: url(../fonts/noto-sans-ethiopic-normal-400-ethiopic.woff2) format('woff2'); unicode-range: U+030E, U+1200-1399, U+2D80-2DDE, U+AB01-AB2E, U+1E7E0-1E7E6, U+1E7E8-1E7EB, U+1E7ED-1E7EE, U+1E7F0-1E7FE;
+}
+
+@font-face { font-family: 'Noto Sans Ethiopic'; font-style: normal; font-weight: 600; font-stretch: 100%; font-display: swap; src: url(../fonts/noto-sans-ethiopic-normal-400-ethiopic.woff2) format('woff2'); unicode-range: U+030E, U+1200-1399, U+2D80-2DDE, U+AB01-AB2E, U+1E7E0-1E7E6, U+1E7E8-1E7EB, U+1E7ED-1E7EE, U+1E7F0-1E7FE;
+}
+
+@font-face { font-family: 'Noto Serif Ethiopic'; font-style: normal; font-weight: 500; font-stretch: 100%; font-display: swap; src: url(../fonts/noto-serif-ethiopic-normal-500-ethiopic.woff2) format('woff2'); unicode-range: U+030E, U+1200-1399, U+2D80-2DDE, U+AB01-AB2E, U+1E7E0-1E7E6, U+1E7E8-1E7EB, U+1E7ED-1E7EE, U+1E7F0-1E7FE;
+}
+
+@font-face { font-family: 'Noto Serif Ethiopic'; font-style: normal; font-weight: 600; font-stretch: 100%; font-display: swap; src: url(../fonts/noto-serif-ethiopic-normal-500-ethiopic.woff2) format('woff2'); unicode-range: U+030E, U+1200-1399, U+2D80-2DDE, U+AB01-AB2E, U+1E7E0-1E7E6, U+1E7E8-1E7EB, U+1E7ED-1E7EE, U+1E7F0-1E7FE;
+}</style>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="preload" as="image" type="image/avif" imagesrcset="images/cultural-trio-480.avif 480w, images/cultural-trio-800.avif 800w, images/cultural-trio.avif 1086w" imagesizes="100vw" fetchpriority="high">
+  <script>
+    // Decide before first paint: preloader once per visit, motion only when the visitor allows it.
+    (function () {
+      var d = document.documentElement, calm = matchMedia("(prefers-reduced-motion: reduce)").matches, seen = false;
+      try { seen = sessionStorage.getItem("mz-seen") === "1"; if (!calm && sessionStorage.getItem("mz-curtain") === "1") d.classList.add("curtain-in"); } catch (e) {}
+      var small = matchMedia("(max-width: 860px)").matches, save = navigator.connection && navigator.connection.saveData;
+      if (seen || calm || small || save) d.classList.add("no-pre");
+      if (!calm) { d.classList.add("fx"); window.__fxFailsafe = setTimeout(function () { d.classList.remove("fx", "curtain-in"); d.classList.add("pre-done"); }, 4000); }
+    })();
+  </script>
 </head>
 <body>
   <a class="skip" href="#main" data-am="ወደ ዋናው ይዘት ይሂዱ">Skip to content</a>
+  <div class="pre" aria-hidden="true">
+    <div class="pre-inner">
+      <img class="pre-logo" src="images/logo-160.webp" alt="" width="74" height="74">
+      <div class="pre-word"><span>Mayza</span><span> </span><span>Design</span></div>
+      <div class="pre-band"></div>
+    </div>
+  </div>
+  <div class="curtain" aria-hidden="true"><i></i><i></i></div>
+  <div class="cursor" aria-hidden="true"><div class="cursor-ring"><span>View</span></div><div class="cursor-dot"></div></div>
   <header class="site-header" id="site-header"></header>
 
   <main id="main">
-    <section class="field page-head">
+    <section class="page-head" data-head>
+      <div class="page-head-media" aria-hidden="true"><figure class="frame" data-parallax><picture><source type="image/avif" srcset="images/cultural-trio-480.avif 480w, images/cultural-trio-800.avif 800w, images/cultural-trio.avif 1086w" sizes="100vw"><source type="image/webp" srcset="images/cultural-trio-480.webp 480w, images/cultural-trio-800.webp 800w, images/cultural-trio.webp 1086w" sizes="100vw"><img src="images/cultural-trio.jpg" alt="" width="1086" height="1448" fetchpriority="high" decoding="async"></picture></figure></div>
       <div class="wrap">
-        <span class="eyebrow" data-cms="collections.head.eyebrow" data-cms-label="Small line" data-cms-label-am="አጭር መስመር" data-am="ስብስቦች">Collections</span>
-        <h1 data-cms="collections.head.title" data-cms-label="Headline" data-cms-label-am="ዋና ርዕስ" data-am="አራት መስመሮች፣ አንድ እጅ።">Four lines, one hand.</h1>
-        <p data-cms="collections.head.text" data-cms-label="Paragraph" data-cms-label-am="አንቀጽ" data-am="እያንዳንዱ ልብስ በትዕዛዝ ይሰፋል፤ ቀለም፣ ጥለት እና ልኬት በእርስዎ ምርጫ ይስተካከላል።">Every piece is made to order, so colour, trim and fit can be adjusted to you.</p>
+        <span class="eyebrow" data-reveal data-cms="collections.head.eyebrow" data-cms-label="Small line" data-cms-label-am="አጭር መስመር" data-am="ስብስቦች">Collections</span>
+        <h1 data-split data-cms="collections.head.title" data-cms-label="Headline" data-cms-label-am="ዋና ርዕስ" data-am="አራት መስመሮች፣ አንድ እጅ።">Four lines, one hand.</h1>
+        <p data-reveal data-cms="collections.head.text" data-cms-label="Paragraph" data-cms-label-am="አንቀጽ" data-am="እያንዳንዱ ልብስ በትዕዛዝ ይሰፋል፤ ቀለም፣ ጥለት እና ልኬት በእርስዎ ምርጫ ይስተካከላል።">Every piece is made to order, so colour, trim and fit can be adjusted to you.</p>
       </div>
     </section>
     <div class="band"></div>
@@ -36,15 +110,14 @@
 
         <article class="split" id="cultural">
           <div class="shots many">
-            <figure class="shot"><img src="images/cultural-trio.jpg" alt="Three men in Mayza jacket and trouser sets with red, yellow and black cultural woven panels" loading="lazy"></figure>
-            <figure class="shot"><img src="images/embroidered-set.jpg" alt="White shirt and trouser set with red and black cultural embroidery" loading="lazy"></figure>
-            <figure class="shot"><img src="images/cultural-duo.jpg" alt="Two men in jackets and a tweed set trimmed with red, yellow and black cultural bands" loading="lazy"></figure>
-            <figure class="shot"><img src="images/trim-shirt.jpg" alt="White shirt with a yellow and black woven cultural trim" loading="lazy"></figure>
-            
+              <figure class="frame" data-wipe data-parallax data-cursor="view"><picture><source type="image/avif" srcset="images/cultural-trio-480.avif 480w, images/cultural-trio-800.avif 800w, images/cultural-trio.avif 1086w" sizes="(max-width: 860px) 100vw, 40vw"><source type="image/webp" srcset="images/cultural-trio-480.webp 480w, images/cultural-trio-800.webp 800w, images/cultural-trio.webp 1086w" sizes="(max-width: 860px) 100vw, 40vw"><img src="images/cultural-trio.jpg" alt="Three men in Mayza jacket and trouser sets with red, yellow and black cultural woven panels" width="1086" height="1448" loading="lazy" decoding="async"></picture></figure>
+              <figure class="frame" data-wipe data-parallax data-cursor="view"><picture><source type="image/avif" srcset="images/embroidered-set-480.avif 360w" sizes="(max-width: 860px) 100vw, 40vw"><source type="image/webp" srcset="images/embroidered-set-480.webp 360w" sizes="(max-width: 860px) 100vw, 40vw"><img src="images/embroidered-set.jpg" alt="White shirt and trouser set with red and black cultural embroidery" width="360" height="640" loading="lazy" decoding="async"></picture></figure>
+              <figure class="frame" data-wipe data-parallax data-cursor="view"><picture><source type="image/avif" srcset="images/cultural-duo-480.avif 480w" sizes="(max-width: 860px) 100vw, 40vw"><source type="image/webp" srcset="images/cultural-duo-480.webp 480w" sizes="(max-width: 860px) 100vw, 40vw"><img src="images/cultural-duo.jpg" alt="Two men in jackets and a tweed set trimmed with red, yellow and black cultural bands" width="480" height="640" loading="lazy" decoding="async"></picture></figure>
+              <figure class="frame" data-wipe data-parallax data-cursor="view"><picture><source type="image/avif" srcset="images/trim-shirt-480.avif 360w" sizes="(max-width: 860px) 100vw, 40vw"><source type="image/webp" srcset="images/trim-shirt-480.webp 360w" sizes="(max-width: 860px) 100vw, 40vw"><img src="images/trim-shirt.jpg" alt="White shirt with a yellow and black woven cultural trim" width="360" height="640" loading="lazy" decoding="async"></picture></figure>
           </div>
-          <div class="stack">
-            <span class="eyebrow" style="color:var(--red)" data-am="መስመር አንድ">Line one</span>
-            <h2 data-am="ባህላዊ አልባሳት">Cultural wear</h2>
+          <div class="stack" data-reveal>
+            <span class="eyebrow" data-am="መስመር አንድ">Line one</span>
+            <h2 data-split data-am="ባህላዊ አልባሳት">Cultural wear</h2>
             <p class="lede" data-am="የሲዳማን ጨምሮ የኢትዮጵያ ባህላዊ ቀለሞችና ጥለቶች፣ በቀሚስ፣ በጃኬት እና በሙሉ ልብስ ላይ በጥንቃቄ ተሰርተው።">The colours and woven bands of Ethiopian cultural dress, Sidama among them, worked into dresses, jackets and sets.</p>
             <ul class="tags">
               <li data-am="የሴቶች ቀሚስ">Women's dresses</li>
@@ -53,18 +126,17 @@
               <li data-am="የጥንዶች ልብስ">Couples' outfits</li>
               <li data-am="ለበዓል እና ለሰርግ">Holiday and wedding</li>
             </ul>
-            <div class="btn-row"><a class="btn red" href="custom.html?line=cultural#order" data-am="ይህን ይዘዙ">Order this line</a></div>
+            <div class="btn-row"><a class="btn red magnetic" href="custom.html?line=cultural#order" data-am="ይህን ይዘዙ">Order this line</a></div>
           </div>
         </article>
-
         <article class="split" id="modern">
           <div class="shots">
-            <figure class="shot"><img src="images/backdrop-duo.jpg" alt="Two men at the Mayza studio, one in a white vest and trouser set" loading="lazy"></figure>
-            <figure class="shot square"><img src="images/burgundy-jacket.jpg" alt="Burgundy leather jacket at the Mayza studio" loading="lazy"></figure>
+              <figure class="frame" data-wipe data-parallax data-cursor="view"><picture><source type="image/avif" srcset="images/backdrop-duo-480.avif 480w, images/backdrop-duo-800.avif 800w, images/backdrop-duo.avif 1536w" sizes="(max-width: 860px) 100vw, 40vw"><source type="image/webp" srcset="images/backdrop-duo-480.webp 480w, images/backdrop-duo-800.webp 800w, images/backdrop-duo.webp 1536w" sizes="(max-width: 860px) 100vw, 40vw"><img src="images/backdrop-duo.jpg" alt="Two men at the Mayza studio, one in a white vest and trouser set" width="1536" height="2048" loading="lazy" decoding="async"></picture></figure>
+              <figure class="frame" data-wipe data-parallax data-cursor="view"><picture><source type="image/avif" srcset="images/burgundy-jacket-480.avif 360w" sizes="(max-width: 860px) 100vw, 40vw"><source type="image/webp" srcset="images/burgundy-jacket-480.webp 360w" sizes="(max-width: 860px) 100vw, 40vw"><img src="images/burgundy-jacket.jpg" alt="Burgundy leather jacket at the Mayza studio" width="360" height="640" loading="lazy" decoding="async"></picture></figure>
           </div>
-          <div class="stack">
-            <span class="eyebrow" style="color:var(--red)" data-am="መስመር ሁለት">Line two</span>
-            <h2 data-am="ዘመናዊ ፋሽን">Modern fashion</h2>
+          <div class="stack" data-reveal>
+            <span class="eyebrow" data-am="መስመር ሁለት">Line two</span>
+            <h2 data-split data-am="ዘመናዊ ፋሽን">Modern fashion</h2>
             <p class="lede" data-am="ቀላል እና ንጹህ ቅርጽ ያላቸው ዘመናዊ ልብሶች፤ ለስራ፣ ለዝግጅት እና ለመድረክ።">Simple, sharply cut contemporary pieces for work, events and the stage.</p>
             <ul class="tags">
               <li data-am="ሙሉ ልብሶች">Matching sets</li>
@@ -72,20 +144,19 @@
               <li data-am="ቀሚሶች">Dresses</li>
               <li data-am="ለአርቲስቶች">Artist styling</li>
             </ul>
-            <div class="btn-row"><a class="btn red" href="custom.html?line=modern#order" data-am="ይህን ይዘዙ">Order this line</a></div>
+            <div class="btn-row"><a class="btn red magnetic" href="custom.html?line=modern#order" data-am="ይህን ይዘዙ">Order this line</a></div>
           </div>
         </article>
-
         <article class="split" id="streetwear">
           <div class="shots many">
-            <figure class="shot"><img src="images/leather-jacket.jpg" alt="Black leather jacket worn with cream trousers" loading="lazy"></figure>
-            <figure class="shot"><img src="images/denim-set.jpg" alt="Dark denim jacket and trouser set with contrast stitching" loading="lazy"></figure>
-            <figure class="shot"><img src="images/stripe-bomber.jpg" alt="Bomber jacket with red, black and yellow woven stripe panels" loading="lazy"></figure>
-            <figure class="shot"><img src="images/stadium-trio.jpg" alt="Three men in Mayza streetwear, one in a patterned two-piece set" loading="lazy"></figure>
+              <figure class="frame" data-wipe data-parallax data-cursor="view"><picture><source type="image/avif" srcset="images/leather-jacket-480.avif 480w, images/leather-jacket-800.avif 800w, images/leather-jacket.avif 1536w" sizes="(max-width: 860px) 100vw, 40vw"><source type="image/webp" srcset="images/leather-jacket-480.webp 480w, images/leather-jacket-800.webp 800w, images/leather-jacket.webp 1536w" sizes="(max-width: 860px) 100vw, 40vw"><img src="images/leather-jacket.jpg" alt="Black leather jacket worn with cream trousers" width="1536" height="2048" loading="lazy" decoding="async"></picture></figure>
+              <figure class="frame" data-wipe data-parallax data-cursor="view"><picture><source type="image/avif" srcset="images/denim-set-480.avif 480w" sizes="(max-width: 860px) 100vw, 40vw"><source type="image/webp" srcset="images/denim-set-480.webp 480w" sizes="(max-width: 860px) 100vw, 40vw"><img src="images/denim-set.jpg" alt="Dark denim jacket and trouser set with contrast stitching" width="480" height="640" loading="lazy" decoding="async"></picture></figure>
+              <figure class="frame" data-wipe data-parallax data-cursor="view"><picture><source type="image/avif" srcset="images/stripe-bomber-480.avif 480w, images/stripe-bomber-800.avif 800w, images/stripe-bomber.avif 1013w" sizes="(max-width: 860px) 100vw, 40vw"><source type="image/webp" srcset="images/stripe-bomber-480.webp 480w, images/stripe-bomber-800.webp 800w, images/stripe-bomber.webp 1013w" sizes="(max-width: 860px) 100vw, 40vw"><img src="images/stripe-bomber.jpg" alt="Bomber jacket with red, black and yellow woven stripe panels" width="1013" height="1350" loading="lazy" decoding="async"></picture></figure>
+              <figure class="frame" data-wipe data-parallax data-cursor="view"><picture><source type="image/avif" srcset="images/stadium-trio-480.avif 480w, images/stadium-trio-800.avif 800w, images/stadium-trio.avif 1080w" sizes="(max-width: 860px) 100vw, 40vw"><source type="image/webp" srcset="images/stadium-trio-480.webp 480w, images/stadium-trio-800.webp 800w, images/stadium-trio.webp 1080w" sizes="(max-width: 860px) 100vw, 40vw"><img src="images/stadium-trio.jpg" alt="Three men in Mayza streetwear, one in a patterned two-piece set" width="1080" height="1164" loading="lazy" decoding="async"></picture></figure>
           </div>
-          <div class="stack">
-            <span class="eyebrow" style="color:var(--red)" data-am="መስመር ሶስት">Line three</span>
-            <h2 data-am="ስትሪትዌር እና ልዩ ህትመት">Streetwear and custom apparel</h2>
+          <div class="stack" data-reveal>
+            <span class="eyebrow" data-am="መስመር ሶስት">Line three</span>
+            <h2 data-split data-am="ስትሪትዌር እና ልዩ ህትመት">Streetwear and custom apparel</h2>
             <p class="lede" data-am="የማይዛ ምልክት ያረፈባቸው የዕለት ልብሶች፤ እንዲሁም ለቡድን፣ ለድርጅት እና ለዝግጅት በራስዎ ዲዛይን የሚዘጋጁ።">Everyday pieces carrying the Mayza mark, plus apparel made to your own design for teams, companies and events.</p>
             <ul class="tags">
               <li data-am="ቲሸርት">T-shirts</li>
@@ -93,36 +164,35 @@
               <li data-am="የቡድን ልብስ">Group orders</li>
               <li data-am="የራስዎ ዲዛይን">Your own artwork</li>
             </ul>
-            <div class="btn-row"><a class="btn red" href="custom.html?line=street#order" data-am="ይህን ይዘዙ">Order this line</a></div>
+            <div class="btn-row"><a class="btn red magnetic" href="custom.html?line=street#order" data-am="ይህን ይዘዙ">Order this line</a></div>
           </div>
         </article>
-
         <article class="split" id="children">
           <div class="shots">
-            <figure class="shot"><img class="pos-l" src="images/child-dress.jpg" alt="Child's cream cultural dress with a striped woven bodice" loading="lazy"></figure>
+              <figure class="frame" data-wipe data-parallax data-cursor="view"><picture><source type="image/avif" srcset="images/child-dress-480.avif 480w, images/child-dress-800.avif 800w, images/child-dress.avif 1122w" sizes="(max-width: 860px) 100vw, 40vw"><source type="image/webp" srcset="images/child-dress-480.webp 480w, images/child-dress-800.webp 800w, images/child-dress.webp 1122w" sizes="(max-width: 860px) 100vw, 40vw"><img class="pos-l" src="images/child-dress.jpg" alt="Child's cream cultural dress with a striped woven bodice" width="1122" height="1402" loading="lazy" decoding="async"></picture></figure>
           </div>
-          <div class="stack">
-            <span class="eyebrow" style="color:var(--red)" data-am="መስመር አራት">Line four</span>
-            <h2 data-am="የልጆች እና የቤተሰብ">Children and family</h2>
+          <div class="stack" data-reveal>
+            <span class="eyebrow" data-am="መስመር አራት">Line four</span>
+            <h2 data-split data-am="የልጆች እና የቤተሰብ">Children and family</h2>
             <p class="lede" data-am="ለልጆች የተዘጋጁ ትናንሽ የባህል ቀሚሶች፣ እና መላ ቤተሰብ አንድ ላይ የሚለብሳቸው ተመሳሳይ ልብሶች።">Cultural dresses scaled down for little ones, and matching outfits a whole family can wear together.</p>
             <ul class="tags">
               <li data-am="የልጆች ቀሚስ">Girls' dresses</li>
               <li data-am="የወንድ ልጆች ልብስ">Boys' sets</li>
               <li data-am="የቤተሰብ ተመሳሳይ ልብስ">Family matching</li>
             </ul>
-            <div class="btn-row"><a class="btn red" href="custom.html?line=cultural&who=child#order" data-am="ይህን ይዘዙ">Order this line</a></div>
+            <div class="btn-row"><a class="btn red magnetic" href="custom.html?line=cultural&who=child#order" data-am="ይህን ይዘዙ">Order this line</a></div>
           </div>
         </article>
 
       </div>
     </section>
 
-    <section class="section tint" id="pieces">
+    <section class="section is-tint cv" id="pieces">
       <div class="wrap">
         <div class="section-head">
-          <span class="eyebrow" data-cms="collections.pieces.eyebrow" data-cms-label="Small line" data-cms-label-am="አጭር መስመር" data-am="ምርቶቻችን">The pieces</span>
-          <h2 data-cms="collections.pieces.title" data-cms-label="Heading" data-cms-label-am="ርዕስ" data-am="ይምረጡ፣ በልክዎ እንሰፋዋለን">Pick a piece, we make it in your size</h2>
-          <p class="lede" data-cms="collections.pieces.text" data-cms-label="Paragraph" data-cms-label-am="አንቀጽ" data-am="የወደዱትን ልብስ ይምረጡ፤ ቀለሙንና ልኬቱን በትዕዛዝ ቅጹ ላይ እናስተካክላለን።">Choose a piece you like. We adjust the colour and fit on the order sheet.</p>
+          <span class="eyebrow" data-reveal data-cms="collections.pieces.eyebrow" data-cms-label="Small line" data-cms-label-am="አጭር መስመር" data-am="ምርቶቻችን">The pieces</span>
+          <h2 data-split data-cms="collections.pieces.title" data-cms-label="Heading" data-cms-label-am="ርዕስ" data-am="ይምረጡ፣ በልክዎ እንሰፋዋለን">Pick a piece, we make it in your size</h2>
+          <p class="lede" data-reveal data-cms="collections.pieces.text" data-cms-label="Paragraph" data-cms-label-am="አንቀጽ" data-am="የወደዱትን ልብስ ይምረጡ፤ ቀለሙንና ልኬቱን በትዕዛዝ ቅጹ ላይ እናስተካክላለን።">Choose a piece you like. We adjust the colour and fit on the order sheet.</p>
         </div>
         <div class="filters" id="piece-filters" role="group" aria-label="Filter by collection">
           <button type="button" class="filter" data-line="all" aria-pressed="true" data-am="ሁሉም">All</button>
@@ -132,19 +202,32 @@
           <button type="button" class="filter" data-line="children" aria-pressed="false" data-am="ልጆች">Children</button>
         </div>
         <div class="pieces" id="pieces-grid" aria-live="polite"></div>
-        <div class="btn-row" style="margin-top:32px">
-          <a class="btn" href="https://web.facebook.com/sidamaCulture" target="_blank" rel="noopener" data-am="በፌስቡክ ተጨማሪ ይመልከቱ">More on Facebook</a>
-          <a class="btn ghost" href="https://www.tiktok.com/@mayza_design" target="_blank" rel="noopener" data-am="በቲክቶክ ይመልከቱ">Watch on TikTok</a>
+        <div class="btn-row" style="margin-top:56px">
+          <a class="btn magnetic" href="https://web.facebook.com/sidamaCulture" target="_blank" rel="noopener" data-am="በፌስቡክ ተጨማሪ ይመልከቱ">More on Facebook</a>
+          <a class="btn ghost magnetic" href="https://www.tiktok.com/@mayza_design" target="_blank" rel="noopener" data-am="በቲክቶክ ይመልከቱ">Watch on TikTok</a>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer" id="site-footer"></footer>
-  <script src="js/config.js"></script>
-  <script src="js/store.js"></script>
-  <script src="js/main.js"></script>
-  <script src="js/motion.js"></script>
-  <script src="js/site.js"></script>
+  <script src="js/config.js" defer></script>
+  <script src="js/store.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/site.js" defer></script>
+  <script>
+    // Motion libraries load once the page has fully loaded, so they never hold up the first view.
+    // They download in parallel and run in order (async = false).
+    (function () {
+      function load() {
+        ["js/vendor/gsap.min.js", "js/vendor/ScrollTrigger.min.js", "js/vendor/SplitText.min.js", "js/vendor/lenis.min.js", "js/experience.js"].forEach(function (src) {
+          var s = document.createElement("script"); s.src = src; s.async = false; document.body.appendChild(s);
+        });
+      }
+      // wait for the first idle moment after load, so the first view has fully painted
+      function idle() { (window.requestIdleCallback || function (f) { setTimeout(f, 300); })(load, { timeout: 500 }); }
+      if (document.readyState === "complete") idle(); else addEventListener("load", idle);
+    })();
+  </script>
 </body>
 </html>

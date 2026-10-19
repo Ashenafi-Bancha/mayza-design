@@ -5,7 +5,8 @@ const { Pool } = require("pg");
 let pool;
 
 function configured() {
-  return Boolean(process.env.DATABASE_URL);
+  const url = process.env.DATABASE_URL || "";
+  return Boolean(url) && !url.includes("YOUR_PASSWORD"); // the .env placeholder means "not set up yet"
 }
 
 function getPool() {
@@ -23,6 +24,8 @@ function getPool() {
       max: Number(process.env.PG_POOL_MAX || 3),
       idleTimeoutMillis: 10000,
     });
+    // An idle connection dropped by the database (restart, network blip) must not crash the server.
+    pool.on("error", (err) => console.error("PostgreSQL connection lost:", err.message));
   }
   return pool;
 }

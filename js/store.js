@@ -92,6 +92,85 @@
     P("seed-12", "stripe-fleece", "streetwear", "Cultural band fleece jacket", "የባህል ጥለት ያለው ፍሊስ ጃኬት", false, 12),
   ];
 
+  const SEED_COLLECTIONS = [
+    {
+      "slug": "cultural",
+      "name_en": "Cultural wear",
+      "name_am": "ባህላዊ አልባሳት",
+      "tagline_en": "Line one",
+      "tagline_am": "መስመር አንድ",
+      "summary_en": "Dresses and sets finished with red, black and yellow woven bands.",
+      "summary_am": "በቀይ፣ በጥቁር እና በቢጫ ጥለት ያጌጡ የባህል ልብሶች።",
+      "description_en": "The colours and woven bands of Ethiopian cultural dress, Sidama among them, worked into dresses, jackets and sets.",
+      "description_am": "የሲዳማን ጨምሮ የኢትዮጵያ ባህላዊ ቀለሞችና ጥለቶች፣ በቀሚስ፣ በጃኬት እና በሙሉ ልብስ ላይ በጥንቃቄ ተሰርተው።",
+      "tags_en": "Women's dresses, Stripe-panel jackets, Men's sets, Couples' outfits, Holiday and wedding",
+      "tags_am": "የሴቶች ቀሚስ, ጥለት ያላቸው ጃኬቶች, የወንዶች ሙሉ ልብስ, የጥንዶች ልብስ, ለበዓል እና ለሰርግ",
+      "image_url": "images/cultural-trio.jpg",
+      "sort": 1,
+      "visible": true,
+      "on_home": true,
+      "id": "col-cultural",
+      "created_at": "2026-10-01T09:00:00Z"
+    },
+    {
+      "slug": "modern",
+      "name_en": "Modern fashion",
+      "name_am": "ዘመናዊ ፋሽን",
+      "tagline_en": "Line two",
+      "tagline_am": "መስመር ሁለት",
+      "summary_en": "Clean, contemporary cuts for everyday wear and for occasions.",
+      "summary_am": "ንጹህ ቅርጽ ያላቸው፣ ለዕለት ተዕለት እና ለዝግጅት የሚሆኑ ልብሶች።",
+      "description_en": "Simple, sharply cut contemporary pieces for work, events and the stage.",
+      "description_am": "ቀላል እና ንጹህ ቅርጽ ያላቸው ዘመናዊ ልብሶች፤ ለስራ፣ ለዝግጅት እና ለመድረክ።",
+      "tags_en": "Matching sets, Vests and trousers, Dresses, Artist styling",
+      "tags_am": "ሙሉ ልብሶች, ሰደርያ እና ሱሪ, ቀሚሶች, ለአርቲስቶች",
+      "image_url": "images/backdrop-duo.jpg",
+      "sort": 2,
+      "visible": true,
+      "on_home": true,
+      "id": "col-modern",
+      "created_at": "2026-10-01T09:00:00Z"
+    },
+    {
+      "slug": "streetwear",
+      "name_en": "Streetwear and custom apparel",
+      "name_am": "ስትሪትዌር እና ልዩ ህትመት",
+      "tagline_en": "Line three",
+      "tagline_am": "መስመር ሶስት",
+      "summary_en": "Tees and casual pieces carrying the Mayza mark.",
+      "summary_am": "የማይዛ ምልክት ያረፈባቸው ቲሸርቶች እና የዕለት ልብሶች።",
+      "description_en": "Everyday pieces carrying the Mayza mark, plus apparel made to your own design for teams, companies and events.",
+      "description_am": "የማይዛ ምልክት ያረፈባቸው የዕለት ልብሶች፤ እንዲሁም ለቡድን፣ ለድርጅት እና ለዝግጅት በራስዎ ዲዛይን የሚዘጋጁ።",
+      "tags_en": "T-shirts, Hoodies, Group orders, Your own artwork",
+      "tags_am": "ቲሸርት, ሁዲ, የቡድን ልብስ, የራስዎ ዲዛይን",
+      "image_url": "images/leather-jacket.jpg",
+      "sort": 3,
+      "visible": true,
+      "on_home": true,
+      "id": "col-streetwear",
+      "created_at": "2026-10-01T09:00:00Z"
+    },
+    {
+      "slug": "children",
+      "name_en": "Children and family",
+      "name_am": "የልጆች እና የቤተሰብ",
+      "tagline_en": "Line four",
+      "tagline_am": "መስመር አራት",
+      "summary_en": "",
+      "summary_am": "",
+      "description_en": "Cultural dresses scaled down for little ones, and matching outfits a whole family can wear together.",
+      "description_am": "ለልጆች የተዘጋጁ ትናንሽ የባህል ቀሚሶች፣ እና መላ ቤተሰብ አንድ ላይ የሚለብሳቸው ተመሳሳይ ልብሶች።",
+      "tags_en": "Girls' dresses, Boys' sets, Family matching",
+      "tags_am": "የልጆች ቀሚስ, የወንድ ልጆች ልብስ, የቤተሰብ ተመሳሳይ ልብስ",
+      "image_url": "images/child-dress.jpg",
+      "sort": 4,
+      "visible": true,
+      "on_home": false,
+      "id": "col-children",
+      "created_at": "2026-10-01T09:00:00Z"
+    }
+  ];
+
   const daysFromNow = (d) => new Date(Date.now() + d * 864e5).toISOString().slice(0, 10);
   const SAMPLE_ORDERS = () => [
     { id: "demo-1", ref: "MZ4K7Q", created_at: new Date(Date.now() - 2 * 36e5).toISOString(), name: "Sample: Hanna G.", phone: "0911000001", garment: "cultural", who: "woman", needed_by: daysFromNow(12), measurements: { chest: "88", waist: "70" }, notes: "Wedding guest dress, red and gold.", product_id: "seed-02", product_name: "Embroidered white set", source: "website", status: "new", price: null, deposit: null, admin_notes: "" },
@@ -128,9 +207,20 @@
     read() {
       try {
         const raw = localStorage.getItem(DEMO_KEY);
-        if (raw) return JSON.parse(raw);
+        if (raw) {
+          const d = JSON.parse(raw);
+          d.collections = d.collections || SEED_COLLECTIONS.map((c) => ({ ...c }));
+          d.content = d.content || {};
+          return d;
+        }
       } catch (e) {}
-      return { settings: { ...DEFAULT_SETTINGS }, products: SEED_PRODUCTS.map((p) => ({ ...p })), orders: SAMPLE_ORDERS() };
+      return {
+        settings: { ...DEFAULT_SETTINGS },
+        collections: SEED_COLLECTIONS.map((c) => ({ ...c })),
+        products: SEED_PRODUCTS.map((p) => ({ ...p })),
+        orders: SAMPLE_ORDERS(),
+        content: {},
+      };
     },
     write(db) {
       try {
@@ -212,6 +302,67 @@
       const blob = await resizeImage(file);
       const { url } = await api("/admin/images", { method: "POST", raw: blob });
       return url;
+    },
+
+    // ---------- collections ----------
+    async listCollections({ all = false } = {}) {
+      await ready();
+      let list;
+      if (!LIVE) {
+        const d = demo.read();
+        list = d.collections.map((c) => ({ ...c, product_count: d.products.filter((p) => p.line === c.slug).length }));
+      } else {
+        list = await api(all ? "/admin/collections" : "/collections");
+      }
+      if (!all) list = list.filter((c) => c.visible);
+      return list.slice().sort((a, b) => (a.sort ?? 0) - (b.sort ?? 0) || String(a.created_at).localeCompare(String(b.created_at)));
+    },
+    async saveCollection(c) {
+      await ready();
+      const row = { ...c, sort: Number(c.sort) || 0 };
+      if (!LIVE) {
+        const d = demo.read();
+        if (row.id) d.collections = d.collections.map((x) => (x.id === row.id ? { ...x, ...row, slug: x.slug } : x));
+        else {
+          const base = String(row.name_en).toLowerCase().normalize("NFKD").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 50) || "collection";
+          let slug = base;
+          for (let i = 2; d.collections.some((x) => x.slug === slug); i++) slug = `${base}-${i}`;
+          d.collections.push({ ...row, id: uid(), slug, created_at: new Date().toISOString() });
+        }
+        demo.write(d);
+        return;
+      }
+      const { id, slug, created_at, updated_at, product_count, ...rest } = row;
+      if (id) await api("/admin/collections/" + id, { method: "PUT", body: rest });
+      else await api("/admin/collections", { method: "POST", body: rest });
+    },
+    async deleteCollection(id, moveTo) {
+      await ready();
+      if (!LIVE) {
+        const d = demo.read();
+        const c = d.collections.find((x) => x.id === id);
+        if (!c) return;
+        const n = d.products.filter((p) => p.line === c.slug).length;
+        if (n && !moveTo) throw new Error(`This collection still has ${n} product(s). Choose a collection to move them to.`);
+        d.products.forEach((p) => { if (p.line === c.slug) p.line = moveTo; });
+        d.collections = d.collections.filter((x) => x.id !== id);
+        demo.write(d);
+        return;
+      }
+      await api("/admin/collections/" + id + (moveTo ? "?moveTo=" + encodeURIComponent(moveTo) : ""), { method: "DELETE" });
+    },
+
+    // ---------- website text and photos ----------
+    async getContent() {
+      await ready();
+      if (!LIVE) return { ...demo.read().content };
+      const { data } = await api("/content");
+      return data || {};
+    },
+    async saveContent(map) {
+      await ready();
+      if (!LIVE) { const d = demo.read(); d.content = { ...map }; demo.write(d); return; }
+      await api("/admin/content", { method: "PUT", body: map });
     },
 
     async listOrders() {

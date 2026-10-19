@@ -53,7 +53,7 @@ const GARMENTS = ["cultural", "modern", "street", "group", "other"];
 const WHOS = ["woman", "man", "child", "couple", "family"];
 const STATUSES = ["new", "confirmed", "in_progress", "ready", "delivered", "cancelled"];
 const SOURCES = ["website", "phone", "walk-in", "social"];
-const LINES = ["cultural", "modern", "streetwear", "children"];
+const SLUG = /^[a-z0-9-]{1,60}$/;
 const measurements = z.object({
   chest: z.string().max(10).optional(), waist: z.string().max(10).optional(),
   hip: z.string().max(10).optional(), height: z.string().max(10).optional(),
@@ -85,13 +85,34 @@ const product = z.object({
   name_am: text(120),
   description_en: text(1000),
   description_am: text(1000),
-  line: z.enum(LINES),
+  line: z.string().regex(SLUG, "Choose a collection."),
   price: money,
   image_url: z.string().regex(IMAGE_PATH, "Add a photo for the product."),
   featured: z.coerce.boolean().default(false),
   visible: z.coerce.boolean().default(true),
   sort: z.coerce.number().int().min(-100000).max(100000).default(0),
 });
+const collection = z.object({
+  name_en: z.string().trim().min(1, "Add an English name for the collection.").max(120),
+  name_am: text(120),
+  tagline_en: text(120), tagline_am: text(120),
+  summary_en: text(300), summary_am: text(300),
+  description_en: text(1500), description_am: text(1500),
+  tags_en: text(500), tags_am: text(500),
+  image_url: blankToNull(z.string().regex(IMAGE_PATH, "Choose a cover photo.")),
+  sort: z.coerce.number().int().min(-100000).max(100000).default(0),
+  visible: z.coerce.boolean().default(true),
+  on_home: z.coerce.boolean().default(false),
+});
+const contentEntry = z.object({
+  en: z.string().max(3000).optional(),
+  am: z.string().max(3000).optional(),
+  img: z.string().regex(IMAGE_PATH, "Use a photo uploaded from the admin.").optional(),
+}).strip();
+const contentMap = z.record(z.string().regex(/^[a-z0-9_.-]{1,80}$/, "One of the content fields has a name the website does not use."), contentEntry)
+  .refine((m) => Object.keys(m).length <= 400, "Too many content fields in one save.");
+const slugify = (s) => String(s).toLowerCase().normalize("NFKD").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 50) || "collection";
+
 const settings = z.object({
   phone: text(40), phone2: text(40), whatsapp: text(40), telegram: text(80),
   address_en: text(200), address_am: text(200), hours_en: text(200), hours_am: text(200),
@@ -126,9 +147,16 @@ async function productName(id, fallback) {
 }
 
 const imageId = (url) => { const m = /^\/api\/images\/([0-9a-f-]{36})$/.exec(url || ""); return m ? m[1] : null; };
+// Removes an uploaded photo once nothing on the site uses it any more
+// (a duplicated product or a page section may share the same photo).
 async function dropImage(url) {
   const id = imageId(url);
-  if (id) await db.q("delete from images where id = $1", [id]);
+  if (!id) return;
+  const { rows } = await db.q(
+    `select 1 from products where image_url = $1
+     union all select 1 from collections where image_url = $1
+     union all select 1 from content where data->>'img' = $1 limit 1`, [url]);
+  if (!rows.length) await db.q("delete from images where id = $1", [id]);
 }
 
 // ---------- public ----------
@@ -151,6 +179,18 @@ api.get("/products/:id", h(async (req, res) => {
   const { rows } = await db.q("select * from products where id = $1 and visible", [req.params.id]);
   if (!rows[0]) return res.status(404).json({ error: "Product not found." });
   res.json(rows[0]);
+}));
+
+api.get("/collections", h(async (_req, res) => {
+  const { rows } = await db.q("select * from collections where visible order by sort, created_at");
+  res.set("Cache-Control", "public, max-age=30");
+  res.json(rows);
+}));
+
+api.get("/content", h(async (_req, res) => {
+  const { rows } = await db.q("select key, data from content");
+  res.set("Cache-Control", "public, max-age=30");
+  res.json({ data: Object.fromEntries(rows.map((r) => [r.key, r.data])) });
 }));
 
 api.get("/images/:id", h(async (req, res) => {
@@ -281,6 +321,93 @@ admin.post("/images", express.raw({ type: ["image/jpeg", "image/png", "image/web
   res.status(201).json({ url: `/api/images/${rows[0].id}` });
 }));
 
+admin.get("/collections", h(async (_req, res) => {
+  const { rows } = await db.q(
+    `select c.*, (select count(*)::int from products p where p.line = c.slug) as product_count
+     from collections c order by sort, created_at`);
+  res.json(rows);
+}));
+
+const COLLECTION_COLS = ["name_en", "name_am", "tagline_en", "tagline_am", "summary_en", "summary_am", "description_en", "description_am", "tags_en", "tags_am", "image_url", "sort", "visible", "on_home"];
+
+admin.post("/collections", h(async (req, res) => {
+  const c = collection.parse(req.body);
+  const base = slugify(c.name_en);
+  const { rows: taken } = await db.q("select slug from collections where slug = $1 or slug like $2", [base, base + "-%"]);
+  const used = new Set(taken.map((r) => r.slug));
+  let slug = base;
+  for (let i = 2; used.has(slug); i++) slug = `${base}-${i}`;
+  const { rows } = await db.q(
+    `insert into collections (slug, ${COLLECTION_COLS.join(", ")}) values ($1, ${COLLECTION_COLS.map((_, i) => "$" + (i + 2)).join(", ")}) returning *`,
+    [slug, ...COLLECTION_COLS.map((k) => c[k])]);
+  res.status(201).json(rows[0]);
+}));
+
+admin.put("/collections/:id", h(async (req, res) => {
+  const id = z.string().uuid().parse(req.params.id);
+  const c = collection.parse(req.body);
+  const before = await db.q("select image_url from collections where id = $1", [id]);
+  if (!before.rows[0]) return res.status(404).json({ error: "That collection no longer exists." });
+  const { rows } = await db.q(
+    `update collections set ${COLLECTION_COLS.map((k, i) => `${k} = $${i + 2}`).join(", ")}, updated_at = now() where id = $1 returning *`,
+    [id, ...COLLECTION_COLS.map((k) => c[k])]);
+  if (before.rows[0].image_url !== c.image_url) await dropImage(before.rows[0].image_url);
+  res.json(rows[0]);
+}));
+
+// Deleting a collection that still has products needs somewhere to move them.
+admin.delete("/collections/:id", h(async (req, res) => {
+  const id = z.string().uuid().parse(req.params.id);
+  const moveTo = req.query.moveTo ? z.string().regex(SLUG).parse(req.query.moveTo) : null;
+  const client = await db.getPool().connect();
+  try {
+    await client.query("begin");
+    const { rows } = await client.query("select slug, image_url from collections where id = $1 for update", [id]);
+    if (!rows[0]) { await client.query("rollback"); return res.json({ ok: true }); }
+    const { rows: cnt } = await client.query("select count(*)::int as n from products where line = $1", [rows[0].slug]);
+    if (cnt[0].n) {
+      if (!moveTo || moveTo === rows[0].slug) {
+        await client.query("rollback");
+        return res.status(409).json({ error: `This collection still has ${cnt[0].n} product(s). Choose a collection to move them to.` });
+      }
+      const target = await client.query("select 1 from collections where slug = $1", [moveTo]);
+      if (!target.rows[0]) { await client.query("rollback"); return res.status(400).json({ error: "The collection to move products to does not exist." }); }
+      await client.query("update products set line = $1, updated_at = now() where line = $2", [moveTo, rows[0].slug]);
+    }
+    await client.query("delete from collections where id = $1", [id]);
+    await client.query("commit");
+    await dropImage(rows[0].image_url).catch(() => {});
+    res.json({ ok: true });
+  } catch (err) {
+    await client.query("rollback").catch(() => {});
+    throw err;
+  } finally {
+    client.release();
+  }
+}));
+
+// Saves the whole content map: keys missing from the map go back to the page's original text.
+admin.put("/content", h(async (req, res) => {
+  const map = contentMap.parse(req.body);
+  const entries = Object.entries(map).filter(([, v]) => v.en || v.am || v.img);
+  const client = await db.getPool().connect();
+  try {
+    await client.query("begin");
+    const { rows: old } = await client.query("select data->>'img' as img from content where data ? 'img'");
+    await client.query("delete from content");
+    for (const [key, data] of entries) await client.query("insert into content (key, data) values ($1, $2)", [key, data]);
+    await client.query("commit");
+    const keep = new Set(entries.map(([, v]) => v.img).filter(Boolean));
+    for (const r of old) if (!keep.has(r.img)) await dropImage(r.img).catch(() => {});
+    res.json({ ok: true });
+  } catch (err) {
+    await client.query("rollback").catch(() => {});
+    throw err;
+  } finally {
+    client.release();
+  }
+}));
+
 admin.put("/settings", h(async (req, res) => {
   const data = settings.parse(req.body);
   await db.q("insert into settings (id, data, updated_at) values (1, $1, now()) on conflict (id) do update set data = $1, updated_at = now()", [data]);
@@ -295,6 +422,7 @@ app.use((err, _req, res, _next) => {
   if (err instanceof z.ZodError) return res.status(400).json({ error: err.issues[0].message });
   if (err.type === "entity.too.large") return res.status(413).json({ error: "That file is too large. Use a photo under 4 MB." });
   if (err.type === "entity.parse.failed") return res.status(400).json({ error: "The request could not be read." });
+  if (err.code === "23503") return res.status(400).json({ error: "That collection does not exist any more. Choose another one." });
   const status = err.status || 500;
   if (status >= 500) console.error(err);
   res.status(status).json({ error: status >= 500 && !err.status ? "Something went wrong on the server. Please try again." : err.message });

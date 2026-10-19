@@ -23,9 +23,9 @@ function ask(question, hidden = false) {
     process.exit(1);
   }
   try {
-    const email = (process.argv[2] || (await ask("Email: "))).toLowerCase();
+    const email = (process.argv[2] || process.env.ADMIN_EMAIL || (await ask("Email: "))).toLowerCase();
     if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) throw new Error("That does not look like an email address.");
-    const name = process.argv[3] || (await ask("Name (optional): "));
+    const name = process.argv[3] || (process.env.ADMIN_EMAIL ? "" : await ask("Name (optional): "));
     const password = process.env.ADMIN_PASSWORD || (await ask("Password (8+ characters): ", true));
     if (password.length < 8) throw new Error("Use a password of at least 8 characters.");
     const { rows } = await db.q(

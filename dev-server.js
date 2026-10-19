@@ -23,5 +23,5 @@ site.use((_req, res) => res.status(404).send("Not found"));
 const port = Number(process.env.PORT || 3000);
 site.listen(port, () => {
   console.log(`Mayza Design running at http://localhost:${port}`);
-  if (!process.env.DATABASE_URL) console.log("No DATABASE_URL set: the admin runs in demo mode.");
+  if (!require("./api/_lib/db").configured()) console.log("No database set up in .env yet: the admin runs in demo mode.");
 });

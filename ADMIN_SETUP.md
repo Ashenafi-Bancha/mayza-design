@@ -11,14 +11,13 @@ The admin lives at `/admin`. Until a database is connected, the site runs in **d
 
 Needs Node.js 18+ and PostgreSQL 13+.
 
-1. Create a database, for example in psql: `create database mayza;`
-2. Copy `.env.example` to `.env` and fill in `DATABASE_URL` and `JWT_SECRET`. Generate a secret with:
+1. Copy `.env.example` to `.env` and fill in `DATABASE_URL` and `JWT_SECRET`. Generate a secret with:
 
    ```bash
    node -e "console.log(require('crypto').randomBytes(48).toString('base64url'))"
    ```
 
-3. Install, create the tables, and create the owner's login:
+2. Install, create the database and tables, and create the owner's login (`ADMIN_EMAIL` and `ADMIN_PASSWORD` in `.env` are used if set):
 
    ```bash
    npm install
@@ -26,7 +25,7 @@ Needs Node.js 18+ and PostgreSQL 13+.
    npm run create-admin
    ```
 
-4. Start it with `npm run dev` and open http://localhost:3000 (admin at http://localhost:3000/admin).
+3. Start it with `npm run dev` and open http://localhost:3000 (admin at http://localhost:3000/admin).
 
 `npm run migrate` is safe to run again after updates. It adds the 12 starting products only when the products table is empty.
 
@@ -57,9 +56,11 @@ If the Vercel project's **Framework Preset** ever changes, keep it on **Other** 
 
 | Area | What it does |
 |---|---|
-| **Overview** | New orders, orders in the workshop, orders ready for pickup, value of open orders, deposits received and money still to collect. A "needs attention" list shows new orders and anything due within 3 days. |
-| **Orders** | Orders sent from the website's order sheet arrive here; an open admin checks every 15 seconds and alerts with a sound and a notice. Filter by status, search by name, phone or reference, and export to Excel (CSV). Each order has one-tap Call and WhatsApp buttons, a status (New, Confirmed, In progress, Ready, Delivered, Cancelled), agreed price, deposit, balance and private notes. Phone and walk-in orders can be added by hand. |
-| **Products** | Add, edit, hide or delete pieces with a photo, English and Amharic names and descriptions, collection, price (or "price on request"), featured flag and position. Visible products fill "The pieces" grid on Collections, each with an "Order this" button that carries the piece into the order sheet. |
+| **Overview** | New orders, orders in the workshop, orders ready for pickup, value of open orders, deposits received and money still to collect. A "needs attention" list shows new orders and anything due within 3 days, and a list ranks the most requested pieces. |
+| **Orders** | Orders sent from the website's order sheet arrive here, and each can be printed as a workshop slip; an open admin checks every 15 seconds and alerts with a sound and a notice. Filter by status, search by name, phone or reference, and export to Excel (CSV). Each order has one-tap Call and WhatsApp buttons, a status (New, Confirmed, In progress, Ready, Delivered, Cancelled), agreed price, deposit, balance and private notes. Phone and walk-in orders can be added by hand. |
+| **Collections** | Add, edit, hide, reorder or delete the collections shown on the Collections page and the home page tiles: names, small line, home-page summary, description and tags in English and Amharic, plus a cover photo. Deleting a collection that still has products asks where to move them. |
+| **Website** | A content editor for the main text and photos of every page (home banner, sections, About story and promises, order steps, page headers), side by side in English and Amharic. Empty boxes keep the original wording, each edited field can be restored, and unsaved changes are kept until saved or discarded. |
+| **Products** | Add, edit, duplicate, search, hide or delete pieces with a photo, English and Amharic names and descriptions, collection, price (or "price on request"), featured flag and position. Visible products fill "The pieces" grid on Collections, each with an "Order this" button that carries the piece into the order sheet. |
 | **Settings** | Phone numbers, WhatsApp and Telegram, address and hours (English and Amharic), social links, follower numbers, and an announcement bar across the top of every page. |
 
 The whole admin works on a phone and switches between English and Amharic.
@@ -73,7 +74,8 @@ The whole admin works on a phone and switches between English and Amharic.
 | `GET /api/images/:id` | anyone | Uploaded product photos, cached for a year |
 | `POST /api/orders` | anyone | Place an order from the website (rate-limited, spam trap) |
 | `POST /api/auth/login`, `/logout`, `GET /api/auth/me`, `POST /api/auth/password` | admin | Sign-in and password change |
-| `/api/admin/orders`, `/api/admin/products`, `/api/admin/images`, `/api/admin/settings` | admin | Manage everything above |
+| `GET /api/collections`, `GET /api/content` | anyone | Visible collections and edited page text |
+| `/api/admin/orders`, `/api/admin/products`, `/api/admin/collections`, `/api/admin/content`, `/api/admin/images`, `/api/admin/settings` | admin | Manage everything above |
 
 ## Security notes
 

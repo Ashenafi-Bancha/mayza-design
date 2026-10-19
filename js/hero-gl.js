@@ -65,9 +65,9 @@ const fragment = /* glsl */ `
     color *= 0.86 + diffuse * 0.2;
     color += vec3(0.79, 0.66, 0.42) * sheen * 0.22;
 
-    // gentle vignette so the edges fall into the black page
+    // gentle vignette that warms the edges toward the Mayza red of the page
     float v = smoothstep(1.15, 0.35, length((uv - vec2(0.55, 0.5)) * vec2(1.1, 0.9)));
-    color *= mix(0.55, 1.0, v);
+    color = mix(vec3(0.62, 0.05, 0.09) * (0.6 + 0.4 * color), color, mix(0.35, 1.0, v));
     gl_FragColor = vec4(color, 1.0);
   }
 `;
@@ -75,7 +75,7 @@ const fragment = /* glsl */ `
 export function initHeroGL(container, img, { scrollProgress = () => 0 } = {}) {
   const renderer = new THREE.WebGLRenderer({ antialias: false, alpha: false, powerPreference: "high-performance" });
   renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.6));
-  renderer.setClearColor(0x0e0b0a, 1);
+  renderer.setClearColor(0xc4121f, 1);
   const canvas = renderer.domElement;
   canvas.setAttribute("aria-hidden", "true");
   container.appendChild(canvas);

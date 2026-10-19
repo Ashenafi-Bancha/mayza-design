@@ -281,6 +281,50 @@
     }
   }
 
+  // ---------- branded scrolling: woven progress band and a back-to-top ring ----------
+  const band = document.createElement("div");
+  band.className = "scroll-band";
+  band.setAttribute("aria-hidden", "true");
+  const toTop = document.createElement("button");
+  toTop.type = "button";
+  toTop.className = "to-top";
+  toTop.setAttribute("aria-label", d.lang === "am" ? "ወደ ላይ" : "Back to top");
+  toTop.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"/><path d="m5 12 7-7 7 7"/></svg>';
+  document.body.append(band, toTop);
+  toTop.addEventListener("click", () => (lenis ? lenis.scrollTo(0, { duration: 1.6 }) : window.scrollTo({ top: 0, behavior: "smooth" })));
+  document.addEventListener("langchange", () => toTop.setAttribute("aria-label", d.lang === "am" ? "ወደ ላይ" : "Back to top"));
+  const setProgress = () => {
+    const max = lenis ? lenis.limit : document.documentElement.scrollHeight - innerHeight;
+    const p = max > 0 ? Math.min(1, Math.max(0, scrollY() / max)) : 0;
+    band.style.setProperty("--progress", p.toFixed(4));
+    toTop.style.setProperty("--p", (p * 100).toFixed(1));
+    toTop.classList.toggle("show", scrollY() > innerHeight * 0.8);
+  };
+  (lenis ? lenis.on.bind(lenis, "scroll") : (fn) => addEventListener("scroll", fn, { passive: true }))(setProgress);
+  addEventListener("resize", setProgress);
+  setProgress();
+
+  // ---------- light that follows the cursor ----------
+  if (finePointer) {
+    const glow = document.createElement("div");
+    glow.className = "cursor-light";
+    glow.setAttribute("aria-hidden", "true");
+    document.body.appendChild(glow);
+    const gx = gsap.quickTo(glow, "x", { duration: 0.9, ease: "power3" });
+    const gy = gsap.quickTo(glow, "y", { duration: 0.9, ease: "power3" });
+    addEventListener("pointermove", (e) => { gx(e.clientX); gy(e.clientY); glow.classList.add("on"); }, { passive: true });
+    document.addEventListener("pointerleave", () => glow.classList.remove("on"));
+    // photos and cards catch a highlight right where the pointer is
+    const SPOT = ".frame, .piece-photo, .steps-track li, .made .stack, .promises .stack, .preview, .picked";
+    document.addEventListener("pointermove", (e) => {
+      const el = e.target.closest(SPOT);
+      if (!el) return;
+      const r = el.getBoundingClientRect();
+      el.style.setProperty("--mx", `${e.clientX - r.left}px`);
+      el.style.setProperty("--my", `${e.clientY - r.top}px`);
+    }, { passive: true });
+  }
+
   // ---------- magnetic buttons ----------
   function bindMagnetic(root) {
     root.querySelectorAll(".magnetic").forEach((el) => {

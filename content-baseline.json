@@ -1,0 +1,2097 @@
+{
+ "pages": {
+  "index": {
+   "title": "Mayza Design | Cultural and modern fashion, Addis Ababa",
+   "meta": {
+    "viewport": "width=device-width, initial-scale=1",
+    "description": "Mayza Design creates cultural, modern and custom-made clothing in Addis Ababa, Ethiopia. Order by phone, WhatsApp or Telegram: 0912070949.",
+    "og:title": "Mayza Design | Cultural and modern fashion, Addis Ababa",
+    "og:description": "Mayza Design creates cultural, modern and custom-made clothing in Addis Ababa, Ethiopia. Order by phone, WhatsApp or Telegram: 0912070949.",
+    "theme-color": "#c4121f",
+    "og:site_name": "Mayza Design",
+    "og:type": "website",
+    "og:image": "images/backdrop-trio.jpg"
+   },
+   "sections": [
+    "header:site-header",
+    "main:main",
+    "section:field hero",
+    "div:band",
+    "nav:quick",
+    "section:section",
+    "div:marquee",
+    "section:section dark lookbook",
+    "section:section tint",
+    "section:section dark",
+    "div:band",
+    "section:field cta",
+    "footer:site-footer"
+   ],
+   "items": [
+    {
+     "section": "page",
+     "kind": "link",
+     "href": "#main"
+    },
+    {
+     "section": "page",
+     "kind": "text",
+     "tag": "a",
+     "en": "Skip to content",
+     "am": "ወደ ዋናው ይዘት ይሂዱ"
+    },
+    {
+     "section": "section:field hero",
+     "kind": "text",
+     "tag": "span",
+     "en": "Addis Ababa · Ethiopia",
+     "am": "አዲስ አበባ · ኢትዮጵያ"
+    },
+    {
+     "section": "section:field hero",
+     "kind": "text",
+     "tag": "h1",
+     "en": "Our culture, cut for today.",
+     "am": "ባህላችን፣ በዘመናዊ ስፌት።"
+    },
+    {
+     "section": "section:field hero",
+     "kind": "text",
+     "tag": "p",
+     "en": "Mayza Design brings the colours and weaving of Ethiopian cultural dress into clothing made to your measure, for the way people dress now.",
+     "am": "ማይዛ ዲዛይን ባህላዊ ጥበብን ከዘመናዊ ፋሽን ጋር አዋህዶ፣ በልክዎ የተሰፋ ልብስ ያዘጋጃል።"
+    },
+    {
+     "section": "section:field hero",
+     "kind": "link",
+     "href": "custom.html#order"
+    },
+    {
+     "section": "section:field hero",
+     "kind": "text",
+     "tag": "a",
+     "en": "Start a custom order",
+     "am": "ልዩ ትዕዛዝ ይጀምሩ"
+    },
+    {
+     "section": "section:field hero",
+     "kind": "link",
+     "href": "collections.html"
+    },
+    {
+     "section": "section:field hero",
+     "kind": "text",
+     "tag": "a",
+     "en": "See the collections",
+     "am": "ስብስቦችን ይመልከቱ"
+    },
+    {
+     "section": "section:field hero",
+     "kind": "image",
+     "src": "images/backdrop-trio.jpg",
+     "alt": "Three people in Mayza outfits in front of the red Mayza backdrop"
+    },
+    {
+     "section": "section:section",
+     "kind": "text",
+     "tag": "span",
+     "en": "What we make",
+     "am": "የምንሰራቸው"
+    },
+    {
+     "section": "section:section",
+     "kind": "text",
+     "tag": "h2",
+     "en": "From cultural dress to streetwear",
+     "am": "ከባህል ልብስ እስከ ስትሪትዌር"
+    },
+    {
+     "section": "section:section",
+     "kind": "link",
+     "href": "collections.html#cultural"
+    },
+    {
+     "section": "section:section",
+     "kind": "image",
+     "src": "images/cultural-trio.jpg",
+     "alt": "Three men in Mayza jacket and trouser sets with red, yellow and black cultural woven panels"
+    },
+    {
+     "section": "section:section",
+     "kind": "text",
+     "tag": "h3",
+     "en": "Cultural wear",
+     "am": "ባህላዊ አልባሳት"
+    },
+    {
+     "section": "section:section",
+     "kind": "text",
+     "tag": "p",
+     "en": "Dresses and sets finished with red, black and yellow woven bands.",
+     "am": "በቀይ፣ በጥቁር እና በቢጫ ጥለት ያጌጡ የባህል ልብሶች።"
+    },
+    {
+     "section": "section:section",
+     "kind": "text",
+     "tag": "span",
+     "en": "View →",
+     "am": "ይመልከቱ →"
+    },
+    {
+     "section": "section:section",
+     "kind": "link",
+     "href": "collections.html#modern"
+    },
+    {
+     "section": "section:section",
+     "kind": "image",
+     "src": "images/backdrop-duo.jpg",
+     "alt": "Two men at the Mayza studio, one in a white vest and trouser set"
+    },
+    {
+     "section": "section:section",
+     "kind": "text",
+     "tag": "h3",
+     "en": "Modern fashion",
+     "am": "ዘመናዊ ፋሽን"
+    },
+    {
+     "section": "section:section",
+     "kind": "text",
+     "tag": "p",
+     "en": "Clean, contemporary cuts for everyday wear and for occasions.",
+     "am": "ንጹህ ቅርጽ ያላቸው፣ ለዕለት ተዕለት እና ለዝግጅት የሚሆኑ ልብሶች።"
+    },
+    {
+     "section": "section:section",
+     "kind": "text",
+     "tag": "span",
+     "en": "View →",
+     "am": "ይመልከቱ →"
+    },
+    {
+     "section": "section:section",
+     "kind": "link",
+     "href": "collections.html#streetwear"
+    },
+    {
+     "section": "section:section",
+     "kind": "image",
+     "src": "images/stripe-bomber.jpg",
+     "alt": "Bomber jacket with red, black and yellow woven stripe panels"
+    },
+    {
+     "section": "section:section",
+     "kind": "text",
+     "tag": "h3",
+     "en": "Streetwear",
+     "am": "ስትሪትዌር"
+    },
+    {
+     "section": "section:section",
+     "kind": "text",
+     "tag": "p",
+     "en": "Tees and casual pieces carrying the Mayza mark.",
+     "am": "የማይዛ ምልክት ያረፈባቸው ቲሸርቶች እና የዕለት ልብሶች።"
+    },
+    {
+     "section": "section:section",
+     "kind": "text",
+     "tag": "span",
+     "en": "View →",
+     "am": "ይመልከቱ →"
+    },
+    {
+     "section": "div:marquee",
+     "kind": "text",
+     "tag": "span",
+     "en": "Cultural wear",
+     "am": "ባህላዊ አልባሳት"
+    },
+    {
+     "section": "div:marquee",
+     "kind": "text",
+     "tag": "span",
+     "en": "Modern fashion",
+     "am": "ዘመናዊ ፋሽን"
+    },
+    {
+     "section": "div:marquee",
+     "kind": "text",
+     "tag": "span",
+     "en": "Streetwear",
+     "am": "ስትሪትዌር"
+    },
+    {
+     "section": "div:marquee",
+     "kind": "text",
+     "tag": "span",
+     "en": "Made to measure",
+     "am": "በልክ የተሰፋ"
+    },
+    {
+     "section": "div:marquee",
+     "kind": "text",
+     "tag": "span",
+     "en": "Addis Ababa",
+     "am": "አዲስ አበባ"
+    },
+    {
+     "section": "div:marquee",
+     "kind": "text",
+     "tag": "span",
+     "en": "Cultural wear",
+     "am": "ባህላዊ አልባሳት"
+    },
+    {
+     "section": "div:marquee",
+     "kind": "text",
+     "tag": "span",
+     "en": "Modern fashion",
+     "am": "ዘመናዊ ፋሽን"
+    },
+    {
+     "section": "div:marquee",
+     "kind": "text",
+     "tag": "span",
+     "en": "Streetwear",
+     "am": "ስትሪትዌር"
+    },
+    {
+     "section": "div:marquee",
+     "kind": "text",
+     "tag": "span",
+     "en": "Made to measure",
+     "am": "በልክ የተሰፋ"
+    },
+    {
+     "section": "div:marquee",
+     "kind": "text",
+     "tag": "span",
+     "en": "Addis Ababa",
+     "am": "አዲስ አበባ"
+    },
+    {
+     "section": "section:section dark lookbook",
+     "kind": "text",
+     "tag": "span",
+     "en": "Lookbook",
+     "am": "ሉክቡክ"
+    },
+    {
+     "section": "section:section dark lookbook",
+     "kind": "text",
+     "tag": "h2",
+     "en": "Turn the collection around",
+     "am": "ስራዎቻችንን ያሽከርክሩ"
+    },
+    {
+     "section": "section:section dark lookbook",
+     "kind": "text",
+     "tag": "p",
+     "en": "Drag to spin, or use the arrows.",
+     "am": "ይጎትቱ ወይም ቀስቶቹን ይጠቀሙ።"
+    },
+    {
+     "section": "section:section dark lookbook",
+     "kind": "image",
+     "src": "images/cultural-trio.jpg",
+     "alt": "Three men in Mayza jacket and trouser sets with red, yellow and black cultural woven panels"
+    },
+    {
+     "section": "section:section dark lookbook",
+     "kind": "image",
+     "src": "images/backdrop-trio.jpg",
+     "alt": "Three people in Mayza outfits in front of the red Mayza backdrop"
+    },
+    {
+     "section": "section:section dark lookbook",
+     "kind": "image",
+     "src": "images/embroidered-set.jpg",
+     "alt": "White shirt and trouser set with red and black cultural embroidery"
+    },
+    {
+     "section": "section:section dark lookbook",
+     "kind": "image",
+     "src": "images/stripe-bomber.jpg",
+     "alt": "Bomber jacket with red, black and yellow woven stripe panels"
+    },
+    {
+     "section": "section:section dark lookbook",
+     "kind": "image",
+     "src": "images/cultural-duo.jpg",
+     "alt": "Two men in jackets and a tweed set trimmed with red, yellow and black cultural bands"
+    },
+    {
+     "section": "section:section dark lookbook",
+     "kind": "image",
+     "src": "images/child-dress.jpg",
+     "alt": "Child's cream cultural dress with a striped woven bodice"
+    },
+    {
+     "section": "section:section dark lookbook",
+     "kind": "image",
+     "src": "images/burgundy-jacket.jpg",
+     "alt": "Burgundy leather jacket at the Mayza studio"
+    },
+    {
+     "section": "section:section dark lookbook",
+     "kind": "image",
+     "src": "images/backdrop-duo.jpg",
+     "alt": "Two men at the Mayza studio, one in a white vest and trouser set"
+    },
+    {
+     "section": "section:section dark lookbook",
+     "kind": "image",
+     "src": "images/denim-set.jpg",
+     "alt": "Dark denim jacket and trouser set with contrast stitching"
+    },
+    {
+     "section": "section:section dark lookbook",
+     "kind": "text",
+     "tag": "button",
+     "en": "←",
+     "am": ""
+    },
+    {
+     "section": "section:section dark lookbook",
+     "kind": "text",
+     "tag": "span",
+     "en": "9 looks",
+     "am": "9 ስራዎች"
+    },
+    {
+     "section": "section:section dark lookbook",
+     "kind": "text",
+     "tag": "button",
+     "en": "→",
+     "am": ""
+    },
+    {
+     "section": "section:section tint",
+     "kind": "image",
+     "src": "images/stadium-trio.jpg",
+     "alt": "Three men in Mayza streetwear, one in a patterned two-piece set"
+    },
+    {
+     "section": "section:section tint",
+     "kind": "text",
+     "tag": "span",
+     "en": "Made to measure",
+     "am": "በልክዎ የተሰፋ"
+    },
+    {
+     "section": "section:section tint",
+     "kind": "text",
+     "tag": "h2",
+     "en": "Tell us what you have in mind. We will make it.",
+     "am": "ያሰቡትን ይንገሩን፣ እኛ እንስፋው።"
+    },
+    {
+     "section": "section:section tint",
+     "kind": "text",
+     "tag": "p",
+     "en": "For a wedding, a holiday, a family set or a group order: we settle the design, the fabric and the fit together.",
+     "am": "ለሰርግ፣ ለበዓል፣ ለቤተሰብ ወይም ለቡድን፤ ዲዛይኑን፣ ጨርቁን እና ልኬቱን አብረን እንወስናለን።"
+    },
+    {
+     "section": "section:section tint",
+     "kind": "link",
+     "href": "custom.html"
+    },
+    {
+     "section": "section:section tint",
+     "kind": "text",
+     "tag": "a",
+     "en": "How custom orders work",
+     "am": "አሰራሩን ይመልከቱ"
+    },
+    {
+     "section": "section:section dark",
+     "kind": "text",
+     "tag": "span",
+     "en": "Our community",
+     "am": "ማህበረሰባችን"
+    },
+    {
+     "section": "section:section dark",
+     "kind": "text",
+     "tag": "h2",
+     "en": "Work that thousands follow",
+     "am": "በሺዎች የሚከተሉት ስራ"
+    },
+    {
+     "section": "section:section dark",
+     "kind": "text",
+     "tag": "strong",
+     "en": "82K",
+     "am": ""
+    },
+    {
+     "section": "section:section dark",
+     "kind": "text",
+     "tag": "span",
+     "en": "followers on Facebook",
+     "am": "የፌስቡክ ተከታዮች"
+    },
+    {
+     "section": "section:section dark",
+     "kind": "text",
+     "tag": "strong",
+     "en": "27.2K",
+     "am": ""
+    },
+    {
+     "section": "section:section dark",
+     "kind": "text",
+     "tag": "span",
+     "en": "followers on TikTok",
+     "am": "የቲክቶክ ተከታዮች"
+    },
+    {
+     "section": "section:section dark",
+     "kind": "text",
+     "tag": "strong",
+     "en": "248.3K",
+     "am": ""
+    },
+    {
+     "section": "section:section dark",
+     "kind": "text",
+     "tag": "span",
+     "en": "likes on TikTok",
+     "am": "የቲክቶክ መውደዶች"
+    },
+    {
+     "section": "section:field cta",
+     "kind": "text",
+     "tag": "h2",
+     "en": "Call to order: 0912070949",
+     "am": "ለማዘዝ ይደውሉ፦ 0912070949"
+    },
+    {
+     "section": "section:field cta",
+     "kind": "text",
+     "tag": "p",
+     "en": "Summit Fiyel Bet, just off the main road, Addis Ababa.",
+     "am": "ሰሚት ፍየል ቤት ትንሽ ገባ ብሎ፣ አዲስ አበባ።"
+    },
+    {
+     "section": "section:field cta",
+     "kind": "link",
+     "href": "tel:+251912070949"
+    },
+    {
+     "section": "section:field cta",
+     "kind": "text",
+     "tag": "a",
+     "en": "Call now",
+     "am": "አሁን ይደውሉ"
+    },
+    {
+     "section": "section:field cta",
+     "kind": "link",
+     "href": "contact.html"
+    },
+    {
+     "section": "section:field cta",
+     "kind": "text",
+     "tag": "a",
+     "en": "Location and contact",
+     "am": "አድራሻ እና መገናኛ"
+    }
+   ]
+  },
+  "collections": {
+   "title": "Collections | Mayza Design",
+   "meta": {
+    "viewport": "width=device-width, initial-scale=1",
+    "description": "Cultural wear, modern fashion, streetwear and children's clothing by Mayza Design, Addis Ababa.",
+    "og:title": "Collections | Mayza Design",
+    "og:description": "Cultural wear, modern fashion, streetwear and children's clothing by Mayza Design, Addis Ababa.",
+    "theme-color": "#c4121f",
+    "og:site_name": "Mayza Design",
+    "og:type": "website",
+    "og:image": "images/backdrop-trio.jpg"
+   },
+   "sections": [
+    "header:site-header",
+    "main:main",
+    "section:field page-head",
+    "div:band",
+    "section:section",
+    "article:cultural",
+    "article:modern",
+    "article:streetwear",
+    "article:children",
+    "section:pieces",
+    "footer:site-footer"
+   ],
+   "items": [
+    {
+     "section": "page",
+     "kind": "link",
+     "href": "#main"
+    },
+    {
+     "section": "page",
+     "kind": "text",
+     "tag": "a",
+     "en": "Skip to content",
+     "am": "ወደ ዋናው ይዘት ይሂዱ"
+    },
+    {
+     "section": "section:field page-head",
+     "kind": "text",
+     "tag": "span",
+     "en": "Collections",
+     "am": "ስብስቦች"
+    },
+    {
+     "section": "section:field page-head",
+     "kind": "text",
+     "tag": "h1",
+     "en": "Four lines, one hand.",
+     "am": "አራት መስመሮች፣ አንድ እጅ።"
+    },
+    {
+     "section": "section:field page-head",
+     "kind": "text",
+     "tag": "p",
+     "en": "Every piece is made to order, so colour, trim and fit can be adjusted to you.",
+     "am": "እያንዳንዱ ልብስ በትዕዛዝ ይሰፋል፤ ቀለም፣ ጥለት እና ልኬት በእርስዎ ምርጫ ይስተካከላል።"
+    },
+    {
+     "section": "article:cultural",
+     "kind": "image",
+     "src": "images/cultural-trio.jpg",
+     "alt": "Three men in Mayza jacket and trouser sets with red, yellow and black cultural woven panels"
+    },
+    {
+     "section": "article:cultural",
+     "kind": "image",
+     "src": "images/embroidered-set.jpg",
+     "alt": "White shirt and trouser set with red and black cultural embroidery"
+    },
+    {
+     "section": "article:cultural",
+     "kind": "image",
+     "src": "images/cultural-duo.jpg",
+     "alt": "Two men in jackets and a tweed set trimmed with red, yellow and black cultural bands"
+    },
+    {
+     "section": "article:cultural",
+     "kind": "image",
+     "src": "images/trim-shirt.jpg",
+     "alt": "White shirt with a yellow and black woven cultural trim"
+    },
+    {
+     "section": "article:cultural",
+     "kind": "text",
+     "tag": "span",
+     "en": "Line one",
+     "am": "መስመር አንድ"
+    },
+    {
+     "section": "article:cultural",
+     "kind": "text",
+     "tag": "h2",
+     "en": "Cultural wear",
+     "am": "ባህላዊ አልባሳት"
+    },
+    {
+     "section": "article:cultural",
+     "kind": "text",
+     "tag": "p",
+     "en": "The colours and woven bands of Ethiopian cultural dress, Sidama among them, worked into dresses, jackets and sets.",
+     "am": "የሲዳማን ጨምሮ የኢትዮጵያ ባህላዊ ቀለሞችና ጥለቶች፣ በቀሚስ፣ በጃኬት እና በሙሉ ልብስ ላይ በጥንቃቄ ተሰርተው።"
+    },
+    {
+     "section": "article:cultural",
+     "kind": "text",
+     "tag": "li",
+     "en": "Women's dresses",
+     "am": "የሴቶች ቀሚስ"
+    },
+    {
+     "section": "article:cultural",
+     "kind": "text",
+     "tag": "li",
+     "en": "Stripe-panel jackets",
+     "am": "ጥለት ያላቸው ጃኬቶች"
+    },
+    {
+     "section": "article:cultural",
+     "kind": "text",
+     "tag": "li",
+     "en": "Men's sets",
+     "am": "የወንዶች ሙሉ ልብስ"
+    },
+    {
+     "section": "article:cultural",
+     "kind": "text",
+     "tag": "li",
+     "en": "Couples' outfits",
+     "am": "የጥንዶች ልብስ"
+    },
+    {
+     "section": "article:cultural",
+     "kind": "text",
+     "tag": "li",
+     "en": "Holiday and wedding",
+     "am": "ለበዓል እና ለሰርግ"
+    },
+    {
+     "section": "article:cultural",
+     "kind": "link",
+     "href": "custom.html?line=cultural#order"
+    },
+    {
+     "section": "article:cultural",
+     "kind": "text",
+     "tag": "a",
+     "en": "Order this line",
+     "am": "ይህን ይዘዙ"
+    },
+    {
+     "section": "article:modern",
+     "kind": "image",
+     "src": "images/backdrop-duo.jpg",
+     "alt": "Two men at the Mayza studio, one in a white vest and trouser set"
+    },
+    {
+     "section": "article:modern",
+     "kind": "image",
+     "src": "images/burgundy-jacket.jpg",
+     "alt": "Burgundy leather jacket at the Mayza studio"
+    },
+    {
+     "section": "article:modern",
+     "kind": "text",
+     "tag": "span",
+     "en": "Line two",
+     "am": "መስመር ሁለት"
+    },
+    {
+     "section": "article:modern",
+     "kind": "text",
+     "tag": "h2",
+     "en": "Modern fashion",
+     "am": "ዘመናዊ ፋሽን"
+    },
+    {
+     "section": "article:modern",
+     "kind": "text",
+     "tag": "p",
+     "en": "Simple, sharply cut contemporary pieces for work, events and the stage.",
+     "am": "ቀላል እና ንጹህ ቅርጽ ያላቸው ዘመናዊ ልብሶች፤ ለስራ፣ ለዝግጅት እና ለመድረክ።"
+    },
+    {
+     "section": "article:modern",
+     "kind": "text",
+     "tag": "li",
+     "en": "Matching sets",
+     "am": "ሙሉ ልብሶች"
+    },
+    {
+     "section": "article:modern",
+     "kind": "text",
+     "tag": "li",
+     "en": "Vests and trousers",
+     "am": "ሰደርያ እና ሱሪ"
+    },
+    {
+     "section": "article:modern",
+     "kind": "text",
+     "tag": "li",
+     "en": "Dresses",
+     "am": "ቀሚሶች"
+    },
+    {
+     "section": "article:modern",
+     "kind": "text",
+     "tag": "li",
+     "en": "Artist styling",
+     "am": "ለአርቲስቶች"
+    },
+    {
+     "section": "article:modern",
+     "kind": "link",
+     "href": "custom.html?line=modern#order"
+    },
+    {
+     "section": "article:modern",
+     "kind": "text",
+     "tag": "a",
+     "en": "Order this line",
+     "am": "ይህን ይዘዙ"
+    },
+    {
+     "section": "article:streetwear",
+     "kind": "image",
+     "src": "images/leather-jacket.jpg",
+     "alt": "Black leather jacket worn with cream trousers"
+    },
+    {
+     "section": "article:streetwear",
+     "kind": "image",
+     "src": "images/denim-set.jpg",
+     "alt": "Dark denim jacket and trouser set with contrast stitching"
+    },
+    {
+     "section": "article:streetwear",
+     "kind": "image",
+     "src": "images/stripe-bomber.jpg",
+     "alt": "Bomber jacket with red, black and yellow woven stripe panels"
+    },
+    {
+     "section": "article:streetwear",
+     "kind": "image",
+     "src": "images/stadium-trio.jpg",
+     "alt": "Three men in Mayza streetwear, one in a patterned two-piece set"
+    },
+    {
+     "section": "article:streetwear",
+     "kind": "text",
+     "tag": "span",
+     "en": "Line three",
+     "am": "መስመር ሶስት"
+    },
+    {
+     "section": "article:streetwear",
+     "kind": "text",
+     "tag": "h2",
+     "en": "Streetwear and custom apparel",
+     "am": "ስትሪትዌር እና ልዩ ህትመት"
+    },
+    {
+     "section": "article:streetwear",
+     "kind": "text",
+     "tag": "p",
+     "en": "Everyday pieces carrying the Mayza mark, plus apparel made to your own design for teams, companies and events.",
+     "am": "የማይዛ ምልክት ያረፈባቸው የዕለት ልብሶች፤ እንዲሁም ለቡድን፣ ለድርጅት እና ለዝግጅት በራስዎ ዲዛይን የሚዘጋጁ።"
+    },
+    {
+     "section": "article:streetwear",
+     "kind": "text",
+     "tag": "li",
+     "en": "T-shirts",
+     "am": "ቲሸርት"
+    },
+    {
+     "section": "article:streetwear",
+     "kind": "text",
+     "tag": "li",
+     "en": "Hoodies",
+     "am": "ሁዲ"
+    },
+    {
+     "section": "article:streetwear",
+     "kind": "text",
+     "tag": "li",
+     "en": "Group orders",
+     "am": "የቡድን ልብስ"
+    },
+    {
+     "section": "article:streetwear",
+     "kind": "text",
+     "tag": "li",
+     "en": "Your own artwork",
+     "am": "የራስዎ ዲዛይን"
+    },
+    {
+     "section": "article:streetwear",
+     "kind": "link",
+     "href": "custom.html?line=street#order"
+    },
+    {
+     "section": "article:streetwear",
+     "kind": "text",
+     "tag": "a",
+     "en": "Order this line",
+     "am": "ይህን ይዘዙ"
+    },
+    {
+     "section": "article:children",
+     "kind": "image",
+     "src": "images/child-dress.jpg",
+     "alt": "Child's cream cultural dress with a striped woven bodice"
+    },
+    {
+     "section": "article:children",
+     "kind": "text",
+     "tag": "span",
+     "en": "Line four",
+     "am": "መስመር አራት"
+    },
+    {
+     "section": "article:children",
+     "kind": "text",
+     "tag": "h2",
+     "en": "Children and family",
+     "am": "የልጆች እና የቤተሰብ"
+    },
+    {
+     "section": "article:children",
+     "kind": "text",
+     "tag": "p",
+     "en": "Cultural dresses scaled down for little ones, and matching outfits a whole family can wear together.",
+     "am": "ለልጆች የተዘጋጁ ትናንሽ የባህል ቀሚሶች፣ እና መላ ቤተሰብ አንድ ላይ የሚለብሳቸው ተመሳሳይ ልብሶች።"
+    },
+    {
+     "section": "article:children",
+     "kind": "text",
+     "tag": "li",
+     "en": "Girls' dresses",
+     "am": "የልጆች ቀሚስ"
+    },
+    {
+     "section": "article:children",
+     "kind": "text",
+     "tag": "li",
+     "en": "Boys' sets",
+     "am": "የወንድ ልጆች ልብስ"
+    },
+    {
+     "section": "article:children",
+     "kind": "text",
+     "tag": "li",
+     "en": "Family matching",
+     "am": "የቤተሰብ ተመሳሳይ ልብስ"
+    },
+    {
+     "section": "article:children",
+     "kind": "link",
+     "href": "custom.html?line=cultural&who=child#order"
+    },
+    {
+     "section": "article:children",
+     "kind": "text",
+     "tag": "a",
+     "en": "Order this line",
+     "am": "ይህን ይዘዙ"
+    },
+    {
+     "section": "section:pieces",
+     "kind": "text",
+     "tag": "span",
+     "en": "The pieces",
+     "am": "ምርቶቻችን"
+    },
+    {
+     "section": "section:pieces",
+     "kind": "text",
+     "tag": "h2",
+     "en": "Pick a piece, we make it in your size",
+     "am": "ይምረጡ፣ በልክዎ እንሰፋዋለን"
+    },
+    {
+     "section": "section:pieces",
+     "kind": "text",
+     "tag": "p",
+     "en": "Choose a piece you like. We adjust the colour and fit on the order sheet.",
+     "am": "የወደዱትን ልብስ ይምረጡ፤ ቀለሙንና ልኬቱን በትዕዛዝ ቅጹ ላይ እናስተካክላለን።"
+    },
+    {
+     "section": "section:pieces",
+     "kind": "text",
+     "tag": "button",
+     "en": "All",
+     "am": "ሁሉም"
+    },
+    {
+     "section": "section:pieces",
+     "kind": "text",
+     "tag": "button",
+     "en": "Cultural",
+     "am": "ባህላዊ"
+    },
+    {
+     "section": "section:pieces",
+     "kind": "text",
+     "tag": "button",
+     "en": "Modern",
+     "am": "ዘመናዊ"
+    },
+    {
+     "section": "section:pieces",
+     "kind": "text",
+     "tag": "button",
+     "en": "Streetwear",
+     "am": "ስትሪትዌር"
+    },
+    {
+     "section": "section:pieces",
+     "kind": "text",
+     "tag": "button",
+     "en": "Children",
+     "am": "ልጆች"
+    },
+    {
+     "section": "section:pieces",
+     "kind": "link",
+     "href": "https://web.facebook.com/sidamaCulture"
+    },
+    {
+     "section": "section:pieces",
+     "kind": "text",
+     "tag": "a",
+     "en": "More on Facebook",
+     "am": "በፌስቡክ ተጨማሪ ይመልከቱ"
+    },
+    {
+     "section": "section:pieces",
+     "kind": "link",
+     "href": "https://www.tiktok.com/@mayza_design"
+    },
+    {
+     "section": "section:pieces",
+     "kind": "text",
+     "tag": "a",
+     "en": "Watch on TikTok",
+     "am": "በቲክቶክ ይመልከቱ"
+    }
+   ]
+  },
+  "custom": {
+   "title": "Custom orders | Mayza Design",
+   "meta": {
+    "viewport": "width=device-width, initial-scale=1",
+    "description": "Order made-to-measure cultural and modern clothing from Mayza Design. Fill in the order sheet and send it by WhatsApp or Telegram, or call 0912070949.",
+    "og:title": "Custom orders | Mayza Design",
+    "og:description": "Order made-to-measure cultural and modern clothing from Mayza Design. Fill in the order sheet and send it by WhatsApp or Telegram, or call 0912070949.",
+    "theme-color": "#c4121f",
+    "og:site_name": "Mayza Design",
+    "og:type": "website",
+    "og:image": "images/backdrop-trio.jpg"
+   },
+   "sections": [
+    "header:site-header",
+    "main:main",
+    "section:field page-head",
+    "div:band",
+    "section:section",
+    "section:order",
+    "aside:preview",
+    "footer:site-footer"
+   ],
+   "items": [
+    {
+     "section": "page",
+     "kind": "link",
+     "href": "#main"
+    },
+    {
+     "section": "page",
+     "kind": "text",
+     "tag": "a",
+     "en": "Skip to content",
+     "am": "ወደ ዋናው ይዘት ይሂዱ"
+    },
+    {
+     "section": "section:field page-head",
+     "kind": "text",
+     "tag": "span",
+     "en": "Custom orders",
+     "am": "ልዩ ትዕዛዝ"
+    },
+    {
+     "section": "section:field page-head",
+     "kind": "text",
+     "tag": "h1",
+     "en": "Made for you, and only you.",
+     "am": "ለእርስዎ ብቻ የተሰፋ።"
+    },
+    {
+     "section": "section:field page-head",
+     "kind": "text",
+     "tag": "p",
+     "en": "We settle the design with you, then cut and sew it to your measurements.",
+     "am": "ዲዛይኑን ከእርስዎ ጋር እንወስናለን፣ በልክዎ እንሰፋለን።"
+    },
+    {
+     "section": "section:section",
+     "kind": "text",
+     "tag": "span",
+     "en": "How it works",
+     "am": "አሰራሩ"
+    },
+    {
+     "section": "section:section",
+     "kind": "text",
+     "tag": "h2",
+     "en": "From idea to finished garment",
+     "am": "ከሃሳብ እስከ ልብስ"
+    },
+    {
+     "section": "section:section",
+     "kind": "text",
+     "tag": "h3",
+     "en": "Share your idea",
+     "am": "ሃሳብዎን ያጋሩ"
+    },
+    {
+     "section": "section:section",
+     "kind": "text",
+     "tag": "p",
+     "en": "Send us the style you want, the occasion, and a reference photo if you have one.",
+     "am": "የሚፈልጉትን ዓይነት፣ ዝግጅቱን እና ካለዎት ፎቶ ይላኩልን።"
+    },
+    {
+     "section": "section:section",
+     "kind": "text",
+     "tag": "h3",
+     "en": "Design and fabric",
+     "am": "ዲዛይን እና ጨርቅ"
+    },
+    {
+     "section": "section:section",
+     "kind": "text",
+     "tag": "p",
+     "en": "We choose colours, trim and fabric together and confirm the price.",
+     "am": "ቀለም፣ ጥለት እና ጨርቅ አብረን እንመርጣለን፤ ዋጋውንም እናሳውቃለን።"
+    },
+    {
+     "section": "section:section",
+     "kind": "text",
+     "tag": "h3",
+     "en": "Measurements",
+     "am": "ልኬት"
+    },
+    {
+     "section": "section:section",
+     "kind": "text",
+     "tag": "p",
+     "en": "We measure you at the studio, or you send your measurements.",
+     "am": "በሱቃችን እንለካዎታለን፣ ወይም ልኬትዎን ይላኩልን።"
+    },
+    {
+     "section": "section:section",
+     "kind": "text",
+     "tag": "h3",
+     "en": "Sewing and pickup",
+     "am": "ስፌት እና ርክክብ"
+    },
+    {
+     "section": "section:section",
+     "kind": "text",
+     "tag": "p",
+     "en": "We call you when it is ready. Try it on and take it home.",
+     "am": "ልብሱ ሲጠናቀቅ እንደውልልዎታለን፤ ሞክረው ይረከባሉ።"
+    },
+    {
+     "section": "section:order",
+     "kind": "text",
+     "tag": "span",
+     "en": "Order sheet",
+     "am": "የትዕዛዝ ቅጽ"
+    },
+    {
+     "section": "section:order",
+     "kind": "text",
+     "tag": "h2",
+     "en": "Prepare your order",
+     "am": "ትዕዛዝዎን ያዘጋጁ"
+    },
+    {
+     "section": "section:order",
+     "kind": "text",
+     "tag": "p",
+     "en": "As you fill this in, your message is written for you. Then send it to us on WhatsApp or Telegram.",
+     "am": "ቅጹን ሲሞሉ መልዕክትዎ በራሱ ይዘጋጃል። ከዚያ በዋትስአፕ ወይም በቴሌግራም ይላኩልን።"
+    },
+    {
+     "section": "section:order",
+     "kind": "text",
+     "tag": "label",
+     "en": "Full name",
+     "am": "ሙሉ ስም"
+    },
+    {
+     "section": "section:order",
+     "kind": "text",
+     "tag": "label",
+     "en": "Phone number",
+     "am": "ስልክ ቁጥር"
+    },
+    {
+     "section": "section:order",
+     "kind": "field",
+     "id": "phone",
+     "placeholder": "09…",
+     "placeholder_am": "",
+     "label": ""
+    },
+    {
+     "section": "section:order",
+     "kind": "text",
+     "tag": "label",
+     "en": "Garment",
+     "am": "የልብስ ዓይነት"
+    },
+    {
+     "section": "section:order",
+     "kind": "text",
+     "tag": "option",
+     "en": "Choose one",
+     "am": "ይምረጡ"
+    },
+    {
+     "section": "section:order",
+     "kind": "text",
+     "tag": "option",
+     "en": "Cultural wear",
+     "am": "ባህላዊ ልብስ"
+    },
+    {
+     "section": "section:order",
+     "kind": "text",
+     "tag": "option",
+     "en": "Modern fashion",
+     "am": "ዘመናዊ ልብስ"
+    },
+    {
+     "section": "section:order",
+     "kind": "text",
+     "tag": "option",
+     "en": "Streetwear / T-shirt",
+     "am": "ስትሪትዌር / ቲሸርት"
+    },
+    {
+     "section": "section:order",
+     "kind": "text",
+     "tag": "option",
+     "en": "Group order",
+     "am": "የቡድን ትዕዛዝ"
+    },
+    {
+     "section": "section:order",
+     "kind": "text",
+     "tag": "option",
+     "en": "Something else",
+     "am": "ሌላ"
+    },
+    {
+     "section": "section:order",
+     "kind": "text",
+     "tag": "label",
+     "en": "Who is it for",
+     "am": "ለማን"
+    },
+    {
+     "section": "section:order",
+     "kind": "text",
+     "tag": "option",
+     "en": "Choose one",
+     "am": "ይምረጡ"
+    },
+    {
+     "section": "section:order",
+     "kind": "text",
+     "tag": "option",
+     "en": "Woman",
+     "am": "ለሴት"
+    },
+    {
+     "section": "section:order",
+     "kind": "text",
+     "tag": "option",
+     "en": "Man",
+     "am": "ለወንድ"
+    },
+    {
+     "section": "section:order",
+     "kind": "text",
+     "tag": "option",
+     "en": "Child",
+     "am": "ለልጅ"
+    },
+    {
+     "section": "section:order",
+     "kind": "text",
+     "tag": "option",
+     "en": "Couple",
+     "am": "ለጥንዶች"
+    },
+    {
+     "section": "section:order",
+     "kind": "text",
+     "tag": "option",
+     "en": "Family",
+     "am": "ለቤተሰብ"
+    },
+    {
+     "section": "section:order",
+     "kind": "text",
+     "tag": "label",
+     "en": "Date you need it by",
+     "am": "የሚፈለግበት ቀን"
+    },
+    {
+     "section": "section:order",
+     "kind": "text",
+     "tag": "label",
+     "en": "Measurements in cm (optional)",
+     "am": "ልኬት በሴንቲሜትር (አማራጭ)"
+    },
+    {
+     "section": "section:order",
+     "kind": "field",
+     "id": "chest",
+     "placeholder": "Chest",
+     "placeholder_am": "ደረት",
+     "label": "Chest"
+    },
+    {
+     "section": "section:order",
+     "kind": "field",
+     "id": "waist",
+     "placeholder": "Waist",
+     "placeholder_am": "ወገብ",
+     "label": "Waist"
+    },
+    {
+     "section": "section:order",
+     "kind": "field",
+     "id": "hip",
+     "placeholder": "Hip",
+     "placeholder_am": "ዳሌ",
+     "label": "Hip"
+    },
+    {
+     "section": "section:order",
+     "kind": "field",
+     "id": "height",
+     "placeholder": "Height",
+     "placeholder_am": "ቁመት",
+     "label": "Height"
+    },
+    {
+     "section": "section:order",
+     "kind": "text",
+     "tag": "span",
+     "en": "Leave these empty if you are not sure. We can measure you at the studio.",
+     "am": "ልኬትዎን ካላወቁ ባዶ ይተዉት፤ በሱቃችን እንለካዎታለን።"
+    },
+    {
+     "section": "section:order",
+     "kind": "text",
+     "tag": "label",
+     "en": "Details",
+     "am": "ዝርዝር"
+    },
+    {
+     "section": "section:order",
+     "kind": "field",
+     "id": "notes",
+     "placeholder": "Colours, occasion, number of pieces…",
+     "placeholder_am": "ቀለም፣ ዝግጅት፣ የልብስ ብዛት…",
+     "label": ""
+    },
+    {
+     "section": "aside:preview",
+     "kind": "text",
+     "tag": "h3",
+     "en": "Your message",
+     "am": "የእርስዎ መልዕክት"
+    },
+    {
+     "section": "aside:preview",
+     "kind": "text",
+     "tag": "button",
+     "en": "Send order to Mayza",
+     "am": "ትዕዛዙን ወደ ማይዛ ላክ"
+    },
+    {
+     "section": "aside:preview",
+     "kind": "text",
+     "tag": "button",
+     "en": "Send on WhatsApp",
+     "am": "በዋትስአፕ ይላኩ"
+    },
+    {
+     "section": "aside:preview",
+     "kind": "text",
+     "tag": "button",
+     "en": "Send on Telegram",
+     "am": "በቴሌግራም ይላኩ"
+    },
+    {
+     "section": "aside:preview",
+     "kind": "text",
+     "tag": "button",
+     "en": "Copy message",
+     "am": "መልዕክቱን ይቅዱ"
+    },
+    {
+     "section": "aside:preview",
+     "kind": "text",
+     "tag": "p",
+     "en": "Prefer to talk? Call",
+     "am": "መደወል ይመርጣሉ? 0912070949 ላይ ይደውሉ።"
+    },
+    {
+     "section": "aside:preview",
+     "kind": "link",
+     "href": "tel:+251912070949"
+    },
+    {
+     "section": "aside:preview",
+     "kind": "text",
+     "tag": "a",
+     "en": "0912070949",
+     "am": ""
+    },
+    {
+     "section": "aside:preview",
+     "kind": "text",
+     "tag": "p",
+     "en": ".",
+     "am": "መደወል ይመርጣሉ? 0912070949 ላይ ይደውሉ።"
+    }
+   ]
+  },
+  "about": {
+   "title": "About | Mayza Design",
+   "meta": {
+    "viewport": "width=device-width, initial-scale=1",
+    "description": "Mayza Design is an Ethiopian fashion and art design brand in Addis Ababa, blending cultural dress with modern fashion.",
+    "og:title": "About | Mayza Design",
+    "og:description": "Mayza Design is an Ethiopian fashion and art design brand in Addis Ababa, blending cultural dress with modern fashion.",
+    "theme-color": "#c4121f",
+    "og:site_name": "Mayza Design",
+    "og:type": "website",
+    "og:image": "images/backdrop-trio.jpg"
+   },
+   "sections": [
+    "header:site-header",
+    "main:main",
+    "section:field page-head",
+    "div:band",
+    "section:section",
+    "section:section tint",
+    "section:section dark",
+    "div:band",
+    "section:field cta",
+    "footer:site-footer"
+   ],
+   "items": [
+    {
+     "section": "page",
+     "kind": "link",
+     "href": "#main"
+    },
+    {
+     "section": "page",
+     "kind": "text",
+     "tag": "a",
+     "en": "Skip to content",
+     "am": "ወደ ዋናው ይዘት ይሂዱ"
+    },
+    {
+     "section": "section:field page-head",
+     "kind": "text",
+     "tag": "span",
+     "en": "About",
+     "am": "ስለ እኛ"
+    },
+    {
+     "section": "section:field page-head",
+     "kind": "text",
+     "tag": "h1",
+     "en": "Cultural. Modern. Beautiful.",
+     "am": "ባህላዊ፣ ዘመናዊ፣ ውበት።"
+    },
+    {
+     "section": "section:field page-head",
+     "kind": "text",
+     "tag": "p",
+     "en": "Mayza Design is a fashion and art design brand based in Addis Ababa.",
+     "am": "ማይዛ ዲዛይን በአዲስ አበባ የሚገኝ የፋሽን እና የጥበብ ዲዛይን ብራንድ ነው።"
+    },
+    {
+     "section": "section:section",
+     "kind": "text",
+     "tag": "span",
+     "en": "Our story",
+     "am": "ታሪካችን"
+    },
+    {
+     "section": "section:section",
+     "kind": "text",
+     "tag": "h2",
+     "en": "Rooted in culture, made for now",
+     "am": "ከባህል የተነሳ፣ ለዛሬ የተሰራ"
+    },
+    {
+     "section": "section:section",
+     "kind": "text",
+     "tag": "p",
+     "en": "Our work starts from Ethiopian cultural dress, and especially from the red, black and yellow woven bands that Sidama clothing is known for.",
+     "am": "ስራችን የሚነሳው ከኢትዮጵያ ባህላዊ አልባሳት ነው፤ በተለይም የሲዳማ ባህል ልብስ ከሚታወቅባቸው ቀይ፣ ጥቁር እና ቢጫ ጥለቶች።"
+    },
+    {
+     "section": "section:section",
+     "kind": "text",
+     "tag": "p",
+     "en": "We carry those colours and patterns into the way people dress today: a wedding dress, a stage outfit, a child's dress or an everyday tee.",
+     "am": "እነዚህን ቀለሞችና ጥለቶች ዛሬ ሰዎች በሚለብሱት መንገድ እንሰራቸዋለን፤ ለሰርግ ቀሚስ፣ ለመድረክ ልብስ፣ ለልጆች ቀሚስ ወይም ለዕለት ቲሸርት።"
+    },
+    {
+     "section": "section:section",
+     "kind": "text",
+     "tag": "p",
+     "en": "Each piece is cut and sewn to order. We aim to offer designs and materials you will not find anywhere else.",
+     "am": "እያንዳንዱ ልብስ በትዕዛዝ እና በልክ ይሰፋል። የትም የማያገኙትን ዲዛይንም ሆነ ማቴሪያል ለማቅረብ እንጥራለን።"
+    },
+    {
+     "section": "section:section",
+     "kind": "image",
+     "src": "images/backdrop-duo.jpg",
+     "alt": "Two men at the Mayza studio, one in a white vest and trouser set"
+    },
+    {
+     "section": "section:section tint",
+     "kind": "text",
+     "tag": "span",
+     "en": "What we stand for",
+     "am": "የምንቆምለት"
+    },
+    {
+     "section": "section:section tint",
+     "kind": "text",
+     "tag": "h2",
+     "en": "Three promises",
+     "am": "ሶስት ቃል ኪዳኖች"
+    },
+    {
+     "section": "section:section tint",
+     "kind": "text",
+     "tag": "h3",
+     "en": "Respect for the culture",
+     "am": "ባህልን ማክበር"
+    },
+    {
+     "section": "section:section tint",
+     "kind": "text",
+     "tag": "p",
+     "en": "The patterns and colours carry meaning. We use them with care and get them right.",
+     "am": "ጥለቶቹና ቀለሞቹ ትርጉም አላቸው። በጥንቃቄ እና በትክክል እንጠቀማቸዋለን።"
+    },
+    {
+     "section": "section:section tint",
+     "kind": "text",
+     "tag": "h3",
+     "en": "Made to fit",
+     "am": "በልክ መስፋት"
+    },
+    {
+     "section": "section:section tint",
+     "kind": "text",
+     "tag": "p",
+     "en": "Clothing looks its best when it fits, which is why we sew to your measurements.",
+     "am": "ልብስ የሚያምረው ሲገጥም ነው። ለዚህም ነው በልክዎ የምንሰፋው።"
+    },
+    {
+     "section": "section:section tint",
+     "kind": "text",
+     "tag": "h3",
+     "en": "Original design",
+     "am": "አዲስ ዲዛይን"
+    },
+    {
+     "section": "section:section tint",
+     "kind": "text",
+     "tag": "p",
+     "en": "Every collection is our own drawing, starting from tradition and moving somewhere new.",
+     "am": "እያንዳንዱ ስብስብ የራሳችን ንድፍ ነው፤ ከባህል ተነስቶ ወደ አዲስ ነገር የሚሄድ።"
+    },
+    {
+     "section": "section:section dark",
+     "kind": "text",
+     "tag": "span",
+     "en": "Our community",
+     "am": "ማህበረሰባችን"
+    },
+    {
+     "section": "section:section dark",
+     "kind": "text",
+     "tag": "h2",
+     "en": "The people with us",
+     "am": "አብረውን ያሉ"
+    },
+    {
+     "section": "section:section dark",
+     "kind": "text",
+     "tag": "strong",
+     "en": "82K",
+     "am": ""
+    },
+    {
+     "section": "section:section dark",
+     "kind": "text",
+     "tag": "span",
+     "en": "followers on Facebook",
+     "am": "የፌስቡክ ተከታዮች"
+    },
+    {
+     "section": "section:section dark",
+     "kind": "text",
+     "tag": "strong",
+     "en": "27.2K",
+     "am": ""
+    },
+    {
+     "section": "section:section dark",
+     "kind": "text",
+     "tag": "span",
+     "en": "followers on TikTok",
+     "am": "የቲክቶክ ተከታዮች"
+    },
+    {
+     "section": "section:section dark",
+     "kind": "text",
+     "tag": "strong",
+     "en": "248.3K",
+     "am": ""
+    },
+    {
+     "section": "section:section dark",
+     "kind": "text",
+     "tag": "span",
+     "en": "likes on TikTok",
+     "am": "የቲክቶክ መውደዶች"
+    },
+    {
+     "section": "section:field cta",
+     "kind": "text",
+     "tag": "h2",
+     "en": "Let us make your next outfit together.",
+     "am": "ቀጣዩ ልብስዎን አብረን እንስራ።"
+    },
+    {
+     "section": "section:field cta",
+     "kind": "link",
+     "href": "custom.html#order"
+    },
+    {
+     "section": "section:field cta",
+     "kind": "text",
+     "tag": "a",
+     "en": "Start a custom order",
+     "am": "ልዩ ትዕዛዝ ይጀምሩ"
+    },
+    {
+     "section": "section:field cta",
+     "kind": "link",
+     "href": "contact.html"
+    },
+    {
+     "section": "section:field cta",
+     "kind": "text",
+     "tag": "a",
+     "en": "Get in touch",
+     "am": "ያግኙን"
+    }
+   ]
+  },
+  "contact": {
+   "title": "Contact | Mayza Design",
+   "meta": {
+    "viewport": "width=device-width, initial-scale=1",
+    "description": "Visit Mayza Design at Summit Fiyel Bet, Addis Ababa, or order by phone, WhatsApp or Telegram on 0912070949.",
+    "og:title": "Contact | Mayza Design",
+    "og:description": "Visit Mayza Design at Summit Fiyel Bet, Addis Ababa, or order by phone, WhatsApp or Telegram on 0912070949.",
+    "theme-color": "#c4121f",
+    "og:site_name": "Mayza Design",
+    "og:type": "website",
+    "og:image": "images/backdrop-trio.jpg"
+   },
+   "sections": [
+    "header:site-header",
+    "main:main",
+    "section:field page-head",
+    "div:band",
+    "section:section",
+    "footer:site-footer"
+   ],
+   "items": [
+    {
+     "section": "page",
+     "kind": "link",
+     "href": "#main"
+    },
+    {
+     "section": "page",
+     "kind": "text",
+     "tag": "a",
+     "en": "Skip to content",
+     "am": "ወደ ዋናው ይዘት ይሂዱ"
+    },
+    {
+     "section": "section:field page-head",
+     "kind": "text",
+     "tag": "span",
+     "en": "Contact",
+     "am": "አድራሻ"
+    },
+    {
+     "section": "section:field page-head",
+     "kind": "text",
+     "tag": "h1",
+     "en": "Visit, call or message us.",
+     "am": "ይምጡ፣ ይደውሉ፣ ይጻፉልን።"
+    },
+    {
+     "section": "section:field page-head",
+     "kind": "text",
+     "tag": "p",
+     "en": "The quickest way to order is a phone call: 0912070949.",
+     "am": "ለማዘዝ ፈጣኑ መንገድ መደወል ነው፦ 0912070949።"
+    },
+    {
+     "section": "section:section",
+     "kind": "text",
+     "tag": "h2",
+     "en": "Ways to reach us",
+     "am": "መገናኛ መንገዶች"
+    },
+    {
+     "section": "section:section",
+     "kind": "text",
+     "tag": "span",
+     "en": "Studio",
+     "am": "አድራሻ"
+    },
+    {
+     "section": "section:section",
+     "kind": "text",
+     "tag": "span",
+     "en": "Summit Fiyel Bet, just off the main road",
+     "am": "ሰሚት ፍየል ቤት ትንሽ ገባ ብሎ"
+    },
+    {
+     "section": "section:section",
+     "kind": "text",
+     "tag": "small",
+     "en": "Addis Ababa, Ethiopia",
+     "am": "አዲስ አበባ፣ ኢትዮጵያ"
+    },
+    {
+     "section": "section:section",
+     "kind": "text",
+     "tag": "span",
+     "en": "Phone",
+     "am": "ስልክ"
+    },
+    {
+     "section": "section:section",
+     "kind": "link",
+     "href": "tel:+251912070949"
+    },
+    {
+     "section": "section:section",
+     "kind": "text",
+     "tag": "a",
+     "en": "0912 07 09 49",
+     "am": ""
+    },
+    {
+     "section": "section:section",
+     "kind": "link",
+     "href": "tel:+251924968631"
+    },
+    {
+     "section": "section:section",
+     "kind": "text",
+     "tag": "a",
+     "en": "0924 96 86 31",
+     "am": ""
+    },
+    {
+     "section": "section:section",
+     "kind": "text",
+     "tag": "span",
+     "en": "Hours",
+     "am": "የስራ ሰዓት"
+    },
+    {
+     "section": "section:section",
+     "kind": "text",
+     "tag": "span",
+     "en": "Always open. A quick call before you visit is appreciated.",
+     "am": "ሁልጊዜ ክፍት፤ ከመምጣትዎ በፊት ቢደውሉ ይመረጣል።"
+    },
+    {
+     "section": "section:section",
+     "kind": "text",
+     "tag": "span",
+     "en": "Social",
+     "am": "ማህበራዊ ሚዲያ"
+    },
+    {
+     "section": "section:section",
+     "kind": "link",
+     "href": "https://web.facebook.com/sidamaCulture"
+    },
+    {
+     "section": "section:section",
+     "kind": "text",
+     "tag": "a",
+     "en": "Facebook · Mayza Design",
+     "am": ""
+    },
+    {
+     "section": "section:section",
+     "kind": "link",
+     "href": "https://www.tiktok.com/@mayza_design"
+    },
+    {
+     "section": "section:section",
+     "kind": "text",
+     "tag": "a",
+     "en": "TikTok · @mayza_design",
+     "am": ""
+    },
+    {
+     "section": "section:section",
+     "kind": "link",
+     "href": "https://www.instagram.com/mayza__design"
+    },
+    {
+     "section": "section:section",
+     "kind": "text",
+     "tag": "a",
+     "en": "Instagram · @mayza__design",
+     "am": ""
+    },
+    {
+     "section": "section:section",
+     "kind": "text",
+     "tag": "h2",
+     "en": "Reach us now",
+     "am": "አሁኑኑ ያግኙን"
+    },
+    {
+     "section": "section:section",
+     "kind": "link",
+     "href": "tel:+251912070949"
+    },
+    {
+     "section": "section:section",
+     "kind": "text",
+     "tag": "a",
+     "en": "Call",
+     "am": "ይደውሉ"
+    },
+    {
+     "section": "section:section",
+     "kind": "link",
+     "href": "https://wa.me/251912070949"
+    },
+    {
+     "section": "section:section",
+     "kind": "text",
+     "tag": "a",
+     "en": "WhatsApp",
+     "am": "ዋትስአፕ"
+    },
+    {
+     "section": "section:section",
+     "kind": "link",
+     "href": "https://t.me/+251912070949"
+    },
+    {
+     "section": "section:section",
+     "kind": "text",
+     "tag": "a",
+     "en": "Telegram",
+     "am": "ቴሌግራም"
+    },
+    {
+     "section": "section:section",
+     "kind": "link",
+     "href": "custom.html#order"
+    },
+    {
+     "section": "section:section",
+     "kind": "text",
+     "tag": "a",
+     "en": "Order sheet",
+     "am": "የትዕዛዝ ቅጽ"
+    },
+    {
+     "section": "section:section",
+     "kind": "image",
+     "src": "images/flag.jpg",
+     "alt": "White flag carrying the red Mayza logo"
+    },
+    {
+     "section": "section:section",
+     "kind": "link",
+     "href": "https://www.google.com/maps/search/?api=1&query=Summit+Fiyel+Bet+Addis+Ababa"
+    },
+    {
+     "section": "section:section",
+     "kind": "text",
+     "tag": "a",
+     "en": "Open in Google Maps",
+     "am": "በጉግል ካርታ ይክፈቱ"
+    }
+   ]
+  }
+ },
+ "shared": {
+  "navigation": [
+   {
+    "href": "index.html",
+    "en": "Home",
+    "am": "መነሻ"
+   },
+   {
+    "href": "collections.html",
+    "en": "Collections",
+    "am": "ስብስቦች"
+   },
+   {
+    "href": "custom.html",
+    "en": "Custom orders",
+    "am": "ልዩ ትዕዛዝ"
+   },
+   {
+    "href": "about.html",
+    "en": "About",
+    "am": "ስለ እኛ"
+   },
+   {
+    "href": "contact.html",
+    "en": "Contact",
+    "am": "አድራሻ"
+   }
+  ],
+  "text_pairs": [
+   {
+    "en": "Order now",
+    "am": "አሁን ይዘዙ"
+   },
+   {
+    "en": "Cultural and modern clothing design, made in Addis Ababa, Ethiopia.",
+    "am": "ባህላዊ እና ዘመናዊ አልባሳት ዲዛይን፤ አዲስ አበባ፣ ኢትዮጵያ።"
+   },
+   {
+    "en": "Visit",
+    "am": "ይጎብኙን"
+   },
+   {
+    "en": "Addis Ababa, Ethiopia",
+    "am": "አዲስ አበባ፣ ኢትዮጵያ"
+   },
+   {
+    "en": "Follow",
+    "am": "ይከተሉን"
+   },
+   {
+    "en": "Call",
+    "am": "ይደውሉ"
+   },
+   {
+    "en": "Order",
+    "am": "ይዘዙ"
+   }
+  ],
+  "quick_links": [
+   {
+    "en": "Call",
+    "am": "ይደውሉ"
+   },
+   {
+    "en": "WhatsApp",
+    "am": "ዋትስአፕ"
+   },
+   {
+    "en": "Telegram",
+    "am": "ቴሌግራም"
+   },
+   {
+    "en": "Collections",
+    "am": "ስብስቦች"
+   },
+   {
+    "en": "Order sheet",
+    "am": "የትዕዛዝ ቅጽ"
+   },
+   {
+    "en": "Location",
+    "am": "አድራሻ"
+   }
+  ],
+  "external_links": [
+   "https://t.me/+251912070949",
+   "https://wa.me/251912070949",
+   "https://web.facebook.com/sidamaCulture",
+   "https://www.instagram.com/mayza__design",
+   "https://www.tiktok.com/@mayza_design"
+  ],
+  "phones": {
+   "phone": "0912070949",
+   "phoneIntl": "251912070949",
+   "phone2": "0924968631"
+  }
+ },
+ "catalogue": {
+  "products": [
+   {
+    "image": "cultural-trio",
+    "collection": "cultural",
+    "name_en": "Woven panel jacket sets",
+    "name_am": "ጥለት ያላቸው የጃኬት ሙሉ ልብሶች"
+   },
+   {
+    "image": "embroidered-set",
+    "collection": "cultural",
+    "name_en": "Embroidered white set",
+    "name_am": "ጥልፍ ያለው ነጭ ሙሉ ልብስ"
+   },
+   {
+    "image": "cultural-duo",
+    "collection": "cultural",
+    "name_en": "Cultural trim jackets",
+    "name_am": "የባህል ጥለት ያላቸው ጃኬቶች"
+   },
+   {
+    "image": "trim-shirt",
+    "collection": "cultural",
+    "name_en": "Woven trim shirt",
+    "name_am": "የባህል ጥለት ያለው ሸሚዝ"
+   },
+   {
+    "image": "child-dress",
+    "collection": "children",
+    "name_en": "Children's cultural dress",
+    "name_am": "የልጆች የባህል ቀሚስ"
+   },
+   {
+    "image": "backdrop-duo",
+    "collection": "modern",
+    "name_en": "White vest and trouser set",
+    "name_am": "ነጭ ሰደርያ እና ሱሪ"
+   },
+   {
+    "image": "burgundy-jacket",
+    "collection": "modern",
+    "name_en": "Burgundy leather jacket",
+    "name_am": "ቡርጋንዲ የቆዳ ጃኬት"
+   },
+   {
+    "image": "backdrop-trio",
+    "collection": "modern",
+    "name_en": "Studio looks",
+    "name_am": "የስቱዲዮ ልብሶች"
+   },
+   {
+    "image": "stripe-bomber",
+    "collection": "streetwear",
+    "name_en": "Stripe-panel bomber",
+    "name_am": "ጥለት ያለው ቦምበር ጃኬት"
+   },
+   {
+    "image": "denim-set",
+    "collection": "streetwear",
+    "name_en": "Denim set",
+    "name_am": "የጂንስ ሙሉ ልብስ"
+   },
+   {
+    "image": "leather-jacket",
+    "collection": "streetwear",
+    "name_en": "Black leather jacket",
+    "name_am": "ጥቁር የቆዳ ጃኬት"
+   },
+   {
+    "image": "stripe-fleece",
+    "collection": "streetwear",
+    "name_en": "Cultural band fleece jacket",
+    "name_am": "የባህል ጥለት ያለው ፍሊስ ጃኬት"
+   }
+  ],
+  "collections": [
+   {
+    "slug": "cultural",
+    "name_en": "Cultural wear",
+    "name_am": "ባህላዊ አልባሳት",
+    "tagline_en": "Line one",
+    "tagline_am": "መስመር አንድ",
+    "summary_en": "Dresses and sets finished with red, black and yellow woven bands.",
+    "summary_am": "በቀይ፣ በጥቁር እና በቢጫ ጥለት ያጌጡ የባህል ልብሶች።",
+    "description_en": "The colours and woven bands of Ethiopian cultural dress, Sidama among them, worked into dresses, jackets and sets.",
+    "description_am": "የሲዳማን ጨምሮ የኢትዮጵያ ባህላዊ ቀለሞችና ጥለቶች፣ በቀሚስ፣ በጃኬት እና በሙሉ ልብስ ላይ በጥንቃቄ ተሰርተው።",
+    "tags_en": "Women's dresses, Stripe-panel jackets, Men's sets, Couples' outfits, Holiday and wedding",
+    "tags_am": "የሴቶች ቀሚስ, ጥለት ያላቸው ጃኬቶች, የወንዶች ሙሉ ልብስ, የጥንዶች ልብስ, ለበዓል እና ለሰርግ",
+    "image_url": "images/cultural-trio.jpg",
+    "on_home": true
+   },
+   {
+    "slug": "modern",
+    "name_en": "Modern fashion",
+    "name_am": "ዘመናዊ ፋሽን",
+    "tagline_en": "Line two",
+    "tagline_am": "መስመር ሁለት",
+    "summary_en": "Clean, contemporary cuts for everyday wear and for occasions.",
+    "summary_am": "ንጹህ ቅርጽ ያላቸው፣ ለዕለት ተዕለት እና ለዝግጅት የሚሆኑ ልብሶች።",
+    "description_en": "Simple, sharply cut contemporary pieces for work, events and the stage.",
+    "description_am": "ቀላል እና ንጹህ ቅርጽ ያላቸው ዘመናዊ ልብሶች፤ ለስራ፣ ለዝግጅት እና ለመድረክ።",
+    "tags_en": "Matching sets, Vests and trousers, Dresses, Artist styling",
+    "tags_am": "ሙሉ ልብሶች, ሰደርያ እና ሱሪ, ቀሚሶች, ለአርቲስቶች",
+    "image_url": "images/backdrop-duo.jpg",
+    "on_home": true
+   },
+   {
+    "slug": "streetwear",
+    "name_en": "Streetwear and custom apparel",
+    "name_am": "ስትሪትዌር እና ልዩ ህትመት",
+    "tagline_en": "Line three",
+    "tagline_am": "መስመር ሶስት",
+    "summary_en": "Tees and casual pieces carrying the Mayza mark.",
+    "summary_am": "የማይዛ ምልክት ያረፈባቸው ቲሸርቶች እና የዕለት ልብሶች።",
+    "description_en": "Everyday pieces carrying the Mayza mark, plus apparel made to your own design for teams, companies and events.",
+    "description_am": "የማይዛ ምልክት ያረፈባቸው የዕለት ልብሶች፤ እንዲሁም ለቡድን፣ ለድርጅት እና ለዝግጅት በራስዎ ዲዛይን የሚዘጋጁ።",
+    "tags_en": "T-shirts, Hoodies, Group orders, Your own artwork",
+    "tags_am": "ቲሸርት, ሁዲ, የቡድን ልብስ, የራስዎ ዲዛይን",
+    "image_url": "images/leather-jacket.jpg",
+    "on_home": true
+   },
+   {
+    "slug": "children",
+    "name_en": "Children and family",
+    "name_am": "የልጆች እና የቤተሰብ",
+    "tagline_en": "Line four",
+    "tagline_am": "መስመር አራት",
+    "summary_en": "",
+    "summary_am": "",
+    "description_en": "Cultural dresses scaled down for little ones, and matching outfits a whole family can wear together.",
+    "description_am": "ለልጆች የተዘጋጁ ትናንሽ የባህል ቀሚሶች፣ እና መላ ቤተሰብ አንድ ላይ የሚለብሳቸው ተመሳሳይ ልብሶች።",
+    "tags_en": "Girls' dresses, Boys' sets, Family matching",
+    "tags_am": "የልጆች ቀሚስ, የወንድ ልጆች ልብስ, የቤተሰብ ተመሳሳይ ልብስ",
+    "image_url": "images/child-dress.jpg",
+    "on_home": false
+   }
+  ],
+  "settings": {
+   "phone": "0912070949",
+   "phone2": "0924968631",
+   "whatsapp": "0912070949",
+   "telegram": "0912070949",
+   "address_en": "Summit Fiyel Bet, just off the main road",
+   "address_am": "ሰሚት ፍየል ቤት ትንሽ ገባ ብሎ",
+   "hours_en": "Always open. A quick call before you visit is appreciated.",
+   "hours_am": "ሁልጊዜ ክፍት፤ ከመምጣትዎ በፊት ቢደውሉ ይመረጣል።",
+   "facebook": "https://web.facebook.com/sidamaCulture",
+   "tiktok": "https://www.tiktok.com/@mayza_design",
+   "instagram": "https://www.instagram.com/mayza__design",
+   "stat_facebook": "82K",
+   "stat_tiktok": "27.2K",
+   "stat_likes": "248.3K",
+   "announce_en": "",
+   "announce_am": ""
+  }
+ }
+}

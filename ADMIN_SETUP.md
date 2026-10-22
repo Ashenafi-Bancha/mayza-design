@@ -5,7 +5,7 @@ The site has two parts in one repository:
 - **Website and admin pages**: plain HTML, CSS and JavaScript (`index.html`, `collections.html`, …, and `admin/`).
 - **API**: Node.js + Express + PostgreSQL in `api/`. On Vercel it runs as one serverless function at `/api`; locally `npm run dev` serves the site and the API together.
 
-The admin lives at `/admin`. Until a database is connected, the site runs in **demo mode**: the admin opens without a password and keeps its data in the visitor's own browser. That is the right state for showing the owner. Once `DATABASE_URL` is set, the site switches to live mode automatically and the admin asks for a sign-in.
+The admin lives at `/admin`. It needs the database: until `DATABASE_URL` is set, the admin shows the setup commands instead of a sign-in. The website's order sheet still works without it (orders stay in the visitor's browser). For using the admin, see [ADMIN_GUIDE.md](ADMIN_GUIDE.md).
 
 ## Run it on your computer
 

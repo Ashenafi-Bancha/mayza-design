@@ -122,6 +122,7 @@
         img._sources.forEach((src) => (c.img ? src.remove() : !src.isConnected && pictureEl.insertBefore(src, img)));
       }
       if (img.getAttribute("src") !== next) img.setAttribute("src", next);
+      if (img.classList.contains("placeholder") || img.dataset.wasPlaceholder) { img.dataset.wasPlaceholder = "1"; img.classList.toggle("placeholder", !c.img); }
     });
     relang();
   }

@@ -278,3 +278,31 @@ initOrderForm();
 let saved = "en";
 try { saved = localStorage.getItem("mayza-lang") || "en"; } catch (e) {}
 setLang(saved);
+
+// Visitor counts for the admin dashboard: no cookies and no personal data.
+// One "visit" per browser tab session, plus which collections people look at.
+(function track() {
+  const base = (window.MAYZA_CONFIG && window.MAYZA_CONFIG.apiBase) || "/api";
+  if (navigator.doNotTrack === "1" || /^(file:|about:)/.test(location.protocol)) return;
+  const send = (data) => {
+    const body = JSON.stringify({ path: location.pathname.slice(0, 200) || "/", ...data });
+    try {
+      if (navigator.sendBeacon && navigator.sendBeacon(base + "/track", new Blob([body], { type: "text/plain" }))) return;
+    } catch (e) {}
+    fetch(base + "/track", { method: "POST", body, headers: { "Content-Type": "text/plain" }, keepalive: true }).catch(() => {});
+  };
+  let visit = false;
+  try { if (!sessionStorage.getItem("mz-visit")) { sessionStorage.setItem("mz-visit", "1"); visit = true; } } catch (e) {}
+  const utm = new URLSearchParams(location.search).get("utm_source");
+  send({ visit, ref: visit ? document.referrer || null : null, utm: visit ? utm : null });
+
+  if (!/collections/.test(location.pathname) || !("IntersectionObserver" in window)) return;
+  const seen = new Set();
+  const io = new IntersectionObserver((entries) => entries.forEach((e) => {
+    const slug = e.target.id;
+    if (e.isIntersecting && /^[a-z0-9-]{1,60}$/.test(slug) && !seen.has(slug)) { seen.add(slug); send({ collection: slug }); }
+  }), { threshold: 0.4 });
+  const watch = () => document.querySelectorAll("article.split[id]").forEach((a) => io.observe(a));
+  setTimeout(watch, 1200);
+  setTimeout(watch, 4000); // the owner's collections may arrive from the API after the first pass
+})();

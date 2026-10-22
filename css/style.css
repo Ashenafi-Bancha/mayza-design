@@ -1185,3 +1185,28 @@ html.menu-open .menu-btn:hover i::after { transform: rotate(-45deg); }
 .site-header.is-solid .brand .logo-dark { display: block; }
 html.menu-open .site-header .brand .logo-light { display: block; }
 html.menu-open .site-header .brand .logo-dark { display: none; }
+
+/* ---------- Community with artists, and the designer ---------- */
+.community .frame { grid-column: 1 / span 5; aspect-ratio: 3 / 4; }
+.community .stack { grid-column: 6 / span 7; }
+.community .figures strong { font-size: clamp(2.6rem, 5.4vw, 5.4rem); }
+.community .figures > div { padding-left: clamp(0px, 1.4vw, 20px); padding-right: clamp(0px, 1.4vw, 20px); }
+.community .figures > div:first-child { padding-left: 0; }
+.frame figcaption {
+  position: absolute; left: 0; right: 0; bottom: 0; z-index: 2;
+  padding: 40px 20px 16px;
+  background: linear-gradient(to top, rgba(23, 17, 15, 0.78), transparent);
+  color: #fff; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase;
+}
+html[lang="am"] .frame figcaption { letter-spacing: 0.02em; font-size: 0.92rem; }
+.designer .frame { grid-column: 8 / span 5; aspect-ratio: 3 / 4; background: var(--garnet); }
+.designer .frame img { object-position: center 30%; }
+.designer .stack { grid-column: 1 / span 6; grid-row: 1; }
+.designer .frame img.placeholder { object-fit: contain; padding: 22%; }
+.designer .signature { font-family: var(--serif); font-style: italic; font-size: clamp(1.6rem, 2.6vw, 2.2rem); color: var(--accent-ink); }
+.designer .role { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--fg-soft); margin-top: -14px; }
+html[lang="am"] .designer .role { letter-spacing: 0.02em; font-size: 0.95rem; }
+@media (max-width: 860px) {
+  .community .frame, .community .stack, .designer .frame, .designer .stack { grid-column: 1 / -1; grid-row: auto; }
+  .designer .frame { max-width: 520px; }
+}

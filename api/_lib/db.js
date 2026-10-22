@@ -1,6 +1,10 @@
 // PostgreSQL connection pool, shared across requests (and kept warm between
 // invocations when running as a Vercel function).
-const { Pool } = require("pg");
+const { Pool, types } = require("pg");
+
+// Keep calendar dates (due dates, event dates) as "2026-12-31" text: turning them
+// into JavaScript times would shift them by the server's time zone.
+types.setTypeParser(1082, (v) => v);
 
 let pool;
 
@@ -32,4 +36,25 @@ function getPool() {
 
 const q = (text, params) => getPool().query(text, params);
 
-module.exports = { q, getPool, configured };
+// Runs fn(client) inside a transaction; rolls back if it throws.
+async function tx(fn) {
+  const client = await getPool().connect();
+  try {
+    await client.query("begin");
+    const out = await fn(client);
+    await client.query("commit");
+    return out;
+  } catch (err) {
+    await client.query("rollback").catch(() => {});
+    throw err;
+  } finally {
+    client.release();
+  }
+}
+
+// Ends the pool (scripts and tests) so the process can exit.
+async function close() {
+  if (pool) { await pool.end(); pool = null; }
+}
+
+module.exports = { q, query: q, tx, getPool, close, configured };
